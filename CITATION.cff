@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite it as below."
+title: "Forecasting ICT employment in the EU: statistical methods vs machine learning (replication code and data)"
+type: software
+authors:
+  - family-names: Poroshyn
+    given-names: Dmytro
+    # orcid: "https://orcid.org/0000-0000-0000-0000"   # TODO: add ORCID
+version: "1.0.0"
+date-released: "2026-09-28"
+license: MIT
+keywords:
+  - employment forecasting
+  - ICT specialists
+  - machine learning
+  - ARIMA
+  - XGBoost
+  - random forest
+  - Prophet
+  - panel data
+  - Diebold-Mariano test
+  - European Union

@@ -1,0 +1,1618 @@
+geo,year,actual,predicted,model
+AT,2013,3.7,3.380923536947963,Pooled OLS (same features)
+BE,2013,4.2,4.064426030482123,Pooled OLS (same features)
+BG,2013,2.5,2.1429108566534585,Pooled OLS (same features)
+CY,2013,2.8,2.5452942474670355,Pooled OLS (same features)
+CZ,2013,3.7,3.3251955548888374,Pooled OLS (same features)
+DE,2013,3.5,3.3517098610793004,Pooled OLS (same features)
+DK,2013,4.8,4.388376919931288,Pooled OLS (same features)
+EE,2013,4.1,3.46155104502663,Pooled OLS (same features)
+ES,2013,3.3,3.0777195389859053,Pooled OLS (same features)
+FI,2013,6.3,5.860696830376689,Pooled OLS (same features)
+FR,2013,3.0,2.9145176469058467,Pooled OLS (same features)
+GR,2013,2.0,1.8985332808948843,Pooled OLS (same features)
+HR,2013,2.6,2.0111647005873574,Pooled OLS (same features)
+HU,2013,3.5,3.06856389151235,Pooled OLS (same features)
+IE,2013,4.7,4.755766805278576,Pooled OLS (same features)
+IT,2013,3.2,2.8037481291029676,Pooled OLS (same features)
+LT,2013,1.8,1.5673373276602574,Pooled OLS (same features)
+LU,2013,4.7,4.764098035337449,Pooled OLS (same features)
+LV,2013,2.4,2.1621926628345443,Pooled OLS (same features)
+MT,2013,3.3,3.276445987620946,Pooled OLS (same features)
+NL,2013,4.7,4.163994705668323,Pooled OLS (same features)
+PL,2013,2.6,2.2290647261510195,Pooled OLS (same features)
+PT,2013,2.4,2.077792461945705,Pooled OLS (same features)
+RO,2013,1.6,1.3465353112836445,Pooled OLS (same features)
+SE,2013,5.7,5.83517464863926,Pooled OLS (same features)
+SI,2013,3.4,3.102002128796848,Pooled OLS (same features)
+SK,2013,2.6,2.5784157864641477,Pooled OLS (same features)
+AT,2014,3.6,3.5367789823770543,Pooled OLS (same features)
+BE,2014,4.2,4.029077843386302,Pooled OLS (same features)
+BG,2014,2.5,2.1855714515597597,Pooled OLS (same features)
+CY,2014,2.8,2.6889777141739097,Pooled OLS (same features)
+CZ,2014,3.7,3.3907753019563565,Pooled OLS (same features)
+DE,2014,3.6,3.276437954972418,Pooled OLS (same features)
+DK,2014,4.6,4.472028868703736,Pooled OLS (same features)
+EE,2014,3.9,3.6135734267044985,Pooled OLS (same features)
+ES,2014,3.2,3.173680466810482,Pooled OLS (same features)
+FI,2014,6.3,6.176260843739318,Pooled OLS (same features)
+FR,2014,3.2,2.9224790009047004,Pooled OLS (same features)
+GR,2014,1.7,1.817774691793912,Pooled OLS (same features)
+HR,2014,2.8,2.258254022888657,Pooled OLS (same features)
+HU,2014,3.5,3.00090718586932,Pooled OLS (same features)
+IE,2014,4.8,4.928932015481836,Pooled OLS (same features)
+IT,2014,3.3,2.9140800836995946,Pooled OLS (same features)
+LT,2014,1.7,1.6751831403037478,Pooled OLS (same features)
+LU,2014,5.1,4.458933662592566,Pooled OLS (same features)
+LV,2014,2.5,2.293736254163244,Pooled OLS (same features)
+MT,2014,3.6,3.0351249266405955,Pooled OLS (same features)
+NL,2014,4.8,4.7050743676400675,Pooled OLS (same features)
+PL,2014,2.6,2.2474607882324444,Pooled OLS (same features)
+PT,2014,3.1,2.162234758127916,Pooled OLS (same features)
+RO,2014,1.6,1.4135245975384696,Pooled OLS (same features)
+SE,2014,5.8,5.658157391305252,Pooled OLS (same features)
+SI,2014,3.5,3.1798055171295267,Pooled OLS (same features)
+SK,2014,2.8,2.452535734885834,Pooled OLS (same features)
+AT,2015,4.0,3.594227703085829,Pooled OLS (same features)
+BE,2015,4.2,4.2537041869497045,Pooled OLS (same features)
+BG,2015,2.9,2.422898184763926,Pooled OLS (same features)
+CY,2015,2.7,2.8608537888371153,Pooled OLS (same features)
+CZ,2015,3.5,3.532769305164375,Pooled OLS (same features)
+DE,2015,3.7,3.6450223612498545,Pooled OLS (same features)
+DK,2015,4.5,4.6524084463241895,Pooled OLS (same features)
+EE,2015,4.2,3.7408208245128995,Pooled OLS (same features)
+ES,2015,3.2,3.24675062094627,Pooled OLS (same features)
+FI,2015,6.4,6.346820562142987,Pooled OLS (same features)
+FR,2015,3.4,3.268456723951098,Pooled OLS (same features)
+GR,2015,1.6,1.833775270285369,Pooled OLS (same features)
+HR,2015,2.8,2.583266382773043,Pooled OLS (same features)
+HU,2015,3.6,3.30064637396275,Pooled OLS (same features)
+IE,2015,4.6,5.078756244160534,Pooled OLS (same features)
+IT,2015,3.3,3.149214261081512,Pooled OLS (same features)
+LT,2015,2.1,1.777973993362051,Pooled OLS (same features)
+LU,2015,5.0,5.01744505242584,Pooled OLS (same features)
+LV,2015,2.7,2.4404541829969,Pooled OLS (same features)
+MT,2015,3.8,3.4741348505083955,Pooled OLS (same features)
+NL,2015,5.0,4.76779302977142,Pooled OLS (same features)
+PL,2015,2.6,2.4449861368493426,Pooled OLS (same features)
+PT,2015,2.9,2.8462713053289685,Pooled OLS (same features)
+RO,2015,1.9,1.6341094718006661,Pooled OLS (same features)
+SE,2015,6.1,5.845352857119231,Pooled OLS (same features)
+SI,2015,3.6,3.3578604177543196,Pooled OLS (same features)
+SK,2015,2.8,2.6750997556547875,Pooled OLS (same features)
+AT,2016,4.2,3.9362138811173297,Pooled OLS (same features)
+BE,2016,4.2,4.30251681744834,Pooled OLS (same features)
+BG,2016,3.0,2.7976797834037237,Pooled OLS (same features)
+CY,2016,2.7,2.8900881176555795,Pooled OLS (same features)
+CZ,2016,3.7,3.5447241897112822,Pooled OLS (same features)
+DE,2016,3.7,3.8045010640400347,Pooled OLS (same features)
+DK,2016,4.9,4.669105297553659,Pooled OLS (same features)
+EE,2016,5.1,4.090531735389097,Pooled OLS (same features)
+ES,2016,3.4,3.3173112231349955,Pooled OLS (same features)
+FI,2016,6.6,6.413073644337824,Pooled OLS (same features)
+FR,2016,3.6,3.5471402608006235,Pooled OLS (same features)
+GR,2016,1.8,1.8681103271434591,Pooled OLS (same features)
+HR,2016,3.4,2.707854595255178,Pooled OLS (same features)
+HU,2016,3.6,3.5065379912804606,Pooled OLS (same features)
+IE,2016,4.9,4.91938595645179,Pooled OLS (same features)
+IT,2016,3.3,3.233220916998048,Pooled OLS (same features)
+LT,2016,2.5,2.1259137012446687,Pooled OLS (same features)
+LU,2016,5.1,4.9023376466909445,Pooled OLS (same features)
+LV,2016,2.7,2.718183039114942,Pooled OLS (same features)
+MT,2016,3.9,3.6771574141243084,Pooled OLS (same features)
+NL,2016,5.1,5.027676567748711,Pooled OLS (same features)
+PL,2016,2.7,2.5408747297458887,Pooled OLS (same features)
+PT,2016,3.0,2.8768874530595885,Pooled OLS (same features)
+RO,2016,2.0,1.9550760002236043,Pooled OLS (same features)
+SE,2016,6.3,6.052842599604513,Pooled OLS (same features)
+SI,2016,3.5,3.522648335992502,Pooled OLS (same features)
+SK,2016,2.9,2.794594001926767,Pooled OLS (same features)
+AT,2017,4.4,4.114485456282178,Pooled OLS (same features)
+BE,2017,4.9,4.375318419661057,Pooled OLS (same features)
+BG,2017,3.1,2.9752657670003706,Pooled OLS (same features)
+CY,2017,2.9,3.0641748457002347,Pooled OLS (same features)
+CZ,2017,3.6,3.784758271498715,Pooled OLS (same features)
+DE,2017,3.8,3.902394164893746,Pooled OLS (same features)
+DK,2017,5.0,4.998233642236321,Pooled OLS (same features)
+EE,2017,5.3,4.847608271034048,Pooled OLS (same features)
+ES,2017,3.5,3.508850513676048,Pooled OLS (same features)
+FI,2017,6.7,6.571284899898348,Pooled OLS (same features)
+FR,2017,3.8,3.803971836908029,Pooled OLS (same features)
+GR,2017,2.0,2.0364255238623477,Pooled OLS (same features)
+HR,2017,3.3,3.259643117542059,Pooled OLS (same features)
+HU,2017,3.6,3.618930453007253,Pooled OLS (same features)
+IE,2017,5.0,5.19338960692456,Pooled OLS (same features)
+IT,2017,3.4,3.3180064600275365,Pooled OLS (same features)
+LT,2017,2.7,2.471636583774394,Pooled OLS (same features)
+LU,2017,5.2,5.085878545231575,Pooled OLS (same features)
+LV,2017,2.8,2.8277541540918287,Pooled OLS (same features)
+MT,2017,4.3,3.9200159443443763,Pooled OLS (same features)
+NL,2017,5.1,5.185126863518053,Pooled OLS (same features)
+PL,2017,2.8,2.68358303597317,Pooled OLS (same features)
+PT,2017,2.9,3.1415386538943935,Pooled OLS (same features)
+RO,2017,2.1,2.1386972398286295,Pooled OLS (same features)
+SE,2017,6.6,6.327727522388982,Pooled OLS (same features)
+SI,2017,3.8,3.5271753475289525,Pooled OLS (same features)
+SK,2017,2.8,3.0042290775968885,Pooled OLS (same features)
+AT,2018,4.5,4.357017361030643,Pooled OLS (same features)
+BE,2018,5.2,4.954236867138462,Pooled OLS (same features)
+BG,2018,3.3,3.1747148423917495,Pooled OLS (same features)
+CY,2018,3.2,3.2272547103075135,Pooled OLS (same features)
+CZ,2018,4.0,3.7113072649524947,Pooled OLS (same features)
+DE,2018,3.9,4.024828543234401,Pooled OLS (same features)
+DK,2018,4.9,5.101171631207311,Pooled OLS (same features)
+EE,2018,5.4,5.131596125610345,Pooled OLS (same features)
+ES,2018,3.6,3.6254636604905843,Pooled OLS (same features)
+FI,2018,6.7,6.685849204509955,Pooled OLS (same features)
+FR,2018,3.9,4.028582253119822,Pooled OLS (same features)
+GR,2018,2.2,2.2230301059538915,Pooled OLS (same features)
+HR,2018,3.4,3.268606678135228,Pooled OLS (same features)
+HU,2018,3.7,3.6843899777052793,Pooled OLS (same features)
+IE,2018,4.8,5.354199879023035,Pooled OLS (same features)
+IT,2018,3.6,3.445824227399146,Pooled OLS (same features)
+LT,2018,2.7,2.707229702502897,Pooled OLS (same features)
+LU,2018,5.9,5.159621085113516,Pooled OLS (same features)
+LV,2018,2.5,2.967107799205784,Pooled OLS (same features)
+MT,2018,4.8,4.307133639254868,Pooled OLS (same features)
+NL,2018,5.3,5.243267784738277,Pooled OLS (same features)
+PL,2018,3.0,2.796459988175033,Pooled OLS (same features)
+PT,2018,3.1,3.1045530088513855,Pooled OLS (same features)
+RO,2018,2.2,2.30565486839976,Pooled OLS (same features)
+SE,2018,6.8,6.642319073446268,Pooled OLS (same features)
+SI,2018,4.0,3.7948203426385736,Pooled OLS (same features)
+SK,2018,3.2,2.963248198961868,Pooled OLS (same features)
+AT,2019,4.3,4.520203264233753,Pooled OLS (same features)
+BE,2019,5.0,5.259957157133587,Pooled OLS (same features)
+BG,2019,3.0,3.4236849371769735,Pooled OLS (same features)
+CY,2019,2.7,3.4866790729253276,Pooled OLS (same features)
+CZ,2019,4.0,4.150336744885503,Pooled OLS (same features)
+DE,2019,4.0,4.156042905448998,Pooled OLS (same features)
+DK,2019,5.1,5.148326867731771,Pooled OLS (same features)
+EE,2019,5.8,5.400646897786814,Pooled OLS (same features)
+ES,2019,3.7,3.7688268463282046,Pooled OLS (same features)
+FI,2019,6.8,6.825361204108462,Pooled OLS (same features)
+FR,2019,4.2,4.184863933968758,Pooled OLS (same features)
+GR,2019,2.0,2.4576925063993627,Pooled OLS (same features)
+HR,2019,3.3,3.4820596458120328,Pooled OLS (same features)
+HU,2019,3.4,3.8276532194424684,Pooled OLS (same features)
+IE,2019,4.9,5.248519787890459,Pooled OLS (same features)
+IT,2019,3.5,3.6611524407486824,Pooled OLS (same features)
+LT,2019,3.1,2.799309651096026,Pooled OLS (same features)
+LU,2019,6.1,5.846127478826656,Pooled OLS (same features)
+LV,2019,3.1,2.728474625396908,Pooled OLS (same features)
+MT,2019,4.6,4.798186280868924,Pooled OLS (same features)
+NL,2019,5.6,5.46883779807404,Pooled OLS (same features)
+PL,2019,3.2,3.000962398346538,Pooled OLS (same features)
+PT,2019,3.6,3.335550654080298,Pooled OLS (same features)
+RO,2019,2.3,2.4167693219790025,Pooled OLS (same features)
+SE,2019,7.0,6.898585079882913,Pooled OLS (same features)
+SI,2019,3.9,4.01523864799231,Pooled OLS (same features)
+SK,2019,3.7,3.3202104631442957,Pooled OLS (same features)
+AT,2020,4.5,4.410232628784305,Pooled OLS (same features)
+BE,2020,5.0,5.186201972854153,Pooled OLS (same features)
+BG,2020,3.3,3.2413322809297576,Pooled OLS (same features)
+CY,2020,3.2,3.1432659240417107,Pooled OLS (same features)
+CZ,2020,4.2,4.173319551045346,Pooled OLS (same features)
+DE,2020,4.7,4.252591775848483,Pooled OLS (same features)
+DK,2020,5.3,5.3127771779392905,Pooled OLS (same features)
+EE,2020,6.2,5.774868558744171,Pooled OLS (same features)
+ES,2020,3.9,3.8884343805875456,Pooled OLS (same features)
+FI,2020,7.6,6.986188785254219,Pooled OLS (same features)
+FR,2020,4.5,4.432196190122304,Pooled OLS (same features)
+GR,2020,2.0,2.328075238724449,Pooled OLS (same features)
+HR,2020,3.7,3.3875908548868514,Pooled OLS (same features)
+HU,2020,3.8,3.6198708194534026,Pooled OLS (same features)
+IE,2020,5.7,5.3185612626666,Pooled OLS (same features)
+IT,2020,3.6,3.6219826689555283,Pooled OLS (same features)
+LT,2020,3.3,3.1596566874296146,Pooled OLS (same features)
+LU,2020,6.3,6.019935934840729,Pooled OLS (same features)
+LV,2020,3.6,3.2132951907426373,Pooled OLS (same features)
+MT,2020,4.4,4.6984403964884445,Pooled OLS (same features)
+NL,2020,5.9,5.70013545851054,Pooled OLS (same features)
+PL,2020,3.5,3.204487592400125,Pooled OLS (same features)
+PT,2020,4.0,3.748683755919455,Pooled OLS (same features)
+RO,2020,2.4,2.5553816069876274,Pooled OLS (same features)
+SE,2020,7.5,7.101321886411374,Pooled OLS (same features)
+SI,2020,4.4,4.001146044631969,Pooled OLS (same features)
+SK,2020,4.2,3.7442801233632714,Pooled OLS (same features)
+AT,2021,4.5,4.639307638361375,Pooled OLS (same features)
+BE,2021,5.6,5.310210719588181,Pooled OLS (same features)
+BG,2021,3.5,3.6148804937396317,Pooled OLS (same features)
+CY,2021,3.9,3.6612917954445074,Pooled OLS (same features)
+CZ,2021,4.6,4.477594795362796,Pooled OLS (same features)
+DE,2021,4.9,4.8776497643600365,Pooled OLS (same features)
+DK,2021,5.6,5.498051097762222,Pooled OLS (same features)
+EE,2021,6.2,6.264413627162705,Pooled OLS (same features)
+ES,2021,4.1,4.109741333659292,Pooled OLS (same features)
+FI,2021,7.4,7.745857893618817,Pooled OLS (same features)
+FR,2021,4.5,4.747335954308774,Pooled OLS (same features)
+GR,2021,2.4,2.392612590663215,Pooled OLS (same features)
+HR,2021,3.7,3.7488430161017257,Pooled OLS (same features)
+HU,2021,3.9,4.017678070262125,Pooled OLS (same features)
+IE,2021,6.3,6.123216129258427,Pooled OLS (same features)
+IT,2021,3.8,3.77067123682041,Pooled OLS (same features)
+LT,2021,3.8,3.369771913434895,Pooled OLS (same features)
+LU,2021,6.7,6.3087709277410315,Pooled OLS (same features)
+LV,2021,3.8,3.6329223951575558,Pooled OLS (same features)
+MT,2021,4.8,4.653508053706432,Pooled OLS (same features)
+NL,2021,6.7,6.0173221076345715,Pooled OLS (same features)
+PL,2021,3.7,3.5420841333068864,Pooled OLS (same features)
+PT,2021,4.6,4.174785752402901,Pooled OLS (same features)
+RO,2021,2.6,2.7444187332944563,Pooled OLS (same features)
+SE,2021,8.0,7.613841282972059,Pooled OLS (same features)
+SI,2021,4.8,4.480724449702766,Pooled OLS (same features)
+SK,2021,4.3,4.277851488043929,Pooled OLS (same features)
+AT,2022,5.0,4.657749136450785,Pooled OLS (same features)
+BE,2022,5.6,5.83129224743305,Pooled OLS (same features)
+BG,2022,3.8,3.78318523024177,Pooled OLS (same features)
+CY,2022,4.4,4.213687725664148,Pooled OLS (same features)
+CZ,2022,4.5,4.822950733774486,Pooled OLS (same features)
+DE,2022,5.0,5.110278065470891,Pooled OLS (same features)
+DK,2022,5.7,5.824647267986388,Pooled OLS (same features)
+EE,2022,6.6,6.402230196143945,Pooled OLS (same features)
+ES,2022,4.3,4.321765608706891,Pooled OLS (same features)
+FI,2022,7.6,7.584389823494524,Pooled OLS (same features)
+FR,2022,4.3,4.842690682571424,Pooled OLS (same features)
+GR,2022,2.5,2.7373519608786947,Pooled OLS (same features)
+HR,2022,3.8,3.794647521103652,Pooled OLS (same features)
+HU,2022,4.2,4.122746010740437,Pooled OLS (same features)
+IE,2022,6.3,6.678083495335859,Pooled OLS (same features)
+IT,2022,3.9,3.9626431417391634,Pooled OLS (same features)
+LT,2022,4.4,3.8774213085359266,Pooled OLS (same features)
+LU,2022,7.7,6.792309545569736,Pooled OLS (same features)
+LV,2022,4.4,3.9131689314685003,Pooled OLS (same features)
+MT,2022,5.0,5.048692994895059,Pooled OLS (same features)
+NL,2022,7.2,6.794699546004426,Pooled OLS (same features)
+PL,2022,3.7,3.7721147975920806,Pooled OLS (same features)
+PT,2022,4.5,4.7671568308840975,Pooled OLS (same features)
+RO,2022,2.8,2.9476196104000603,Pooled OLS (same features)
+SE,2022,8.6,8.095867016856813,Pooled OLS (same features)
+SI,2022,4.5,4.84744228383068,Pooled OLS (same features)
+SK,2022,4.3,4.470704489196015,Pooled OLS (same features)
+AT,2023,5.3,5.127683627015329,Pooled OLS (same features)
+BE,2023,5.4,5.842278092603974,Pooled OLS (same features)
+BG,2023,4.3,4.085834465533233,Pooled OLS (same features)
+CY,2023,5.6,4.732192581753892,Pooled OLS (same features)
+CZ,2023,4.3,4.727328734760703,Pooled OLS (same features)
+DE,2023,4.9,5.283497151848819,Pooled OLS (same features)
+DK,2023,5.9,5.959951683895663,Pooled OLS (same features)
+EE,2023,6.7,6.770598100655321,Pooled OLS (same features)
+ES,2023,4.4,4.55800775258509,Pooled OLS (same features)
+FI,2023,7.6,7.8597070785904455,Pooled OLS (same features)
+FR,2023,4.7,4.717400017949383,Pooled OLS (same features)
+GR,2023,2.4,2.8066776331422667,Pooled OLS (same features)
+HR,2023,4.3,3.984926194729799,Pooled OLS (same features)
+HU,2023,4.2,4.405385033543458,Pooled OLS (same features)
+IE,2023,6.2,6.79638339829999,Pooled OLS (same features)
+IT,2023,4.1,4.0931165029095835,Pooled OLS (same features)
+LT,2023,4.9,4.438616117690121,Pooled OLS (same features)
+LU,2023,8.0,7.718032352688687,Pooled OLS (same features)
+LV,2023,4.4,4.513728756452061,Pooled OLS (same features)
+MT,2023,4.7,5.2300729462996065,Pooled OLS (same features)
+NL,2023,6.9,7.281214695845219,Pooled OLS (same features)
+PL,2023,4.3,3.860678821635527,Pooled OLS (same features)
+PT,2023,4.6,4.740545547879633,Pooled OLS (same features)
+RO,2023,2.6,3.0889513998860765,Pooled OLS (same features)
+SE,2023,8.7,8.706693161716473,Pooled OLS (same features)
+SI,2023,3.8,4.665354878609754,Pooled OLS (same features)
+SK,2023,4.2,4.536315010810424,Pooled OLS (same features)
+AT,2024,5.3,5.3818594704118325,Pooled OLS (same features)
+BE,2024,5.7,5.721209688301107,Pooled OLS (same features)
+BG,2024,4.6,4.50602347345507,Pooled OLS (same features)
+CY,2024,5.0,5.8519048437495105,Pooled OLS (same features)
+CZ,2024,4.5,4.557563918179037,Pooled OLS (same features)
+DE,2024,5.3,5.161057130679209,Pooled OLS (same features)
+DK,2024,5.8,6.127115593582616,Pooled OLS (same features)
+EE,2024,7.2,6.830276953666717,Pooled OLS (same features)
+ES,2024,4.7,4.669804591170891,Pooled OLS (same features)
+FI,2024,7.8,7.8298779692806555,Pooled OLS (same features)
+FR,2024,4.8,5.019025165821404,Pooled OLS (same features)
+GR,2024,2.5,2.749518170046248,Pooled OLS (same features)
+HR,2024,5.0,4.4330291170236205,Pooled OLS (same features)
+HU,2024,4.5,4.389423021425152,Pooled OLS (same features)
+IE,2024,6.3,6.733324104242442,Pooled OLS (same features)
+IT,2024,4.0,4.274808786425744,Pooled OLS (same features)
+LT,2024,5.3,4.9405761466802645,Pooled OLS (same features)
+LU,2024,8.0,7.9722103163359055,Pooled OLS (same features)
+LV,2024,4.9,4.558456142032389,Pooled OLS (same features)
+MT,2024,5.2,4.9868308249859705,Pooled OLS (same features)
+NL,2024,7.0,7.07792137594711,Pooled OLS (same features)
+PL,2024,4.5,4.4248712854841035,Pooled OLS (same features)
+PT,2024,5.2,4.86938258831217,Pooled OLS (same features)
+RO,2024,2.8,2.895996018969455,Pooled OLS (same features)
+SE,2024,8.6,8.807575103597275,Pooled OLS (same features)
+SI,2024,4.3,4.10224257503825,Pooled OLS (same features)
+SK,2024,4.6,4.43577183088521,Pooled OLS (same features)
+AT,2013,3.7,3.4472965874420956,FE OLS (same features + country FE)
+BE,2013,4.2,4.282210142341462,FE OLS (same features + country FE)
+BG,2013,2.5,2.1589149540569537,FE OLS (same features + country FE)
+CY,2013,2.8,2.586188734951506,FE OLS (same features + country FE)
+CZ,2013,3.7,3.532296728109449,FE OLS (same features + country FE)
+DE,2013,3.5,3.3489518703563794,FE OLS (same features + country FE)
+DK,2013,4.8,4.466058633983684,FE OLS (same features + country FE)
+EE,2013,4.1,3.7158694121680993,FE OLS (same features + country FE)
+ES,2013,3.3,3.228959639320869,FE OLS (same features + country FE)
+FI,2013,6.3,6.139852477341986,FE OLS (same features + country FE)
+FR,2013,3.0,2.8006809011583993,FE OLS (same features + country FE)
+GR,2013,2.0,2.0199935271689977,FE OLS (same features + country FE)
+HR,2013,2.6,1.9061569112863905,FE OLS (same features + country FE)
+HU,2013,3.5,3.0694469318717057,FE OLS (same features + country FE)
+IE,2013,4.7,4.460627742377683,FE OLS (same features + country FE)
+IT,2013,3.2,3.046376157669072,FE OLS (same features + country FE)
+LT,2013,1.8,1.4439866412695928,FE OLS (same features + country FE)
+LU,2013,4.7,4.933630687104618,FE OLS (same features + country FE)
+LV,2013,2.4,2.1029371918713977,FE OLS (same features + country FE)
+MT,2013,3.3,3.382775835210241,FE OLS (same features + country FE)
+NL,2013,4.7,4.341301173960748,FE OLS (same features + country FE)
+PL,2013,2.6,2.4844453222515983,FE OLS (same features + country FE)
+PT,2013,2.4,2.1142715528167315,FE OLS (same features + country FE)
+RO,2013,1.6,1.17188966118246,FE OLS (same features + country FE)
+SE,2013,5.7,6.061017597239924,FE OLS (same features + country FE)
+SI,2013,3.4,3.260308359014289,FE OLS (same features + country FE)
+SK,2013,2.6,2.8055699137581005,FE OLS (same features + country FE)
+AT,2014,3.6,3.624693372254054,FE OLS (same features + country FE)
+BE,2014,4.2,4.134453600234357,FE OLS (same features + country FE)
+BG,2014,2.5,2.1944551673692505,FE OLS (same features + country FE)
+CY,2014,2.8,2.621254861228704,FE OLS (same features + country FE)
+CZ,2014,3.7,3.276595877289556,FE OLS (same features + country FE)
+DE,2014,3.6,3.1851020066110314,FE OLS (same features + country FE)
+DK,2014,4.6,4.559496273340896,FE OLS (same features + country FE)
+EE,2014,3.9,3.7208467438668524,FE OLS (same features + country FE)
+ES,2014,3.2,3.1873891766460494,FE OLS (same features + country FE)
+FI,2014,6.3,6.602580534058621,FE OLS (same features + country FE)
+FR,2014,3.2,2.739502092792504,FE OLS (same features + country FE)
+GR,2014,1.7,1.7773815090274825,FE OLS (same features + country FE)
+HR,2014,2.8,2.2252582649281862,FE OLS (same features + country FE)
+HU,2014,3.5,2.9431943034195758,FE OLS (same features + country FE)
+IE,2014,4.8,4.458594749147604,FE OLS (same features + country FE)
+IT,2014,3.3,3.065630298387759,FE OLS (same features + country FE)
+LT,2014,1.7,1.4840393292095158,FE OLS (same features + country FE)
+LU,2014,5.1,4.718018368863923,FE OLS (same features + country FE)
+LV,2014,2.5,2.246723436788269,FE OLS (same features + country FE)
+MT,2014,3.6,2.915118167653441,FE OLS (same features + country FE)
+NL,2014,4.8,4.944176159726397,FE OLS (same features + country FE)
+PL,2014,2.6,2.3373709029629692,FE OLS (same features + country FE)
+PT,2014,3.1,2.118384865396547,FE OLS (same features + country FE)
+RO,2014,1.6,1.1420862880484641,FE OLS (same features + country FE)
+SE,2014,5.8,6.083305381533407,FE OLS (same features + country FE)
+SI,2014,3.5,3.4050771802053634,FE OLS (same features + country FE)
+SK,2014,2.8,2.5466750846932973,FE OLS (same features + country FE)
+AT,2015,4.0,3.637319835011349,FE OLS (same features + country FE)
+BE,2015,4.2,4.345310232604677,FE OLS (same features + country FE)
+BG,2015,2.9,2.3818599786959895,FE OLS (same features + country FE)
+CY,2015,2.7,2.720371216963847,FE OLS (same features + country FE)
+CZ,2015,3.5,3.5701159966660776,FE OLS (same features + country FE)
+DE,2015,3.7,3.5781256651142814,FE OLS (same features + country FE)
+DK,2015,4.5,4.712458427694145,FE OLS (same features + country FE)
+EE,2015,4.2,3.745394905170215,FE OLS (same features + country FE)
+ES,2015,3.2,3.1982915380065604,FE OLS (same features + country FE)
+FI,2015,6.4,6.827700304884094,FE OLS (same features + country FE)
+FR,2015,3.4,3.251673644994472,FE OLS (same features + country FE)
+GR,2015,1.6,1.7975429033389543,FE OLS (same features + country FE)
+HR,2015,2.8,2.5394480684987997,FE OLS (same features + country FE)
+HU,2015,3.6,3.5626244462239245,FE OLS (same features + country FE)
+IE,2015,4.6,4.0954549584766236,FE OLS (same features + country FE)
+IT,2015,3.3,3.2007925427794093,FE OLS (same features + country FE)
+LT,2015,2.1,1.7004174010685968,FE OLS (same features + country FE)
+LU,2015,5.0,5.12102121614855,FE OLS (same features + country FE)
+LV,2015,2.7,2.4384999079312877,FE OLS (same features + country FE)
+MT,2015,3.8,3.4718284605252414,FE OLS (same features + country FE)
+NL,2015,5.0,4.866182160211773,FE OLS (same features + country FE)
+PL,2015,2.6,2.600828914162072,FE OLS (same features + country FE)
+PT,2015,2.9,2.7350680992339416,FE OLS (same features + country FE)
+RO,2015,1.9,1.4598305772747238,FE OLS (same features + country FE)
+SE,2015,6.1,6.307795791973128,FE OLS (same features + country FE)
+SI,2015,3.6,3.5544356302347913,FE OLS (same features + country FE)
+SK,2015,2.8,2.88376057026242,FE OLS (same features + country FE)
+AT,2016,4.2,3.944890594611018,FE OLS (same features + country FE)
+BE,2016,4.2,4.367582965703812,FE OLS (same features + country FE)
+BG,2016,3.0,2.736743502165926,FE OLS (same features + country FE)
+CY,2016,2.7,2.615960469215476,FE OLS (same features + country FE)
+CZ,2016,3.7,3.67080666895234,FE OLS (same features + country FE)
+DE,2016,3.7,3.7126170156482474,FE OLS (same features + country FE)
+DK,2016,4.9,4.719881137234231,FE OLS (same features + country FE)
+EE,2016,5.1,4.214976150697322,FE OLS (same features + country FE)
+ES,2016,3.4,3.2763971989073113,FE OLS (same features + country FE)
+FI,2016,6.6,6.789265709902569,FE OLS (same features + country FE)
+FR,2016,3.6,3.4830967935017165,FE OLS (same features + country FE)
+GR,2016,1.8,1.7448609319912034,FE OLS (same features + country FE)
+HR,2016,3.4,2.630135805405539,FE OLS (same features + country FE)
+HU,2016,3.6,3.5576270184648395,FE OLS (same features + country FE)
+IE,2016,4.9,4.387075904951481,FE OLS (same features + country FE)
+IT,2016,3.3,3.2114713573187457,FE OLS (same features + country FE)
+LT,2016,2.5,2.0265445252967824,FE OLS (same features + country FE)
+LU,2016,5.1,5.066935533116444,FE OLS (same features + country FE)
+LV,2016,2.7,2.794223085725921,FE OLS (same features + country FE)
+MT,2016,3.9,3.7937635124764655,FE OLS (same features + country FE)
+NL,2016,5.1,5.084070118901263,FE OLS (same features + country FE)
+PL,2016,2.7,2.5959464756424326,FE OLS (same features + country FE)
+PT,2016,3.0,2.782627368918123,FE OLS (same features + country FE)
+RO,2016,2.0,1.7241013481369143,FE OLS (same features + country FE)
+SE,2016,6.3,6.382766248853555,FE OLS (same features + country FE)
+SI,2016,3.5,3.706802413931457,FE OLS (same features + country FE)
+SK,2016,2.9,3.0195219116367005,FE OLS (same features + country FE)
+AT,2017,4.4,4.105125341110573,FE OLS (same features + country FE)
+BE,2017,4.9,4.377981130599774,FE OLS (same features + country FE)
+BG,2017,3.1,2.8992468067007797,FE OLS (same features + country FE)
+CY,2017,2.9,2.756773080932085,FE OLS (same features + country FE)
+CZ,2017,3.6,3.7909154877590163,FE OLS (same features + country FE)
+DE,2017,3.8,3.785950662424523,FE OLS (same features + country FE)
+DK,2017,5.0,5.069187613864003,FE OLS (same features + country FE)
+EE,2017,5.3,4.961462763473268,FE OLS (same features + country FE)
+ES,2017,3.5,3.3990331366996758,FE OLS (same features + country FE)
+FI,2017,6.7,6.936190814494843,FE OLS (same features + country FE)
+FR,2017,3.8,3.6964821585347387,FE OLS (same features + country FE)
+GR,2017,2.0,1.857657181969858,FE OLS (same features + country FE)
+HR,2017,3.3,3.38815741098199,FE OLS (same features + country FE)
+HU,2017,3.6,3.720704067600079,FE OLS (same features + country FE)
+IE,2017,5.0,4.753483710658195,FE OLS (same features + country FE)
+IT,2017,3.4,3.2913596800145193,FE OLS (same features + country FE)
+LT,2017,2.7,2.333370715197108,FE OLS (same features + country FE)
+LU,2017,5.2,5.3149578252562,FE OLS (same features + country FE)
+LV,2017,2.8,2.885866013862282,FE OLS (same features + country FE)
+MT,2017,4.3,3.9305446284341112,FE OLS (same features + country FE)
+NL,2017,5.1,5.186461650855309,FE OLS (same features + country FE)
+PL,2017,2.8,2.6663877279467374,FE OLS (same features + country FE)
+PT,2017,2.9,2.9982840576639065,FE OLS (same features + country FE)
+RO,2017,2.1,1.8452963578573789,FE OLS (same features + country FE)
+SE,2017,6.6,6.510005783813128,FE OLS (same features + country FE)
+SI,2017,3.8,3.678188051404577,FE OLS (same features + country FE)
+SK,2017,2.8,3.123480752078603,FE OLS (same features + country FE)
+AT,2018,4.5,4.358915651711793,FE OLS (same features + country FE)
+BE,2018,5.2,4.8426644746512855,FE OLS (same features + country FE)
+BG,2018,3.3,3.1049607594720006,FE OLS (same features + country FE)
+CY,2018,3.2,2.890258767660517,FE OLS (same features + country FE)
+CZ,2018,4.0,3.7185963277071403,FE OLS (same features + country FE)
+DE,2018,3.9,3.881346999573344,FE OLS (same features + country FE)
+DK,2018,4.9,5.153113463044652,FE OLS (same features + country FE)
+EE,2018,5.4,5.21258788022091,FE OLS (same features + country FE)
+ES,2018,3.6,3.532876766029579,FE OLS (same features + country FE)
+FI,2018,6.7,6.97369322629932,FE OLS (same features + country FE)
+FR,2018,3.9,3.890819768178085,FE OLS (same features + country FE)
+GR,2018,2.2,2.00295823399317,FE OLS (same features + country FE)
+HR,2018,3.4,3.221422522341351,FE OLS (same features + country FE)
+HU,2018,3.7,3.7556603324338855,FE OLS (same features + country FE)
+IE,2018,4.8,5.058724819136306,FE OLS (same features + country FE)
+IT,2018,3.6,3.3683467404656495,FE OLS (same features + country FE)
+LT,2018,2.7,2.56054060934079,FE OLS (same features + country FE)
+LU,2018,5.9,5.396241699032643,FE OLS (same features + country FE)
+LV,2018,2.5,2.973055879294219,FE OLS (same features + country FE)
+MT,2018,4.8,4.316724919020874,FE OLS (same features + country FE)
+NL,2018,5.3,5.289195565868156,FE OLS (same features + country FE)
+PL,2018,3.0,2.769309259863563,FE OLS (same features + country FE)
+PT,2018,3.1,3.0115991971893763,FE OLS (same features + country FE)
+RO,2018,2.2,1.9615205754774778,FE OLS (same features + country FE)
+SE,2018,6.8,6.902153883694307,FE OLS (same features + country FE)
+SI,2018,4.0,3.8741656712896715,FE OLS (same features + country FE)
+SK,2018,3.2,3.1673718056741023,FE OLS (same features + country FE)
+AT,2019,4.3,4.541030043028309,FE OLS (same features + country FE)
+BE,2019,5.0,5.089025707123303,FE OLS (same features + country FE)
+BG,2019,3.0,3.343275795717109,FE OLS (same features + country FE)
+CY,2019,2.7,3.18220266088469,FE OLS (same features + country FE)
+CZ,2019,4.0,4.140377393205832,FE OLS (same features + country FE)
+DE,2019,4.0,4.037536651885988,FE OLS (same features + country FE)
+DK,2019,5.1,5.2219271045876585,FE OLS (same features + country FE)
+EE,2019,5.8,5.443991123073485,FE OLS (same features + country FE)
+ES,2019,3.7,3.6419269529809113,FE OLS (same features + country FE)
+FI,2019,6.8,7.095529424933714,FE OLS (same features + country FE)
+FR,2019,4.2,4.047055518142733,FE OLS (same features + country FE)
+GR,2019,2.0,2.2361658682601693,FE OLS (same features + country FE)
+HR,2019,3.3,3.3679562242245464,FE OLS (same features + country FE)
+HU,2019,3.4,3.8292020126801583,FE OLS (same features + country FE)
+IE,2019,4.9,4.8501358209104115,FE OLS (same features + country FE)
+IT,2019,3.5,3.5876729290202567,FE OLS (same features + country FE)
+LT,2019,3.1,2.662300940039187,FE OLS (same features + country FE)
+LU,2019,6.1,5.977700347700791,FE OLS (same features + country FE)
+LV,2019,3.1,2.7746756211510952,FE OLS (same features + country FE)
+MT,2019,4.6,4.686166441329609,FE OLS (same features + country FE)
+NL,2019,5.6,5.4571862316693345,FE OLS (same features + country FE)
+PL,2019,3.2,2.925849550562313,FE OLS (same features + country FE)
+PT,2019,3.6,3.266671993034044,FE OLS (same features + country FE)
+RO,2019,2.3,2.1498157391352164,FE OLS (same features + country FE)
+SE,2019,7.0,7.01077946812914,FE OLS (same features + country FE)
+SI,2019,3.9,4.010012127740016,FE OLS (same features + country FE)
+SK,2019,3.7,3.435053309593626,FE OLS (same features + country FE)
+AT,2020,4.5,4.583141175603988,FE OLS (same features + country FE)
+BE,2020,5.0,5.0955666530629795,FE OLS (same features + country FE)
+BG,2020,3.3,3.2415972640028548,FE OLS (same features + country FE)
+CY,2020,3.2,2.894907859634268,FE OLS (same features + country FE)
+CZ,2020,4.2,4.24289991925618,FE OLS (same features + country FE)
+DE,2020,4.7,4.208938032939063,FE OLS (same features + country FE)
+DK,2020,5.3,5.408810209865683,FE OLS (same features + country FE)
+EE,2020,6.2,5.871604350647312,FE OLS (same features + country FE)
+ES,2020,3.9,3.8095885489728327,FE OLS (same features + country FE)
+FI,2020,7.6,7.319292779279754,FE OLS (same features + country FE)
+FR,2020,4.5,4.547671841375507,FE OLS (same features + country FE)
+GR,2020,2.0,2.1619998960395845,FE OLS (same features + country FE)
+HR,2020,3.7,3.402981232674032,FE OLS (same features + country FE)
+HU,2020,3.8,3.6474218934585814,FE OLS (same features + country FE)
+IE,2020,5.7,4.940124346568481,FE OLS (same features + country FE)
+IT,2020,3.6,3.6306168766544844,FE OLS (same features + country FE)
+LT,2020,3.3,3.0287629763397863,FE OLS (same features + country FE)
+LU,2020,6.3,6.185003424268485,FE OLS (same features + country FE)
+LV,2020,3.6,3.189431475714609,FE OLS (same features + country FE)
+MT,2020,4.4,4.687127951298036,FE OLS (same features + country FE)
+NL,2020,5.9,5.790646852137288,FE OLS (same features + country FE)
+PL,2020,3.5,3.1151230267659127,FE OLS (same features + country FE)
+PT,2020,4.0,3.641904458066973,FE OLS (same features + country FE)
+RO,2020,2.4,2.296461552944561,FE OLS (same features + country FE)
+SE,2020,7.5,7.275996044760275,FE OLS (same features + country FE)
+SI,2020,4.4,4.033332422254953,FE OLS (same features + country FE)
+SK,2020,4.2,3.719844944670524,FE OLS (same features + country FE)
+AT,2021,4.5,4.667466900172286,FE OLS (same features + country FE)
+BE,2021,5.6,5.222758071006826,FE OLS (same features + country FE)
+BG,2021,3.5,3.550963213758281,FE OLS (same features + country FE)
+CY,2021,3.9,3.4277559771076165,FE OLS (same features + country FE)
+CZ,2021,4.6,4.526340402281104,FE OLS (same features + country FE)
+DE,2021,4.9,4.808203154081126,FE OLS (same features + country FE)
+DK,2021,5.6,5.546145078286802,FE OLS (same features + country FE)
+EE,2021,6.2,6.368529276424859,FE OLS (same features + country FE)
+ES,2021,4.1,4.002621444094132,FE OLS (same features + country FE)
+FI,2021,7.4,7.9104504686753,FE OLS (same features + country FE)
+FR,2021,4.5,4.607106312318187,FE OLS (same features + country FE)
+GR,2021,2.4,2.231023660686515,FE OLS (same features + country FE)
+HR,2021,3.7,3.647644122284475,FE OLS (same features + country FE)
+HU,2021,3.9,3.93841123700445,FE OLS (same features + country FE)
+IE,2021,6.3,5.4916158235411405,FE OLS (same features + country FE)
+IT,2021,3.8,3.6801896458664634,FE OLS (same features + country FE)
+LT,2021,3.8,3.247428977002591,FE OLS (same features + country FE)
+LU,2021,6.7,6.350888571068717,FE OLS (same features + country FE)
+LV,2021,3.8,3.5730099282632395,FE OLS (same features + country FE)
+MT,2021,4.8,4.623518872255968,FE OLS (same features + country FE)
+NL,2021,6.7,6.080688456637244,FE OLS (same features + country FE)
+PL,2021,3.7,3.4294458119568194,FE OLS (same features + country FE)
+PT,2021,4.6,3.9997636894030664,FE OLS (same features + country FE)
+RO,2021,2.6,2.4348312509862406,FE OLS (same features + country FE)
+SE,2021,8.0,7.709786471191183,FE OLS (same features + country FE)
+SI,2021,4.8,4.426199566122094,FE OLS (same features + country FE)
+SK,2021,4.3,4.246650678057286,FE OLS (same features + country FE)
+AT,2022,5.0,4.736112899191641,FE OLS (same features + country FE)
+BE,2022,5.6,5.762242056863922,FE OLS (same features + country FE)
+BG,2022,3.8,3.6963639481080346,FE OLS (same features + country FE)
+CY,2022,4.4,4.077830582904605,FE OLS (same features + country FE)
+CZ,2022,4.5,4.816502894860008,FE OLS (same features + country FE)
+DE,2022,5.0,5.0847156983656,FE OLS (same features + country FE)
+DK,2022,5.7,5.869270086890319,FE OLS (same features + country FE)
+EE,2022,6.6,6.620387472569346,FE OLS (same features + country FE)
+ES,2022,4.3,4.227459027960822,FE OLS (same features + country FE)
+FI,2022,7.6,7.747729659224116,FE OLS (same features + country FE)
+FR,2022,4.3,4.729006646231677,FE OLS (same features + country FE)
+GR,2022,2.5,2.489748267601708,FE OLS (same features + country FE)
+HR,2022,3.8,3.7867690400812037,FE OLS (same features + country FE)
+HU,2022,4.2,4.131214576625716,FE OLS (same features + country FE)
+IE,2022,6.3,6.353188086520743,FE OLS (same features + country FE)
+IT,2022,3.9,3.832048607219562,FE OLS (same features + country FE)
+LT,2022,4.4,3.8417925128037322,FE OLS (same features + country FE)
+LU,2022,7.7,6.939247284524676,FE OLS (same features + country FE)
+LV,2022,4.4,3.9512541580537763,FE OLS (same features + country FE)
+MT,2022,5.0,4.999031355446409,FE OLS (same features + country FE)
+NL,2022,7.2,6.840881634982396,FE OLS (same features + country FE)
+PL,2022,3.7,3.7136723051139726,FE OLS (same features + country FE)
+PT,2022,4.5,4.5719999409448535,FE OLS (same features + country FE)
+RO,2022,2.8,2.70050032911074,FE OLS (same features + country FE)
+SE,2022,8.6,8.22124342024929,FE OLS (same features + country FE)
+SI,2022,4.5,4.806944115138371,FE OLS (same features + country FE)
+SK,2022,4.3,4.4848675519176675,FE OLS (same features + country FE)
+AT,2023,5.3,5.155214835436928,FE OLS (same features + country FE)
+BE,2023,5.4,5.764305929643202,FE OLS (same features + country FE)
+BG,2023,4.3,4.022801341443712,FE OLS (same features + country FE)
+CY,2023,5.6,4.720429910647368,FE OLS (same features + country FE)
+CZ,2023,4.3,4.746428835037888,FE OLS (same features + country FE)
+DE,2023,4.9,5.313698141706427,FE OLS (same features + country FE)
+DK,2023,5.9,6.0245550662497,FE OLS (same features + country FE)
+EE,2023,6.7,6.9657034959607,FE OLS (same features + country FE)
+ES,2023,4.4,4.4426896378419904,FE OLS (same features + country FE)
+FI,2023,7.6,7.977141465654965,FE OLS (same features + country FE)
+FR,2023,4.7,4.648801878401372,FE OLS (same features + country FE)
+GR,2023,2.4,2.5483456259941395,FE OLS (same features + country FE)
+HR,2023,4.3,4.04779648740967,FE OLS (same features + country FE)
+HU,2023,4.2,4.354219304753599,FE OLS (same features + country FE)
+IE,2023,6.2,6.521810188133612,FE OLS (same features + country FE)
+IT,2023,4.1,3.964138122879214,FE OLS (same features + country FE)
+LT,2023,4.9,4.431657731471601,FE OLS (same features + country FE)
+LU,2023,8.0,7.710374312048927,FE OLS (same features + country FE)
+LV,2023,4.4,4.519868052559113,FE OLS (same features + country FE)
+MT,2023,4.7,5.143228459990846,FE OLS (same features + country FE)
+NL,2023,6.9,7.224790027497885,FE OLS (same features + country FE)
+PL,2023,4.3,3.903904874942876,FE OLS (same features + country FE)
+PT,2023,4.6,4.584337085643117,FE OLS (same features + country FE)
+RO,2023,2.6,2.7918700889532966,FE OLS (same features + country FE)
+SE,2023,8.7,8.791418541408847,FE OLS (same features + country FE)
+SI,2023,3.8,4.569585110298277,FE OLS (same features + country FE)
+SK,2023,4.2,4.599681619149328,FE OLS (same features + country FE)
+AT,2024,5.3,5.417916287401843,FE OLS (same features + country FE)
+BE,2024,5.7,5.691293593428748,FE OLS (same features + country FE)
+BG,2024,4.6,4.467306883880351,FE OLS (same features + country FE)
+CY,2024,5.0,5.604480422134282,FE OLS (same features + country FE)
+CZ,2024,4.5,4.660899552066404,FE OLS (same features + country FE)
+DE,2024,5.3,5.241548711004379,FE OLS (same features + country FE)
+DK,2024,5.8,6.180317834913971,FE OLS (same features + country FE)
+EE,2024,7.2,7.086840901811371,FE OLS (same features + country FE)
+ES,2024,4.7,4.574923463871844,FE OLS (same features + country FE)
+FI,2024,7.8,7.980880518888574,FE OLS (same features + country FE)
+FR,2024,4.8,4.907295147365096,FE OLS (same features + country FE)
+GR,2024,2.5,2.5028237767072383,FE OLS (same features + country FE)
+HR,2024,5.0,4.543576971823795,FE OLS (same features + country FE)
+HU,2024,4.5,4.444117477037274,FE OLS (same features + country FE)
+IE,2024,6.3,6.429197601336297,FE OLS (same features + country FE)
+IT,2024,4.0,4.124287645814752,FE OLS (same features + country FE)
+LT,2024,5.3,4.989342789520563,FE OLS (same features + country FE)
+LU,2024,8.0,7.942022580805219,FE OLS (same features + country FE)
+LV,2024,4.9,4.622766687868031,FE OLS (same features + country FE)
+MT,2024,5.2,4.926210068044977,FE OLS (same features + country FE)
+NL,2024,7.0,7.081876816519365,FE OLS (same features + country FE)
+PL,2024,4.5,4.474444821371856,FE OLS (same features + country FE)
+PT,2024,5.2,4.776880860518434,FE OLS (same features + country FE)
+RO,2024,2.8,2.737738967926695,FE OLS (same features + country FE)
+SE,2024,8.6,8.908684044157585,FE OLS (same features + country FE)
+SI,2024,4.3,4.214330119521076,FE OLS (same features + country FE)
+SK,2024,4.6,4.61815622716586,FE OLS (same features + country FE)
+AT,2013,3.7,3.631741131493864,Ensemble ex ante (ARIMA + XGB lagged exog)
+AT,2014,3.6,3.7782712653226707,Ensemble ex ante (ARIMA + XGB lagged exog)
+AT,2015,4.0,3.591794515251575,Ensemble ex ante (ARIMA + XGB lagged exog)
+AT,2016,4.2,3.98557027581571,Ensemble ex ante (ARIMA + XGB lagged exog)
+AT,2017,4.4,4.321744118404744,Ensemble ex ante (ARIMA + XGB lagged exog)
+AT,2018,4.5,4.583393470880651,Ensemble ex ante (ARIMA + XGB lagged exog)
+AT,2019,4.3,4.69094250403773,Ensemble ex ante (ARIMA + XGB lagged exog)
+AT,2020,4.5,4.493629662214984,Ensemble ex ante (ARIMA + XGB lagged exog)
+AT,2021,4.5,4.631368827888155,Ensemble ex ante (ARIMA + XGB lagged exog)
+AT,2022,5.0,4.652172145273525,Ensemble ex ante (ARIMA + XGB lagged exog)
+AT,2023,5.3,5.034096265336531,Ensemble ex ante (ARIMA + XGB lagged exog)
+AT,2024,5.3,5.405525919020192,Ensemble ex ante (ARIMA + XGB lagged exog)
+BE,2013,4.2,4.055398589339216,Ensemble ex ante (ARIMA + XGB lagged exog)
+BE,2014,4.2,4.187641406521511,Ensemble ex ante (ARIMA + XGB lagged exog)
+BE,2015,4.2,4.245931271390229,Ensemble ex ante (ARIMA + XGB lagged exog)
+BE,2016,4.2,4.181501005394746,Ensemble ex ante (ARIMA + XGB lagged exog)
+BE,2017,4.9,4.234209052552011,Ensemble ex ante (ARIMA + XGB lagged exog)
+BE,2018,5.2,4.867329498882318,Ensemble ex ante (ARIMA + XGB lagged exog)
+BE,2019,5.0,5.312369526005901,Ensemble ex ante (ARIMA + XGB lagged exog)
+BE,2020,5.0,4.9899069680265775,Ensemble ex ante (ARIMA + XGB lagged exog)
+BE,2021,5.6,5.147642729376741,Ensemble ex ante (ARIMA + XGB lagged exog)
+BE,2022,5.6,5.808941636395678,Ensemble ex ante (ARIMA + XGB lagged exog)
+BE,2023,5.4,5.652777484426323,Ensemble ex ante (ARIMA + XGB lagged exog)
+BE,2024,5.7,5.434659913084181,Ensemble ex ante (ARIMA + XGB lagged exog)
+BG,2013,2.5,2.3954917365351154,Ensemble ex ante (ARIMA + XGB lagged exog)
+BG,2014,2.5,2.4617708180318063,Ensemble ex ante (ARIMA + XGB lagged exog)
+BG,2015,2.9,2.5392820058298087,Ensemble ex ante (ARIMA + XGB lagged exog)
+BG,2016,3.0,2.974153811366895,Ensemble ex ante (ARIMA + XGB lagged exog)
+BG,2017,3.1,3.065687100141989,Ensemble ex ante (ARIMA + XGB lagged exog)
+BG,2018,3.3,3.2055916570192435,Ensemble ex ante (ARIMA + XGB lagged exog)
+BG,2019,3.0,3.3052000288457277,Ensemble ex ante (ARIMA + XGB lagged exog)
+BG,2020,3.3,3.1529140658136043,Ensemble ex ante (ARIMA + XGB lagged exog)
+BG,2021,3.5,3.3155476203291503,Ensemble ex ante (ARIMA + XGB lagged exog)
+BG,2022,3.8,3.537693721981723,Ensemble ex ante (ARIMA + XGB lagged exog)
+BG,2023,4.3,3.878881517789888,Ensemble ex ante (ARIMA + XGB lagged exog)
+BG,2024,4.6,4.525271350360717,Ensemble ex ante (ARIMA + XGB lagged exog)
+CY,2013,2.8,2.618632028901568,Ensemble ex ante (ARIMA + XGB lagged exog)
+CY,2014,2.8,2.775693087346765,Ensemble ex ante (ARIMA + XGB lagged exog)
+CY,2015,2.7,2.8226430654525765,Ensemble ex ante (ARIMA + XGB lagged exog)
+CY,2016,2.7,2.688899580489369,Ensemble ex ante (ARIMA + XGB lagged exog)
+CY,2017,2.9,2.694339820626403,Ensemble ex ante (ARIMA + XGB lagged exog)
+CY,2018,3.2,2.9154550856468386,Ensemble ex ante (ARIMA + XGB lagged exog)
+CY,2019,2.7,3.450638596642941,Ensemble ex ante (ARIMA + XGB lagged exog)
+CY,2020,3.2,2.9088716123012457,Ensemble ex ante (ARIMA + XGB lagged exog)
+CY,2021,3.9,3.3965019882167686,Ensemble ex ante (ARIMA + XGB lagged exog)
+CY,2022,4.4,4.093870614628781,Ensemble ex ante (ARIMA + XGB lagged exog)
+CY,2023,5.6,4.567363374612778,Ensemble ex ante (ARIMA + XGB lagged exog)
+CY,2024,5.0,5.946059639626128,Ensemble ex ante (ARIMA + XGB lagged exog)
+CZ,2013,3.7,3.5762689641841243,Ensemble ex ante (ARIMA + XGB lagged exog)
+CZ,2014,3.7,3.661000696189711,Ensemble ex ante (ARIMA + XGB lagged exog)
+CZ,2015,3.5,3.7053209467175634,Ensemble ex ante (ARIMA + XGB lagged exog)
+CZ,2016,3.7,3.5041716923114814,Ensemble ex ante (ARIMA + XGB lagged exog)
+CZ,2017,3.6,3.825069031591993,Ensemble ex ante (ARIMA + XGB lagged exog)
+CZ,2018,4.0,3.620573422644547,Ensemble ex ante (ARIMA + XGB lagged exog)
+CZ,2019,4.0,4.1542235735899045,Ensemble ex ante (ARIMA + XGB lagged exog)
+CZ,2020,4.2,4.049544231601299,Ensemble ex ante (ARIMA + XGB lagged exog)
+CZ,2021,4.6,4.325604277214706,Ensemble ex ante (ARIMA + XGB lagged exog)
+CZ,2022,4.5,4.738948471759089,Ensemble ex ante (ARIMA + XGB lagged exog)
+CZ,2023,4.3,4.595562196302999,Ensemble ex ante (ARIMA + XGB lagged exog)
+CZ,2024,4.5,4.35404429760033,Ensemble ex ante (ARIMA + XGB lagged exog)
+DE,2013,3.5,3.504368402513438,Ensemble ex ante (ARIMA + XGB lagged exog)
+DE,2014,3.6,3.53809391001343,Ensemble ex ante (ARIMA + XGB lagged exog)
+DE,2015,3.7,3.532925198809724,Ensemble ex ante (ARIMA + XGB lagged exog)
+DE,2016,3.7,3.5371088621441262,Ensemble ex ante (ARIMA + XGB lagged exog)
+DE,2017,3.8,3.7025857469147665,Ensemble ex ante (ARIMA + XGB lagged exog)
+DE,2018,3.9,3.791470371760659,Ensemble ex ante (ARIMA + XGB lagged exog)
+DE,2019,4.0,4.013691097678289,Ensemble ex ante (ARIMA + XGB lagged exog)
+DE,2020,4.7,4.0167628831896005,Ensemble ex ante (ARIMA + XGB lagged exog)
+DE,2021,4.9,4.679127465322145,Ensemble ex ante (ARIMA + XGB lagged exog)
+DE,2022,5.0,4.949032666213556,Ensemble ex ante (ARIMA + XGB lagged exog)
+DE,2023,4.9,5.011183116486629,Ensemble ex ante (ARIMA + XGB lagged exog)
+DE,2024,5.3,5.01054070279498,Ensemble ex ante (ARIMA + XGB lagged exog)
+DK,2013,4.8,4.490641388686559,Ensemble ex ante (ARIMA + XGB lagged exog)
+DK,2014,4.6,4.846341477756378,Ensemble ex ante (ARIMA + XGB lagged exog)
+DK,2015,4.5,4.695358299031739,Ensemble ex ante (ARIMA + XGB lagged exog)
+DK,2016,4.9,4.575516983814883,Ensemble ex ante (ARIMA + XGB lagged exog)
+DK,2017,5.0,4.825269686176615,Ensemble ex ante (ARIMA + XGB lagged exog)
+DK,2018,4.9,4.967703877204097,Ensemble ex ante (ARIMA + XGB lagged exog)
+DK,2019,5.1,4.951117661495668,Ensemble ex ante (ARIMA + XGB lagged exog)
+DK,2020,5.3,5.083465337414077,Ensemble ex ante (ARIMA + XGB lagged exog)
+DK,2021,5.6,5.338080143292219,Ensemble ex ante (ARIMA + XGB lagged exog)
+DK,2022,5.7,5.699468937723081,Ensemble ex ante (ARIMA + XGB lagged exog)
+DK,2023,5.9,5.865482068791108,Ensemble ex ante (ARIMA + XGB lagged exog)
+DK,2024,5.8,6.019928829254479,Ensemble ex ante (ARIMA + XGB lagged exog)
+EE,2013,4.1,3.624457607869349,Ensemble ex ante (ARIMA + XGB lagged exog)
+EE,2014,3.9,3.8730071356005245,Ensemble ex ante (ARIMA + XGB lagged exog)
+EE,2015,4.2,3.8366891454514644,Ensemble ex ante (ARIMA + XGB lagged exog)
+EE,2016,5.1,4.0621392523992945,Ensemble ex ante (ARIMA + XGB lagged exog)
+EE,2017,5.3,4.883849590548353,Ensemble ex ante (ARIMA + XGB lagged exog)
+EE,2018,5.4,5.3422809411651375,Ensemble ex ante (ARIMA + XGB lagged exog)
+EE,2019,5.8,5.542310787235869,Ensemble ex ante (ARIMA + XGB lagged exog)
+EE,2020,6.2,5.881318454211581,Ensemble ex ante (ARIMA + XGB lagged exog)
+EE,2021,6.2,6.289009221056495,Ensemble ex ante (ARIMA + XGB lagged exog)
+EE,2022,6.6,6.422176071643921,Ensemble ex ante (ARIMA + XGB lagged exog)
+EE,2023,6.7,6.831096842922406,Ensemble ex ante (ARIMA + XGB lagged exog)
+EE,2024,7.2,6.83890766965221,Ensemble ex ante (ARIMA + XGB lagged exog)
+ES,2013,3.3,3.1703916871246456,Ensemble ex ante (ARIMA + XGB lagged exog)
+ES,2014,3.2,3.2814005666024837,Ensemble ex ante (ARIMA + XGB lagged exog)
+ES,2015,3.2,3.2487364238535403,Ensemble ex ante (ARIMA + XGB lagged exog)
+ES,2016,3.4,3.244545294139802,Ensemble ex ante (ARIMA + XGB lagged exog)
+ES,2017,3.5,3.425098546564307,Ensemble ex ante (ARIMA + XGB lagged exog)
+ES,2018,3.6,3.5714381381437206,Ensemble ex ante (ARIMA + XGB lagged exog)
+ES,2019,3.7,3.618271412850425,Ensemble ex ante (ARIMA + XGB lagged exog)
+ES,2020,3.9,3.6612408508829426,Ensemble ex ante (ARIMA + XGB lagged exog)
+ES,2021,4.1,4.084537274209364,Ensemble ex ante (ARIMA + XGB lagged exog)
+ES,2022,4.3,4.214552705418209,Ensemble ex ante (ARIMA + XGB lagged exog)
+ES,2023,4.4,4.442731062031512,Ensemble ex ante (ARIMA + XGB lagged exog)
+ES,2024,4.7,4.580982635354716,Ensemble ex ante (ARIMA + XGB lagged exog)
+FI,2013,6.3,6.079682891061006,Ensemble ex ante (ARIMA + XGB lagged exog)
+FI,2014,6.3,6.280872508444926,Ensemble ex ante (ARIMA + XGB lagged exog)
+FI,2015,6.4,6.231446271720248,Ensemble ex ante (ARIMA + XGB lagged exog)
+FI,2016,6.6,6.254898133336555,Ensemble ex ante (ARIMA + XGB lagged exog)
+FI,2017,6.7,6.378861786869653,Ensemble ex ante (ARIMA + XGB lagged exog)
+FI,2018,6.7,6.625106024326742,Ensemble ex ante (ARIMA + XGB lagged exog)
+FI,2019,6.8,6.649232206233419,Ensemble ex ante (ARIMA + XGB lagged exog)
+FI,2020,7.6,6.710408366247962,Ensemble ex ante (ARIMA + XGB lagged exog)
+FI,2021,7.4,7.549551499751361,Ensemble ex ante (ARIMA + XGB lagged exog)
+FI,2022,7.6,7.491280848310715,Ensemble ex ante (ARIMA + XGB lagged exog)
+FI,2023,7.6,7.7195269404118,Ensemble ex ante (ARIMA + XGB lagged exog)
+FI,2024,7.8,7.633340298339548,Ensemble ex ante (ARIMA + XGB lagged exog)
+FR,2013,3.0,2.77170715400555,Ensemble ex ante (ARIMA + XGB lagged exog)
+FR,2014,3.2,3.073246151154992,Ensemble ex ante (ARIMA + XGB lagged exog)
+FR,2015,3.4,3.2645562708087406,Ensemble ex ante (ARIMA + XGB lagged exog)
+FR,2016,3.6,3.4462229992566167,Ensemble ex ante (ARIMA + XGB lagged exog)
+FR,2017,3.8,3.6930573524951082,Ensemble ex ante (ARIMA + XGB lagged exog)
+FR,2018,3.9,3.8803991847248724,Ensemble ex ante (ARIMA + XGB lagged exog)
+FR,2019,4.2,4.048316136188974,Ensemble ex ante (ARIMA + XGB lagged exog)
+FR,2020,4.5,4.401451176075578,Ensemble ex ante (ARIMA + XGB lagged exog)
+FR,2021,4.5,4.447804311626225,Ensemble ex ante (ARIMA + XGB lagged exog)
+FR,2022,4.3,4.649719378831566,Ensemble ex ante (ARIMA + XGB lagged exog)
+FR,2023,4.7,4.418736935155396,Ensemble ex ante (ARIMA + XGB lagged exog)
+FR,2024,4.8,4.720907794080407,Ensemble ex ante (ARIMA + XGB lagged exog)
+GR,2013,2.0,1.9248735266161643,Ensemble ex ante (ARIMA + XGB lagged exog)
+GR,2014,1.7,2.035238288184547,Ensemble ex ante (ARIMA + XGB lagged exog)
+GR,2015,1.6,1.7984334626697978,Ensemble ex ante (ARIMA + XGB lagged exog)
+GR,2016,1.8,1.7147032518919167,Ensemble ex ante (ARIMA + XGB lagged exog)
+GR,2017,2.0,1.9178039653819612,Ensemble ex ante (ARIMA + XGB lagged exog)
+GR,2018,2.2,2.0264337336840317,Ensemble ex ante (ARIMA + XGB lagged exog)
+GR,2019,2.0,2.294120595354639,Ensemble ex ante (ARIMA + XGB lagged exog)
+GR,2020,2.0,2.0831167930943835,Ensemble ex ante (ARIMA + XGB lagged exog)
+GR,2021,2.4,2.127480358831324,Ensemble ex ante (ARIMA + XGB lagged exog)
+GR,2022,2.5,2.592786543813,Ensemble ex ante (ARIMA + XGB lagged exog)
+GR,2023,2.4,2.564350390726168,Ensemble ex ante (ARIMA + XGB lagged exog)
+GR,2024,2.5,2.4954220057276126,Ensemble ex ante (ARIMA + XGB lagged exog)
+HR,2013,2.6,2.4531847645637743,Ensemble ex ante (ARIMA + XGB lagged exog)
+HR,2014,2.8,2.6589397434772115,Ensemble ex ante (ARIMA + XGB lagged exog)
+HR,2015,2.8,2.8605035442543345,Ensemble ex ante (ARIMA + XGB lagged exog)
+HR,2016,3.4,2.8215310081119003,Ensemble ex ante (ARIMA + XGB lagged exog)
+HR,2017,3.3,3.5477343474058056,Ensemble ex ante (ARIMA + XGB lagged exog)
+HR,2018,3.4,3.3578201647431376,Ensemble ex ante (ARIMA + XGB lagged exog)
+HR,2019,3.3,3.472884911583453,Ensemble ex ante (ARIMA + XGB lagged exog)
+HR,2020,3.7,3.432684572773371,Ensemble ex ante (ARIMA + XGB lagged exog)
+HR,2021,3.7,3.73095034557395,Ensemble ex ante (ARIMA + XGB lagged exog)
+HR,2022,3.8,3.773945048317041,Ensemble ex ante (ARIMA + XGB lagged exog)
+HR,2023,4.3,3.8469163817212273,Ensemble ex ante (ARIMA + XGB lagged exog)
+HR,2024,5.0,4.54101628609181,Ensemble ex ante (ARIMA + XGB lagged exog)
+HU,2013,3.5,3.0013664969185925,Ensemble ex ante (ARIMA + XGB lagged exog)
+HU,2014,3.5,3.480342426853495,Ensemble ex ante (ARIMA + XGB lagged exog)
+HU,2015,3.6,3.460984619077843,Ensemble ex ante (ARIMA + XGB lagged exog)
+HU,2016,3.6,3.5831486158593044,Ensemble ex ante (ARIMA + XGB lagged exog)
+HU,2017,3.6,3.6338943851996204,Ensemble ex ante (ARIMA + XGB lagged exog)
+HU,2018,3.7,3.6876632445029327,Ensemble ex ante (ARIMA + XGB lagged exog)
+HU,2019,3.4,3.708317048114575,Ensemble ex ante (ARIMA + XGB lagged exog)
+HU,2020,3.8,3.5726286283569815,Ensemble ex ante (ARIMA + XGB lagged exog)
+HU,2021,3.9,3.9032152287134725,Ensemble ex ante (ARIMA + XGB lagged exog)
+HU,2022,4.2,4.005364385037634,Ensemble ex ante (ARIMA + XGB lagged exog)
+HU,2023,4.2,4.373524604587846,Ensemble ex ante (ARIMA + XGB lagged exog)
+HU,2024,4.5,4.28412778290688,Ensemble ex ante (ARIMA + XGB lagged exog)
+IE,2013,4.7,4.838262985451722,Ensemble ex ante (ARIMA + XGB lagged exog)
+IE,2014,4.8,4.802534805253787,Ensemble ex ante (ARIMA + XGB lagged exog)
+IE,2015,4.6,4.781846311272405,Ensemble ex ante (ARIMA + XGB lagged exog)
+IE,2016,4.9,4.5617851082933605,Ensemble ex ante (ARIMA + XGB lagged exog)
+IE,2017,5.0,4.956333286024627,Ensemble ex ante (ARIMA + XGB lagged exog)
+IE,2018,4.8,5.028454208438349,Ensemble ex ante (ARIMA + XGB lagged exog)
+IE,2019,4.9,4.9109609231584805,Ensemble ex ante (ARIMA + XGB lagged exog)
+IE,2020,5.7,5.0357182842317565,Ensemble ex ante (ARIMA + XGB lagged exog)
+IE,2021,6.3,5.807187047472704,Ensemble ex ante (ARIMA + XGB lagged exog)
+IE,2022,6.3,6.493172987645847,Ensemble ex ante (ARIMA + XGB lagged exog)
+IE,2023,6.2,6.500101957279653,Ensemble ex ante (ARIMA + XGB lagged exog)
+IE,2024,6.3,6.250115178494411,Ensemble ex ante (ARIMA + XGB lagged exog)
+IT,2013,3.2,3.095715792453042,Ensemble ex ante (ARIMA + XGB lagged exog)
+IT,2014,3.3,3.163221997419144,Ensemble ex ante (ARIMA + XGB lagged exog)
+IT,2015,3.3,3.2942453492436625,Ensemble ex ante (ARIMA + XGB lagged exog)
+IT,2016,3.3,3.3199936716458094,Ensemble ex ante (ARIMA + XGB lagged exog)
+IT,2017,3.4,3.3581755201102177,Ensemble ex ante (ARIMA + XGB lagged exog)
+IT,2018,3.6,3.426003621412604,Ensemble ex ante (ARIMA + XGB lagged exog)
+IT,2019,3.5,3.6681894529663572,Ensemble ex ante (ARIMA + XGB lagged exog)
+IT,2020,3.6,3.5222184926066427,Ensemble ex ante (ARIMA + XGB lagged exog)
+IT,2021,3.8,3.6338152768777343,Ensemble ex ante (ARIMA + XGB lagged exog)
+IT,2022,3.9,3.820574010166479,Ensemble ex ante (ARIMA + XGB lagged exog)
+IT,2023,4.1,3.9731509541275525,Ensemble ex ante (ARIMA + XGB lagged exog)
+IT,2024,4.0,4.194459601934423,Ensemble ex ante (ARIMA + XGB lagged exog)
+LT,2013,1.8,1.954173606652316,Ensemble ex ante (ARIMA + XGB lagged exog)
+LT,2014,1.7,1.841317737257051,Ensemble ex ante (ARIMA + XGB lagged exog)
+LT,2015,2.1,1.8082606526782201,Ensemble ex ante (ARIMA + XGB lagged exog)
+LT,2016,2.5,2.1221456033955945,Ensemble ex ante (ARIMA + XGB lagged exog)
+LT,2017,2.7,2.6366627734543977,Ensemble ex ante (ARIMA + XGB lagged exog)
+LT,2018,2.7,2.7132304753429577,Ensemble ex ante (ARIMA + XGB lagged exog)
+LT,2019,3.1,2.7271426276116673,Ensemble ex ante (ARIMA + XGB lagged exog)
+LT,2020,3.3,3.378229000803066,Ensemble ex ante (ARIMA + XGB lagged exog)
+LT,2021,3.8,3.3209413940439925,Ensemble ex ante (ARIMA + XGB lagged exog)
+LT,2022,4.4,4.129950932723916,Ensemble ex ante (ARIMA + XGB lagged exog)
+LT,2023,4.9,4.661161975887264,Ensemble ex ante (ARIMA + XGB lagged exog)
+LT,2024,5.3,5.201071716588857,Ensemble ex ante (ARIMA + XGB lagged exog)
+LU,2013,4.7,4.709745815618888,Ensemble ex ante (ARIMA + XGB lagged exog)
+LU,2014,5.1,4.668543503104401,Ensemble ex ante (ARIMA + XGB lagged exog)
+LU,2015,5.0,4.8506173435186435,Ensemble ex ante (ARIMA + XGB lagged exog)
+LU,2016,5.1,4.797649183727224,Ensemble ex ante (ARIMA + XGB lagged exog)
+LU,2017,5.2,5.114751821408598,Ensemble ex ante (ARIMA + XGB lagged exog)
+LU,2018,5.9,5.167873212411273,Ensemble ex ante (ARIMA + XGB lagged exog)
+LU,2019,6.1,5.695107462419987,Ensemble ex ante (ARIMA + XGB lagged exog)
+LU,2020,6.3,6.183356229574349,Ensemble ex ante (ARIMA + XGB lagged exog)
+LU,2021,6.7,6.336154872443537,Ensemble ex ante (ARIMA + XGB lagged exog)
+LU,2022,7.7,6.717894576052423,Ensemble ex ante (ARIMA + XGB lagged exog)
+LU,2023,8.0,7.6892546962597255,Ensemble ex ante (ARIMA + XGB lagged exog)
+LU,2024,8.0,8.196908043985921,Ensemble ex ante (ARIMA + XGB lagged exog)
+LV,2013,2.4,2.2955023811166146,Ensemble ex ante (ARIMA + XGB lagged exog)
+LV,2014,2.5,2.462459014519196,Ensemble ex ante (ARIMA + XGB lagged exog)
+LV,2015,2.7,2.537078949574613,Ensemble ex ante (ARIMA + XGB lagged exog)
+LV,2016,2.7,2.738638584312213,Ensemble ex ante (ARIMA + XGB lagged exog)
+LV,2017,2.8,2.7123499234225514,Ensemble ex ante (ARIMA + XGB lagged exog)
+LV,2018,2.5,2.8330714105486825,Ensemble ex ante (ARIMA + XGB lagged exog)
+LV,2019,3.1,2.644080103217557,Ensemble ex ante (ARIMA + XGB lagged exog)
+LV,2020,3.6,3.1418666641414923,Ensemble ex ante (ARIMA + XGB lagged exog)
+LV,2021,3.8,3.7938738130383083,Ensemble ex ante (ARIMA + XGB lagged exog)
+LV,2022,4.4,3.910891129391416,Ensemble ex ante (ARIMA + XGB lagged exog)
+LV,2023,4.4,4.570927333679792,Ensemble ex ante (ARIMA + XGB lagged exog)
+LV,2024,4.9,4.551496103375804,Ensemble ex ante (ARIMA + XGB lagged exog)
+MT,2013,3.3,3.511285683817763,Ensemble ex ante (ARIMA + XGB lagged exog)
+MT,2014,3.6,3.253255371336005,Ensemble ex ante (ARIMA + XGB lagged exog)
+MT,2015,3.8,3.6324703487929373,Ensemble ex ante (ARIMA + XGB lagged exog)
+MT,2016,3.9,3.699573107927555,Ensemble ex ante (ARIMA + XGB lagged exog)
+MT,2017,4.3,3.8093924394290664,Ensemble ex ante (ARIMA + XGB lagged exog)
+MT,2018,4.8,4.182339082139499,Ensemble ex ante (ARIMA + XGB lagged exog)
+MT,2019,4.6,4.696606366674244,Ensemble ex ante (ARIMA + XGB lagged exog)
+MT,2020,4.4,4.627628751121353,Ensemble ex ante (ARIMA + XGB lagged exog)
+MT,2021,4.8,4.478307879817685,Ensemble ex ante (ARIMA + XGB lagged exog)
+MT,2022,5.0,4.805944208964415,Ensemble ex ante (ARIMA + XGB lagged exog)
+MT,2023,4.7,5.048166834621188,Ensemble ex ante (ARIMA + XGB lagged exog)
+MT,2024,5.2,4.652670476842825,Ensemble ex ante (ARIMA + XGB lagged exog)
+NL,2013,4.7,4.578261065262076,Ensemble ex ante (ARIMA + XGB lagged exog)
+NL,2014,4.8,4.706908753143631,Ensemble ex ante (ARIMA + XGB lagged exog)
+NL,2015,5.0,4.788341606496496,Ensemble ex ante (ARIMA + XGB lagged exog)
+NL,2016,5.1,5.080815288950369,Ensemble ex ante (ARIMA + XGB lagged exog)
+NL,2017,5.1,5.228554920946548,Ensemble ex ante (ARIMA + XGB lagged exog)
+NL,2018,5.3,5.203110848823167,Ensemble ex ante (ARIMA + XGB lagged exog)
+NL,2019,5.6,5.516809260351146,Ensemble ex ante (ARIMA + XGB lagged exog)
+NL,2020,5.9,5.716576670618193,Ensemble ex ante (ARIMA + XGB lagged exog)
+NL,2021,6.7,6.042690911127558,Ensemble ex ante (ARIMA + XGB lagged exog)
+NL,2022,7.2,6.90935776651405,Ensemble ex ante (ARIMA + XGB lagged exog)
+NL,2023,6.9,7.714205367658913,Ensemble ex ante (ARIMA + XGB lagged exog)
+NL,2024,7.0,7.204167056421586,Ensemble ex ante (ARIMA + XGB lagged exog)
+PL,2013,2.6,2.5339222775608574,Ensemble ex ante (ARIMA + XGB lagged exog)
+PL,2014,2.6,2.5065270279167526,Ensemble ex ante (ARIMA + XGB lagged exog)
+PL,2015,2.6,2.656861537791557,Ensemble ex ante (ARIMA + XGB lagged exog)
+PL,2016,2.7,2.5697082089949017,Ensemble ex ante (ARIMA + XGB lagged exog)
+PL,2017,2.8,2.731818400742343,Ensemble ex ante (ARIMA + XGB lagged exog)
+PL,2018,3.0,2.713547940841527,Ensemble ex ante (ARIMA + XGB lagged exog)
+PL,2019,3.2,3.040002192204004,Ensemble ex ante (ARIMA + XGB lagged exog)
+PL,2020,3.5,3.22793394126228,Ensemble ex ante (ARIMA + XGB lagged exog)
+PL,2021,3.7,3.7247796027679563,Ensemble ex ante (ARIMA + XGB lagged exog)
+PL,2022,3.7,3.7264713533652127,Ensemble ex ante (ARIMA + XGB lagged exog)
+PL,2023,4.3,3.7964504793637213,Ensemble ex ante (ARIMA + XGB lagged exog)
+PL,2024,4.5,4.555062011494279,Ensemble ex ante (ARIMA + XGB lagged exog)
+PT,2013,2.4,2.2123677234442036,Ensemble ex ante (ARIMA + XGB lagged exog)
+PT,2014,3.1,2.4117324296087315,Ensemble ex ante (ARIMA + XGB lagged exog)
+PT,2015,2.9,3.2490936098229026,Ensemble ex ante (ARIMA + XGB lagged exog)
+PT,2016,3.0,2.7077927756427305,Ensemble ex ante (ARIMA + XGB lagged exog)
+PT,2017,2.9,2.917336002578656,Ensemble ex ante (ARIMA + XGB lagged exog)
+PT,2018,3.1,2.8352212767890963,Ensemble ex ante (ARIMA + XGB lagged exog)
+PT,2019,3.6,3.082780079636328,Ensemble ex ante (ARIMA + XGB lagged exog)
+PT,2020,4.0,3.6183951962957415,Ensemble ex ante (ARIMA + XGB lagged exog)
+PT,2021,4.6,4.067431813520431,Ensemble ex ante (ARIMA + XGB lagged exog)
+PT,2022,4.5,4.694692007264161,Ensemble ex ante (ARIMA + XGB lagged exog)
+PT,2023,4.6,4.49482619893016,Ensemble ex ante (ARIMA + XGB lagged exog)
+PT,2024,5.2,4.573474539806995,Ensemble ex ante (ARIMA + XGB lagged exog)
+RO,2014,1.6,1.5778397947420566,Ensemble ex ante (ARIMA + XGB lagged exog)
+RO,2015,1.9,1.625909819033255,Ensemble ex ante (ARIMA + XGB lagged exog)
+RO,2016,2.0,1.963555101332821,Ensemble ex ante (ARIMA + XGB lagged exog)
+RO,2017,2.1,1.9530960545168277,Ensemble ex ante (ARIMA + XGB lagged exog)
+RO,2018,2.2,2.235764131297314,Ensemble ex ante (ARIMA + XGB lagged exog)
+RO,2019,2.3,2.356570617178776,Ensemble ex ante (ARIMA + XGB lagged exog)
+RO,2020,2.4,2.415904534786981,Ensemble ex ante (ARIMA + XGB lagged exog)
+RO,2021,2.6,2.5562912486957536,Ensemble ex ante (ARIMA + XGB lagged exog)
+RO,2022,2.8,2.79981799409945,Ensemble ex ante (ARIMA + XGB lagged exog)
+RO,2023,2.6,2.9172729931518027,Ensemble ex ante (ARIMA + XGB lagged exog)
+RO,2024,2.8,2.757938553920252,Ensemble ex ante (ARIMA + XGB lagged exog)
+SE,2013,5.7,6.035328108018491,Ensemble ex ante (ARIMA + XGB lagged exog)
+SE,2014,5.8,5.894010360224096,Ensemble ex ante (ARIMA + XGB lagged exog)
+SE,2015,6.1,5.801107247612965,Ensemble ex ante (ARIMA + XGB lagged exog)
+SE,2016,6.3,6.049212202920658,Ensemble ex ante (ARIMA + XGB lagged exog)
+SE,2017,6.6,6.156010171189299,Ensemble ex ante (ARIMA + XGB lagged exog)
+SE,2018,6.8,6.321689851764326,Ensemble ex ante (ARIMA + XGB lagged exog)
+SE,2019,7.0,6.65603834645488,Ensemble ex ante (ARIMA + XGB lagged exog)
+SE,2020,7.5,6.915075856649707,Ensemble ex ante (ARIMA + XGB lagged exog)
+SE,2021,8.0,7.490344918356673,Ensemble ex ante (ARIMA + XGB lagged exog)
+SE,2022,8.6,7.965538574203645,Ensemble ex ante (ARIMA + XGB lagged exog)
+SE,2023,8.7,8.563569366831226,Ensemble ex ante (ARIMA + XGB lagged exog)
+SE,2024,8.6,8.677526622691913,Ensemble ex ante (ARIMA + XGB lagged exog)
+SI,2013,3.4,3.263170312412095,Ensemble ex ante (ARIMA + XGB lagged exog)
+SI,2014,3.5,3.411449887981054,Ensemble ex ante (ARIMA + XGB lagged exog)
+SI,2015,3.6,3.4960844078252062,Ensemble ex ante (ARIMA + XGB lagged exog)
+SI,2016,3.5,3.6257120282665602,Ensemble ex ante (ARIMA + XGB lagged exog)
+SI,2017,3.8,3.5213471268632954,Ensemble ex ante (ARIMA + XGB lagged exog)
+SI,2018,4.0,3.7623989420873754,Ensemble ex ante (ARIMA + XGB lagged exog)
+SI,2019,3.9,4.034703753051298,Ensemble ex ante (ARIMA + XGB lagged exog)
+SI,2020,4.4,3.994232109632314,Ensemble ex ante (ARIMA + XGB lagged exog)
+SI,2021,4.8,4.639235858184248,Ensemble ex ante (ARIMA + XGB lagged exog)
+SI,2022,4.5,4.8215680915546155,Ensemble ex ante (ARIMA + XGB lagged exog)
+SI,2023,3.8,4.54274803731022,Ensemble ex ante (ARIMA + XGB lagged exog)
+SI,2024,4.3,3.7905370433457435,Ensemble ex ante (ARIMA + XGB lagged exog)
+SK,2013,2.6,2.5819801512681586,Ensemble ex ante (ARIMA + XGB lagged exog)
+SK,2014,2.8,2.526645109621267,Ensemble ex ante (ARIMA + XGB lagged exog)
+SK,2015,2.8,2.8250236667327195,Ensemble ex ante (ARIMA + XGB lagged exog)
+SK,2016,2.9,2.823598855629836,Ensemble ex ante (ARIMA + XGB lagged exog)
+SK,2017,2.8,2.9531637651033056,Ensemble ex ante (ARIMA + XGB lagged exog)
+SK,2018,3.2,2.8033532992095243,Ensemble ex ante (ARIMA + XGB lagged exog)
+SK,2019,3.7,3.326220907120076,Ensemble ex ante (ARIMA + XGB lagged exog)
+SK,2020,4.2,3.743804496638453,Ensemble ex ante (ARIMA + XGB lagged exog)
+SK,2021,4.3,4.504137115025651,Ensemble ex ante (ARIMA + XGB lagged exog)
+SK,2022,4.3,4.3311554925945845,Ensemble ex ante (ARIMA + XGB lagged exog)
+SK,2023,4.2,4.384331592089765,Ensemble ex ante (ARIMA + XGB lagged exog)
+SK,2024,4.6,4.24674574969252,Ensemble ex ante (ARIMA + XGB lagged exog)
+AT,2013,3.7,3.5936700495691367,"ARIMA(1,1,1) + 2011 break dummy"
+AT,2014,3.6,3.7660221168530583,"ARIMA(1,1,1) + 2011 break dummy"
+AT,2015,4.0,3.483399033459733,"ARIMA(1,1,1) + 2011 break dummy"
+AT,2016,4.2,3.929656329289029,"ARIMA(1,1,1) + 2011 break dummy"
+AT,2017,4.4,4.293065737244972,"ARIMA(1,1,1) + 2011 break dummy"
+AT,2018,4.5,4.503888817535279,"ARIMA(1,1,1) + 2011 break dummy"
+AT,2019,4.3,4.604498197476833,"ARIMA(1,1,1) + 2011 break dummy"
+AT,2020,4.5,4.37518149125324,"ARIMA(1,1,1) + 2011 break dummy"
+AT,2021,4.5,4.585585609525809,"ARIMA(1,1,1) + 2011 break dummy"
+AT,2022,5.0,4.5797547013828375,"ARIMA(1,1,1) + 2011 break dummy"
+AT,2023,5.3,5.102707717812454,"ARIMA(1,1,1) + 2011 break dummy"
+AT,2024,5.3,5.415413590348239,"ARIMA(1,1,1) + 2011 break dummy"
+BE,2013,4.2,4.4601475783234585,"ARIMA(1,1,1) + 2011 break dummy"
+BE,2014,4.2,4.317402571018757,"ARIMA(1,1,1) + 2011 break dummy"
+BE,2015,4.2,4.3025847994644355,"ARIMA(1,1,1) + 2011 break dummy"
+BE,2016,4.2,4.287284326063097,"ARIMA(1,1,1) + 2011 break dummy"
+BE,2017,4.9,4.254160325756232,"ARIMA(1,1,1) + 2011 break dummy"
+BE,2018,5.2,5.028618393509672,"ARIMA(1,1,1) + 2011 break dummy"
+BE,2019,5.0,5.3451255923640035,"ARIMA(1,1,1) + 2011 break dummy"
+BE,2020,5.0,4.997459034316086,"ARIMA(1,1,1) + 2011 break dummy"
+BE,2021,5.6,5.0023456382689835,"ARIMA(1,1,1) + 2011 break dummy"
+BE,2022,5.6,5.843887386463806,"ARIMA(1,1,1) + 2011 break dummy"
+BE,2023,5.4,5.4239888152999765,"ARIMA(1,1,1) + 2011 break dummy"
+BE,2024,5.7,5.50434819387732,"ARIMA(1,1,1) + 2011 break dummy"
+BG,2013,2.5,2.5000000167561005,"ARIMA(1,1,1) + 2011 break dummy"
+BG,2014,2.5,2.5000000000000004,"ARIMA(1,1,1) + 2011 break dummy"
+BG,2015,2.9,2.5,"ARIMA(1,1,1) + 2011 break dummy"
+BG,2016,3.0,2.90000000053757,"ARIMA(1,1,1) + 2011 break dummy"
+BG,2017,3.1,3.08572931238041,"ARIMA(1,1,1) + 2011 break dummy"
+BG,2018,3.3,3.187490944683808,"ARIMA(1,1,1) + 2011 break dummy"
+BG,2019,3.0,3.4083262184228964,"ARIMA(1,1,1) + 2011 break dummy"
+BG,2020,3.3,3.05371377137742,"ARIMA(1,1,1) + 2011 break dummy"
+BG,2021,3.5,3.3734760836729683,"ARIMA(1,1,1) + 2011 break dummy"
+BG,2022,3.8,3.4911770660179196,"ARIMA(1,1,1) + 2011 break dummy"
+BG,2023,4.3,3.8980113506967995,"ARIMA(1,1,1) + 2011 break dummy"
+BG,2024,4.6,4.466198232808431,"ARIMA(1,1,1) + 2011 break dummy"
+CY,2013,2.8,2.5794525791510994,"ARIMA(1,1,1) + 2011 break dummy"
+CY,2014,2.8,2.8000000229065765,"ARIMA(1,1,1) + 2011 break dummy"
+CY,2015,2.7,2.8000000000000034,"ARIMA(1,1,1) + 2011 break dummy"
+CY,2016,2.7,2.6870558163226277,"ARIMA(1,1,1) + 2011 break dummy"
+CY,2017,2.9,2.7115563194879395,"ARIMA(1,1,1) + 2011 break dummy"
+CY,2018,3.2,2.9727613295690833,"ARIMA(1,1,1) + 2011 break dummy"
+CY,2019,2.7,3.2913618824380473,"ARIMA(1,1,1) + 2011 break dummy"
+CY,2020,3.2,2.795060002002578,"ARIMA(1,1,1) + 2011 break dummy"
+CY,2021,3.9,2.9623787485587987,"ARIMA(1,1,1) + 2011 break dummy"
+CY,2022,4.4,3.8191563892418907,"ARIMA(1,1,1) + 2011 break dummy"
+CY,2023,5.6,4.496634077224313,"ARIMA(1,1,1) + 2011 break dummy"
+CY,2024,5.0,6.300123755873478,"ARIMA(1,1,1) + 2011 break dummy"
+CZ,2013,3.7,3.3141144958311584,"ARIMA(1,1,1) + 2011 break dummy"
+CZ,2014,3.7,3.8440004442017432,"ARIMA(1,1,1) + 2011 break dummy"
+CZ,2015,3.5,3.7566994211151234,"ARIMA(1,1,1) + 2011 break dummy"
+CZ,2016,3.7,3.478609332609381,"ARIMA(1,1,1) + 2011 break dummy"
+CZ,2017,3.6,3.7445929067791486,"ARIMA(1,1,1) + 2011 break dummy"
+CZ,2018,4.0,3.6021843127309414,"ARIMA(1,1,1) + 2011 break dummy"
+CZ,2019,4.0,4.098304625729634,"ARIMA(1,1,1) + 2011 break dummy"
+CZ,2020,4.2,4.0796557604750125,"ARIMA(1,1,1) + 2011 break dummy"
+CZ,2021,4.6,4.307455395425551,"ARIMA(1,1,1) + 2011 break dummy"
+CZ,2022,4.5,4.727195501425129,"ARIMA(1,1,1) + 2011 break dummy"
+CZ,2023,4.3,4.611598908106794,"ARIMA(1,1,1) + 2011 break dummy"
+CZ,2024,4.5,4.381454059486422,"ARIMA(1,1,1) + 2011 break dummy"
+DE,2013,3.5,3.270943676100375,"ARIMA(1,1,1) + 2011 break dummy"
+DE,2014,3.6,3.6023994667988384,"ARIMA(1,1,1) + 2011 break dummy"
+DE,2015,3.7,3.7040445487746254,"ARIMA(1,1,1) + 2011 break dummy"
+DE,2016,3.7,3.804977599689406,"ARIMA(1,1,1) + 2011 break dummy"
+DE,2017,3.8,3.7941649808106286,"ARIMA(1,1,1) + 2011 break dummy"
+DE,2018,3.9,3.8957516333929743,"ARIMA(1,1,1) + 2011 break dummy"
+DE,2019,4.0,3.996760285073729,"ARIMA(1,1,1) + 2011 break dummy"
+DE,2020,4.7,4.096914297478815,"ARIMA(1,1,1) + 2011 break dummy"
+DE,2021,4.9,4.831235609723651,"ARIMA(1,1,1) + 2011 break dummy"
+DE,2022,5.0,5.037426644013427,"ARIMA(1,1,1) + 2011 break dummy"
+DE,2023,4.9,5.134961469495805,"ARIMA(1,1,1) + 2011 break dummy"
+DE,2024,5.3,5.019813892453282,"ARIMA(1,1,1) + 2011 break dummy"
+DK,2013,4.8,4.499915356648695,"ARIMA(1,1,1) + 2011 break dummy"
+DK,2014,4.6,4.953167076209061,"ARIMA(1,1,1) + 2011 break dummy"
+DK,2015,4.5,4.5879546568736425,"ARIMA(1,1,1) + 2011 break dummy"
+DK,2016,4.9,4.54971190386902,"ARIMA(1,1,1) + 2011 break dummy"
+DK,2017,5.0,4.760945464103893,"ARIMA(1,1,1) + 2011 break dummy"
+DK,2018,4.9,4.963430439701147,"ARIMA(1,1,1) + 2011 break dummy"
+DK,2019,5.1,4.907965353191137,"ARIMA(1,1,1) + 2011 break dummy"
+DK,2020,5.3,5.055451713173786,"ARIMA(1,1,1) + 2011 break dummy"
+DK,2021,5.6,5.265153928356618,"ARIMA(1,1,1) + 2011 break dummy"
+DK,2022,5.7,5.581873501414692,"ARIMA(1,1,1) + 2011 break dummy"
+DK,2023,5.9,5.790691185420878,"ARIMA(1,1,1) + 2011 break dummy"
+DK,2024,5.8,5.998320849450876,"ARIMA(1,1,1) + 2011 break dummy"
+EE,2013,4.1,3.9953054006601065,"ARIMA(1,1,1) + 2011 break dummy"
+EE,2014,3.9,4.215774240220751,"ARIMA(1,1,1) + 2011 break dummy"
+EE,2015,4.2,3.7240027606816275,"ARIMA(1,1,1) + 2011 break dummy"
+EE,2016,5.1,4.296659856907626,"ARIMA(1,1,1) + 2011 break dummy"
+EE,2017,5.3,5.571452878152238,"ARIMA(1,1,1) + 2011 break dummy"
+EE,2018,5.4,5.111641979103652,"ARIMA(1,1,1) + 2011 break dummy"
+EE,2019,5.8,5.646395531094183,"ARIMA(1,1,1) + 2011 break dummy"
+EE,2020,6.2,5.937088881064548,"ARIMA(1,1,1) + 2011 break dummy"
+EE,2021,6.2,6.455201458006563,"ARIMA(1,1,1) + 2011 break dummy"
+EE,2022,6.6,5.977369879499988,"ARIMA(1,1,1) + 2011 break dummy"
+EE,2023,6.7,6.816732822810773,"ARIMA(1,1,1) + 2011 break dummy"
+EE,2024,7.2,6.909105674421995,"ARIMA(1,1,1) + 2011 break dummy"
+ES,2013,3.3,3.2660456960747415,"ARIMA(1,1,1) + 2011 break dummy"
+ES,2014,3.2,3.3820334046079354,"ARIMA(1,1,1) + 2011 break dummy"
+ES,2015,3.2,3.071830220047631,"ARIMA(1,1,1) + 2011 break dummy"
+ES,2016,3.4,3.1935241434346446,"ARIMA(1,1,1) + 2011 break dummy"
+ES,2017,3.5,3.509526068914853,"ARIMA(1,1,1) + 2011 break dummy"
+ES,2018,3.6,3.500823557497284,"ARIMA(1,1,1) + 2011 break dummy"
+ES,2019,3.7,3.6958405977062907,"ARIMA(1,1,1) + 2011 break dummy"
+ES,2020,3.9,3.7808760815857583,"ARIMA(1,1,1) + 2011 break dummy"
+ES,2021,4.1,3.9893711024466767,"ARIMA(1,1,1) + 2011 break dummy"
+ES,2022,4.3,4.19891741266201,"ARIMA(1,1,1) + 2011 break dummy"
+ES,2023,4.4,4.4498124997398785,"ARIMA(1,1,1) + 2011 break dummy"
+ES,2024,4.7,4.5251923127949185,"ARIMA(1,1,1) + 2011 break dummy"
+FI,2013,6.3,5.80838410754594,"ARIMA(1,1,1) + 2011 break dummy"
+FI,2014,6.3,6.389973146238096,"ARIMA(1,1,1) + 2011 break dummy"
+FI,2015,6.4,6.404278161846884,"ARIMA(1,1,1) + 2011 break dummy"
+FI,2016,6.6,6.505189701026165,"ARIMA(1,1,1) + 2011 break dummy"
+FI,2017,6.7,6.715227098372798,"ARIMA(1,1,1) + 2011 break dummy"
+FI,2018,6.7,6.814869185829303,"ARIMA(1,1,1) + 2011 break dummy"
+FI,2019,6.8,6.688838443817657,"ARIMA(1,1,1) + 2011 break dummy"
+FI,2020,7.6,6.905292303764236,"ARIMA(1,1,1) + 2011 break dummy"
+FI,2021,7.4,8.653885477800427,"ARIMA(1,1,1) + 2011 break dummy"
+FI,2022,7.6,7.515642409720366,"ARIMA(1,1,1) + 2011 break dummy"
+FI,2023,7.6,7.722131494182682,"ARIMA(1,1,1) + 2011 break dummy"
+FI,2024,7.8,7.715077838305597,"ARIMA(1,1,1) + 2011 break dummy"
+FR,2013,3.0,2.7027391123761326,"ARIMA(1,1,1) + 2011 break dummy"
+FR,2014,3.2,2.757727353940422,"ARIMA(1,1,1) + 2011 break dummy"
+FR,2015,3.4,3.199944505925313,"ARIMA(1,1,1) + 2011 break dummy"
+FR,2016,3.6,3.477497426528303,"ARIMA(1,1,1) + 2011 break dummy"
+FR,2017,3.8,3.711914038630277,"ARIMA(1,1,1) + 2011 break dummy"
+FR,2018,3.9,3.9319796027148124,"ARIMA(1,1,1) + 2011 break dummy"
+FR,2019,4.2,4.013055497246301,"ARIMA(1,1,1) + 2011 break dummy"
+FR,2020,4.5,4.3588825236358115,"ARIMA(1,1,1) + 2011 break dummy"
+FR,2021,4.5,4.695348733774744,"ARIMA(1,1,1) + 2011 break dummy"
+FR,2022,4.3,4.6285577562848745,"ARIMA(1,1,1) + 2011 break dummy"
+FR,2023,4.7,4.303692807567308,"ARIMA(1,1,1) + 2011 break dummy"
+FR,2024,4.8,4.815446872525529,"ARIMA(1,1,1) + 2011 break dummy"
+GR,2013,2.0,1.9000000025605737,"ARIMA(1,1,1) + 2011 break dummy"
+GR,2014,1.7,2.0852403714911647,"ARIMA(1,1,1) + 2011 break dummy"
+GR,2015,1.6,2.0045699962088586,"ARIMA(1,1,1) + 2011 break dummy"
+GR,2016,1.8,1.6469593455144178,"ARIMA(1,1,1) + 2011 break dummy"
+GR,2017,2.0,1.8399705882640234,"ARIMA(1,1,1) + 2011 break dummy"
+GR,2018,2.2,2.0771214439700767,"ARIMA(1,1,1) + 2011 break dummy"
+GR,2019,2.0,2.2599487620389516,"ARIMA(1,1,1) + 2011 break dummy"
+GR,2020,2.0,1.94041461427148,"ARIMA(1,1,1) + 2011 break dummy"
+GR,2021,2.4,1.9471714869524799,"ARIMA(1,1,1) + 2011 break dummy"
+GR,2022,2.5,2.514306778211732,"ARIMA(1,1,1) + 2011 break dummy"
+GR,2023,2.4,2.4602927749699433,"ARIMA(1,1,1) + 2011 break dummy"
+GR,2024,2.5,2.371121057683108,"ARIMA(1,1,1) + 2011 break dummy"
+HR,2013,2.6,2.5710764914975535,"ARIMA(1,1,1) + 2011 break dummy"
+HR,2014,2.8,2.6510275663707907,"ARIMA(1,1,1) + 2011 break dummy"
+HR,2015,2.8,2.992759664061005,"ARIMA(1,1,1) + 2011 break dummy"
+HR,2016,3.4,2.685688007023445,"ARIMA(1,1,1) + 2011 break dummy"
+HR,2017,3.3,3.5255560023737162,"ARIMA(1,1,1) + 2011 break dummy"
+HR,2018,3.4,3.402400897647843,"ARIMA(1,1,1) + 2011 break dummy"
+HR,2019,3.3,3.5038535125840373,"ARIMA(1,1,1) + 2011 break dummy"
+HR,2020,3.7,3.3849352681841247,"ARIMA(1,1,1) + 2011 break dummy"
+HR,2021,3.7,3.570133157297051,"ARIMA(1,1,1) + 2011 break dummy"
+HR,2022,3.8,3.783589379463344,"ARIMA(1,1,1) + 2011 break dummy"
+HR,2023,4.3,3.720673310180055,"ARIMA(1,1,1) + 2011 break dummy"
+HR,2024,5.0,4.423678158393963,"ARIMA(1,1,1) + 2011 break dummy"
+HU,2013,3.5,2.694753443283869,"ARIMA(1,1,1) + 2011 break dummy"
+HU,2014,3.5,3.676330110589386,"ARIMA(1,1,1) + 2011 break dummy"
+HU,2015,3.6,3.4910057875850047,"ARIMA(1,1,1) + 2011 break dummy"
+HU,2016,3.6,3.6434312532227304,"ARIMA(1,1,1) + 2011 break dummy"
+HU,2017,3.6,3.6013343389368853,"ARIMA(1,1,1) + 2011 break dummy"
+HU,2018,3.7,3.6000357402297207,"ARIMA(1,1,1) + 2011 break dummy"
+HU,2019,3.4,3.7429524008136426,"ARIMA(1,1,1) + 2011 break dummy"
+HU,2020,3.8,3.3165185646286037,"ARIMA(1,1,1) + 2011 break dummy"
+HU,2021,3.9,3.716343597888918,"ARIMA(1,1,1) + 2011 break dummy"
+HU,2022,4.2,3.9685768872987195,"ARIMA(1,1,1) + 2011 break dummy"
+HU,2023,4.2,4.114939469285784,"ARIMA(1,1,1) + 2011 break dummy"
+HU,2024,4.5,4.280178385140615,"ARIMA(1,1,1) + 2011 break dummy"
+IE,2013,4.7,4.862337586866633,"ARIMA(1,1,1) + 2011 break dummy"
+IE,2014,4.8,4.687741554106216,"ARIMA(1,1,1) + 2011 break dummy"
+IE,2015,4.6,4.832401531716457,"ARIMA(1,1,1) + 2011 break dummy"
+IE,2016,4.9,4.59067508953116,"ARIMA(1,1,1) + 2011 break dummy"
+IE,2017,5.0,4.797329971037235,"ARIMA(1,1,1) + 2011 break dummy"
+IE,2018,4.8,5.002285450696726,"ARIMA(1,1,1) + 2011 break dummy"
+IE,2019,4.9,4.82521197194315,"ARIMA(1,1,1) + 2011 break dummy"
+IE,2020,5.7,4.885728205900389,"ARIMA(1,1,1) + 2011 break dummy"
+IE,2021,6.3,5.844180232038023,"ARIMA(1,1,1) + 2011 break dummy"
+IE,2022,6.3,6.493648491123065,"ARIMA(1,1,1) + 2011 break dummy"
+IE,2023,6.2,6.239609021177439,"ARIMA(1,1,1) + 2011 break dummy"
+IE,2024,6.3,6.17826572713706,"ARIMA(1,1,1) + 2011 break dummy"
+IT,2013,3.2,3.13887000268396,"ARIMA(1,1,1) + 2011 break dummy"
+IT,2014,3.3,3.2343408625414662,"ARIMA(1,1,1) + 2011 break dummy"
+IT,2015,3.3,3.3642103192200334,"ARIMA(1,1,1) + 2011 break dummy"
+IT,2016,3.3,3.2597303239900715,"ARIMA(1,1,1) + 2011 break dummy"
+IT,2017,3.4,3.350163259888629,"ARIMA(1,1,1) + 2011 break dummy"
+IT,2018,3.6,3.4590955975555966,"ARIMA(1,1,1) + 2011 break dummy"
+IT,2019,3.5,3.760173302520468,"ARIMA(1,1,1) + 2011 break dummy"
+IT,2020,3.6,3.4126661039982773,"ARIMA(1,1,1) + 2011 break dummy"
+IT,2021,3.8,3.654271139921831,"ARIMA(1,1,1) + 2011 break dummy"
+IT,2022,3.9,3.7721953217972053,"ARIMA(1,1,1) + 2011 break dummy"
+IT,2023,4.1,3.918806019750627,"ARIMA(1,1,1) + 2011 break dummy"
+IT,2024,4.0,4.180863946240585,"ARIMA(1,1,1) + 2011 break dummy"
+LT,2013,1.8,1.9413441257521526,"ARIMA(1,1,1) + 2011 break dummy"
+LT,2014,1.7,1.8022526362943003,"ARIMA(1,1,1) + 2011 break dummy"
+LT,2015,2.1,1.7081479155869994,"ARIMA(1,1,1) + 2011 break dummy"
+LT,2016,2.5,1.9068694345528046,"ARIMA(1,1,1) + 2011 break dummy"
+LT,2017,2.7,2.561873632925084,"ARIMA(1,1,1) + 2011 break dummy"
+LT,2018,2.7,2.808636306892862,"ARIMA(1,1,1) + 2011 break dummy"
+LT,2019,3.1,2.609414539649206,"ARIMA(1,1,1) + 2011 break dummy"
+LT,2020,3.3,3.3835008654924295,"ARIMA(1,1,1) + 2011 break dummy"
+LT,2021,3.8,3.162750822246935,"ARIMA(1,1,1) + 2011 break dummy"
+LT,2022,4.4,4.03720712907643,"ARIMA(1,1,1) + 2011 break dummy"
+LT,2023,4.9,4.781028209119906,"ARIMA(1,1,1) + 2011 break dummy"
+LT,2024,5.3,5.318581221354543,"ARIMA(1,1,1) + 2011 break dummy"
+LU,2013,4.7,4.737224179900103,"ARIMA(1,1,1) + 2011 break dummy"
+LU,2014,5.1,4.648437647582022,"ARIMA(1,1,1) + 2011 break dummy"
+LU,2015,5.0,4.897660732084095,"ARIMA(1,1,1) + 2011 break dummy"
+LU,2016,5.1,4.928919558224072,"ARIMA(1,1,1) + 2011 break dummy"
+LU,2017,5.2,5.021093578424213,"ARIMA(1,1,1) + 2011 break dummy"
+LU,2018,5.9,5.118570128212836,"ARIMA(1,1,1) + 2011 break dummy"
+LU,2019,6.1,5.628157558134839,"ARIMA(1,1,1) + 2011 break dummy"
+LU,2020,6.3,5.987898660704794,"ARIMA(1,1,1) + 2011 break dummy"
+LU,2021,6.7,6.239038954407669,"ARIMA(1,1,1) + 2011 break dummy"
+LU,2022,7.7,6.6330781709412765,"ARIMA(1,1,1) + 2011 break dummy"
+LU,2023,8.0,7.680234605728229,"ARIMA(1,1,1) + 2011 break dummy"
+LU,2024,8.0,8.017990875375288,"ARIMA(1,1,1) + 2011 break dummy"
+LV,2013,2.4,2.36379933517386,"ARIMA(1,1,1) + 2011 break dummy"
+LV,2014,2.5,2.356892142264184,"ARIMA(1,1,1) + 2011 break dummy"
+LV,2015,2.7,2.3894322134263732,"ARIMA(1,1,1) + 2011 break dummy"
+LV,2016,2.7,2.507617721024731,"ARIMA(1,1,1) + 2011 break dummy"
+LV,2017,2.8,2.5816968873321153,"ARIMA(1,1,1) + 2011 break dummy"
+LV,2018,2.5,2.684869908901064,"ARIMA(1,1,1) + 2011 break dummy"
+LV,2019,3.1,2.5180213979419754,"ARIMA(1,1,1) + 2011 break dummy"
+LV,2020,3.6,2.7297805261516563,"ARIMA(1,1,1) + 2011 break dummy"
+LV,2021,3.8,3.592929876767994,"ARIMA(1,1,1) + 2011 break dummy"
+LV,2022,4.4,3.8100787108931784,"ARIMA(1,1,1) + 2011 break dummy"
+LV,2023,4.4,4.628493772823921,"ARIMA(1,1,1) + 2011 break dummy"
+LV,2024,4.9,4.535602832284746,"ARIMA(1,1,1) + 2011 break dummy"
+MT,2013,3.3,3.392117265766196,"ARIMA(1,1,1) + 2011 break dummy"
+MT,2014,3.6,3.3654101919992545,"ARIMA(1,1,1) + 2011 break dummy"
+MT,2015,3.8,3.4027350512563137,"ARIMA(1,1,1) + 2011 break dummy"
+MT,2016,3.9,3.4818345078525303,"ARIMA(1,1,1) + 2011 break dummy"
+MT,2017,4.3,3.569934910615361,"ARIMA(1,1,1) + 2011 break dummy"
+MT,2018,4.8,3.7515322609261856,"ARIMA(1,1,1) + 2011 break dummy"
+MT,2019,4.6,4.1812332687907485,"ARIMA(1,1,1) + 2011 break dummy"
+MT,2020,4.4,4.226541954287126,"ARIMA(1,1,1) + 2011 break dummy"
+MT,2021,4.8,4.163417811851809,"ARIMA(1,1,1) + 2011 break dummy"
+MT,2022,5.0,4.610620521344641,"ARIMA(1,1,1) + 2011 break dummy"
+MT,2023,4.7,4.814189621435129,"ARIMA(1,1,1) + 2011 break dummy"
+MT,2024,5.2,4.7134480855526935,"ARIMA(1,1,1) + 2011 break dummy"
+NL,2013,4.7,4.489352071010432,"ARIMA(1,1,1) + 2011 break dummy"
+NL,2014,4.8,4.766644920412565,"ARIMA(1,1,1) + 2011 break dummy"
+NL,2015,5.0,4.77523941213769,"ARIMA(1,1,1) + 2011 break dummy"
+NL,2016,5.1,5.080430655389937,"ARIMA(1,1,1) + 2011 break dummy"
+NL,2017,5.1,5.161472118908663,"ARIMA(1,1,1) + 2011 break dummy"
+NL,2018,5.3,5.107029216210684,"ARIMA(1,1,1) + 2011 break dummy"
+NL,2019,5.6,5.37957903755605,"ARIMA(1,1,1) + 2011 break dummy"
+NL,2020,5.9,5.762971911069511,"ARIMA(1,1,1) + 2011 break dummy"
+NL,2021,6.7,6.124214328648265,"ARIMA(1,1,1) + 2011 break dummy"
+NL,2022,7.2,7.307028568995025,"ARIMA(1,1,1) + 2011 break dummy"
+NL,2023,6.9,7.685276893271937,"ARIMA(1,1,1) + 2011 break dummy"
+NL,2024,7.0,6.727307126057077,"ARIMA(1,1,1) + 2011 break dummy"
+PL,2013,2.6,2.56953341312653,"ARIMA(1,1,1) + 2011 break dummy"
+PL,2014,2.6,2.6770386419259915,"ARIMA(1,1,1) + 2011 break dummy"
+PL,2015,2.6,2.667440564760815,"ARIMA(1,1,1) + 2011 break dummy"
+PL,2016,2.7,2.6593607521377516,"ARIMA(1,1,1) + 2011 break dummy"
+PL,2017,2.8,2.765197199447054,"ARIMA(1,1,1) + 2011 break dummy"
+PL,2018,3.0,2.869441188977827,"ARIMA(1,1,1) + 2011 break dummy"
+PL,2019,3.2,3.0803630456665374,"ARIMA(1,1,1) + 2011 break dummy"
+PL,2020,3.5,3.2908172074696056,"ARIMA(1,1,1) + 2011 break dummy"
+PL,2021,3.7,3.6058303777736844,"ARIMA(1,1,1) + 2011 break dummy"
+PL,2022,3.7,3.8520273965988716,"ARIMA(1,1,1) + 2011 break dummy"
+PL,2023,4.3,3.8047283418396964,"ARIMA(1,1,1) + 2011 break dummy"
+PL,2024,4.5,4.499723608063372,"ARIMA(1,1,1) + 2011 break dummy"
+PT,2013,2.4,2.100000012118399,"ARIMA(1,1,1) + 2011 break dummy"
+PT,2014,3.1,2.5053298270206197,"ARIMA(1,1,1) + 2011 break dummy"
+PT,2015,2.9,3.4833917245423542,"ARIMA(1,1,1) + 2011 break dummy"
+PT,2016,3.0,2.7775655444242395,"ARIMA(1,1,1) + 2011 break dummy"
+PT,2017,2.9,3.1109417182902845,"ARIMA(1,1,1) + 2011 break dummy"
+PT,2018,3.1,2.988165417930876,"ARIMA(1,1,1) + 2011 break dummy"
+PT,2019,3.6,3.2005898499692513,"ARIMA(1,1,1) + 2011 break dummy"
+PT,2020,4.0,3.7314196469421113,"ARIMA(1,1,1) + 2011 break dummy"
+PT,2021,4.6,4.152263243881182,"ARIMA(1,1,1) + 2011 break dummy"
+PT,2022,4.5,4.845043394306319,"ARIMA(1,1,1) + 2011 break dummy"
+PT,2023,4.6,4.6619438059546905,"ARIMA(1,1,1) + 2011 break dummy"
+PT,2024,5.2,4.758689547705411,"ARIMA(1,1,1) + 2011 break dummy"
+RO,2014,1.6,1.5479094399671616,"ARIMA(1,1,1) + 2011 break dummy"
+RO,2015,1.9,1.6378762960031688,"ARIMA(1,1,1) + 2011 break dummy"
+RO,2016,2.0,2.2225875369900585,"ARIMA(1,1,1) + 2011 break dummy"
+RO,2017,2.1,1.8971051147784328,"ARIMA(1,1,1) + 2011 break dummy"
+RO,2018,2.2,2.2505660378098042,"ARIMA(1,1,1) + 2011 break dummy"
+RO,2019,2.3,2.14600179380048,"ARIMA(1,1,1) + 2011 break dummy"
+RO,2020,2.4,2.414373570577233,"ARIMA(1,1,1) + 2011 break dummy"
+RO,2021,2.6,2.366200085285702,"ARIMA(1,1,1) + 2011 break dummy"
+RO,2022,2.8,2.7292165901954433,"ARIMA(1,1,1) + 2011 break dummy"
+RO,2023,2.6,2.87628597574473,"ARIMA(1,1,1) + 2011 break dummy"
+RO,2024,2.8,2.471487393622524,"ARIMA(1,1,1) + 2011 break dummy"
+SE,2013,5.7,5.721000793535493,"ARIMA(1,1,1) + 2011 break dummy"
+SE,2014,5.8,5.7363033394235465,"ARIMA(1,1,1) + 2011 break dummy"
+SE,2015,6.1,5.753525676220873,"ARIMA(1,1,1) + 2011 break dummy"
+SE,2016,6.3,6.020233274722169,"ARIMA(1,1,1) + 2011 break dummy"
+SE,2017,6.6,6.362359465928056,"ARIMA(1,1,1) + 2011 break dummy"
+SE,2018,6.8,6.724468079131254,"ARIMA(1,1,1) + 2011 break dummy"
+SE,2019,7.0,6.932568256641012,"ARIMA(1,1,1) + 2011 break dummy"
+SE,2020,7.5,7.137008930272206,"ARIMA(1,1,1) + 2011 break dummy"
+SE,2021,8.0,7.715257510214105,"ARIMA(1,1,1) + 2011 break dummy"
+SE,2022,8.6,8.333332974558333,"ARIMA(1,1,1) + 2011 break dummy"
+SE,2023,8.7,9.05726231735308,"ARIMA(1,1,1) + 2011 break dummy"
+SE,2024,8.6,8.996905090907767,"ARIMA(1,1,1) + 2011 break dummy"
+SI,2013,3.4,3.415529284922359,"ARIMA(1,1,1) + 2011 break dummy"
+SI,2014,3.5,3.411014647478569,"ARIMA(1,1,1) + 2011 break dummy"
+SI,2015,3.6,3.460587407981621,"ARIMA(1,1,1) + 2011 break dummy"
+SI,2016,3.5,3.533955129765642,"ARIMA(1,1,1) + 2011 break dummy"
+SI,2017,3.8,3.482782659742737,"ARIMA(1,1,1) + 2011 break dummy"
+SI,2018,4.0,3.6618170138630575,"ARIMA(1,1,1) + 2011 break dummy"
+SI,2019,3.9,3.937072709112332,"ARIMA(1,1,1) + 2011 break dummy"
+SI,2020,4.4,3.937971483456692,"ARIMA(1,1,1) + 2011 break dummy"
+SI,2021,4.8,4.501639596165421,"ARIMA(1,1,1) + 2011 break dummy"
+SI,2022,4.5,4.8191624503121595,"ARIMA(1,1,1) + 2011 break dummy"
+SI,2023,3.8,4.510351577513462,"ARIMA(1,1,1) + 2011 break dummy"
+SI,2024,4.3,3.5799230760193406,"ARIMA(1,1,1) + 2011 break dummy"
+SK,2013,2.6,2.3773694817891724,"ARIMA(1,1,1) + 2011 break dummy"
+SK,2014,2.8,2.743969594611846,"ARIMA(1,1,1) + 2011 break dummy"
+SK,2015,2.8,2.860478013485948,"ARIMA(1,1,1) + 2011 break dummy"
+SK,2016,2.9,2.75306924015195,"ARIMA(1,1,1) + 2011 break dummy"
+SK,2017,2.8,3.0261943410960885,"ARIMA(1,1,1) + 2011 break dummy"
+SK,2018,3.2,2.632043329964259,"ARIMA(1,1,1) + 2011 break dummy"
+SK,2019,3.7,3.362441382995566,"ARIMA(1,1,1) + 2011 break dummy"
+SK,2020,4.2,3.6913228087794483,"ARIMA(1,1,1) + 2011 break dummy"
+SK,2021,4.3,4.481020273919398,"ARIMA(1,1,1) + 2011 break dummy"
+SK,2022,4.3,4.283650344380207,"ARIMA(1,1,1) + 2011 break dummy"
+SK,2023,4.2,4.304770047616344,"ARIMA(1,1,1) + 2011 break dummy"
+SK,2024,4.6,4.134244373987988,"ARIMA(1,1,1) + 2011 break dummy"
+AT,2013,3.7,3.687495140315228,"ARIMA auto-AIC (p,q<=2, drift or not)"
+AT,2014,3.6,3.7888840285391767,"ARIMA auto-AIC (p,q<=2, drift or not)"
+AT,2015,4.0,3.6699951438787144,"ARIMA auto-AIC (p,q<=2, drift or not)"
+AT,2016,4.2,3.945432821742372,"ARIMA auto-AIC (p,q<=2, drift or not)"
+AT,2017,4.4,4.308328446089551,"ARIMA auto-AIC (p,q<=2, drift or not)"
+AT,2018,4.5,4.51537972007576,"ARIMA auto-AIC (p,q<=2, drift or not)"
+AT,2019,4.3,4.6142807591192,"ARIMA auto-AIC (p,q<=2, drift or not)"
+AT,2020,4.5,4.393328422618337,"ARIMA auto-AIC (p,q<=2, drift or not)"
+AT,2021,4.5,4.599995106108738,"ARIMA auto-AIC (p,q<=2, drift or not)"
+AT,2022,5.0,4.594112718135712,"ARIMA auto-AIC (p,q<=2, drift or not)"
+AT,2023,5.3,4.831716157510504,"ARIMA auto-AIC (p,q<=2, drift or not)"
+AT,2024,5.3,5.426310773524758,"ARIMA auto-AIC (p,q<=2, drift or not)"
+BE,2013,4.2,4.474949918779062,"ARIMA auto-AIC (p,q<=2, drift or not)"
+BE,2014,4.2,4.473262695278924,"ARIMA auto-AIC (p,q<=2, drift or not)"
+BE,2015,4.2,4.300549941533175,"ARIMA auto-AIC (p,q<=2, drift or not)"
+BE,2016,4.2,4.292115158002348,"ARIMA auto-AIC (p,q<=2, drift or not)"
+BE,2017,4.9,4.265386403985494,"ARIMA auto-AIC (p,q<=2, drift or not)"
+BE,2018,5.2,4.640636411847657,"ARIMA auto-AIC (p,q<=2, drift or not)"
+BE,2019,5.0,5.328566467161522,"ARIMA auto-AIC (p,q<=2, drift or not)"
+BE,2020,5.0,4.984659326729801,"ARIMA auto-AIC (p,q<=2, drift or not)"
+BE,2021,5.6,5.09690508848841,"ARIMA auto-AIC (p,q<=2, drift or not)"
+BE,2022,5.6,5.523550382517656,"ARIMA auto-AIC (p,q<=2, drift or not)"
+BE,2023,5.4,5.468096097211282,"ARIMA auto-AIC (p,q<=2, drift or not)"
+BE,2024,5.7,5.518444429079343,"ARIMA auto-AIC (p,q<=2, drift or not)"
+BG,2013,2.5,2.290539233280993,"ARIMA auto-AIC (p,q<=2, drift or not)"
+BG,2014,2.5,2.5066414446563883,"ARIMA auto-AIC (p,q<=2, drift or not)"
+BG,2015,2.9,2.5290741648602477,"ARIMA auto-AIC (p,q<=2, drift or not)"
+BG,2016,3.0,2.8426421909324504,"ARIMA auto-AIC (p,q<=2, drift or not)"
+BG,2017,3.1,3.154427652907381,"ARIMA auto-AIC (p,q<=2, drift or not)"
+BG,2018,3.3,3.3365487056740335,"ARIMA auto-AIC (p,q<=2, drift or not)"
+BG,2019,3.0,3.3588829011566,"ARIMA auto-AIC (p,q<=2, drift or not)"
+BG,2020,3.3,3.1169962783114546,"ARIMA auto-AIC (p,q<=2, drift or not)"
+BG,2021,3.5,2.976917972720712,"ARIMA auto-AIC (p,q<=2, drift or not)"
+BG,2022,3.8,3.3983752687660056,"ARIMA auto-AIC (p,q<=2, drift or not)"
+BG,2023,4.3,3.8147612065041976,"ARIMA auto-AIC (p,q<=2, drift or not)"
+BG,2024,4.6,4.486339982634693,"ARIMA auto-AIC (p,q<=2, drift or not)"
+CY,2013,2.8,2.6,"ARIMA auto-AIC (p,q<=2, drift or not)"
+CY,2014,2.8,2.86666225748833,"ARIMA auto-AIC (p,q<=2, drift or not)"
+CY,2015,2.7,2.806648751653971,"ARIMA auto-AIC (p,q<=2, drift or not)"
+CY,2016,2.7,2.7487738461577926,"ARIMA auto-AIC (p,q<=2, drift or not)"
+CY,2017,2.9,2.8072260704107554,"ARIMA auto-AIC (p,q<=2, drift or not)"
+CY,2018,3.2,2.9971098042914788,"ARIMA auto-AIC (p,q<=2, drift or not)"
+CY,2019,2.7,3.2223074543813577,"ARIMA auto-AIC (p,q<=2, drift or not)"
+CY,2020,3.2,2.838891722110941,"ARIMA auto-AIC (p,q<=2, drift or not)"
+CY,2021,3.9,2.9566808829740565,"ARIMA auto-AIC (p,q<=2, drift or not)"
+CY,2022,4.4,3.3450025680165707,"ARIMA auto-AIC (p,q<=2, drift or not)"
+CY,2023,5.6,4.5222173250798825,"ARIMA auto-AIC (p,q<=2, drift or not)"
+CY,2024,5.0,5.778942330026686,"ARIMA auto-AIC (p,q<=2, drift or not)"
+CZ,2013,3.7,3.4,"ARIMA auto-AIC (p,q<=2, drift or not)"
+CZ,2014,3.7,3.7,"ARIMA auto-AIC (p,q<=2, drift or not)"
+CZ,2015,3.5,3.7,"ARIMA auto-AIC (p,q<=2, drift or not)"
+CZ,2016,3.7,3.5,"ARIMA auto-AIC (p,q<=2, drift or not)"
+CZ,2017,3.6,3.7,"ARIMA auto-AIC (p,q<=2, drift or not)"
+CZ,2018,4.0,3.6,"ARIMA auto-AIC (p,q<=2, drift or not)"
+CZ,2019,4.0,4.0,"ARIMA auto-AIC (p,q<=2, drift or not)"
+CZ,2020,4.2,4.0,"ARIMA auto-AIC (p,q<=2, drift or not)"
+CZ,2021,4.6,4.2,"ARIMA auto-AIC (p,q<=2, drift or not)"
+CZ,2022,4.5,4.6,"ARIMA auto-AIC (p,q<=2, drift or not)"
+CZ,2023,4.3,4.5,"ARIMA auto-AIC (p,q<=2, drift or not)"
+CZ,2024,4.5,4.3,"ARIMA auto-AIC (p,q<=2, drift or not)"
+DE,2013,3.5,3.544438241200476,"ARIMA auto-AIC (p,q<=2, drift or not)"
+DE,2014,3.6,3.5399958326962846,"ARIMA auto-AIC (p,q<=2, drift or not)"
+DE,2015,3.7,3.5454518875189898,"ARIMA auto-AIC (p,q<=2, drift or not)"
+DE,2016,3.7,3.5583343551077435,"ARIMA auto-AIC (p,q<=2, drift or not)"
+DE,2017,3.8,3.569243460352262,"ARIMA auto-AIC (p,q<=2, drift or not)"
+DE,2018,3.9,3.5858256347515014,"ARIMA auto-AIC (p,q<=2, drift or not)"
+DE,2019,4.0,3.7640345853592416,"ARIMA auto-AIC (p,q<=2, drift or not)"
+DE,2020,4.7,3.8424646111837997,"ARIMA auto-AIC (p,q<=2, drift or not)"
+DE,2021,4.9,4.7,"ARIMA auto-AIC (p,q<=2, drift or not)"
+DE,2022,5.0,4.9,"ARIMA auto-AIC (p,q<=2, drift or not)"
+DE,2023,4.9,5.0,"ARIMA auto-AIC (p,q<=2, drift or not)"
+DE,2024,5.3,4.9,"ARIMA auto-AIC (p,q<=2, drift or not)"
+DK,2013,4.8,4.4652829833667695,"ARIMA auto-AIC (p,q<=2, drift or not)"
+DK,2014,4.6,4.833309502123903,"ARIMA auto-AIC (p,q<=2, drift or not)"
+DK,2015,4.5,4.800201689280621,"ARIMA auto-AIC (p,q<=2, drift or not)"
+DK,2016,4.9,4.579009763399675,"ARIMA auto-AIC (p,q<=2, drift or not)"
+DK,2017,5.0,4.81925557112346,"ARIMA auto-AIC (p,q<=2, drift or not)"
+DK,2018,4.9,4.905439071192223,"ARIMA auto-AIC (p,q<=2, drift or not)"
+DK,2019,5.1,4.943770923984937,"ARIMA auto-AIC (p,q<=2, drift or not)"
+DK,2020,5.3,5.022684607279079,"ARIMA auto-AIC (p,q<=2, drift or not)"
+DK,2021,5.6,5.131063434935089,"ARIMA auto-AIC (p,q<=2, drift or not)"
+DK,2022,5.7,5.501022305737622,"ARIMA auto-AIC (p,q<=2, drift or not)"
+DK,2023,5.9,5.712914389355634,"ARIMA auto-AIC (p,q<=2, drift or not)"
+DK,2024,5.8,5.921606586469083,"ARIMA auto-AIC (p,q<=2, drift or not)"
+EE,2013,4.1,3.8,"ARIMA auto-AIC (p,q<=2, drift or not)"
+EE,2014,3.9,4.1,"ARIMA auto-AIC (p,q<=2, drift or not)"
+EE,2015,4.2,3.9000000000000004,"ARIMA auto-AIC (p,q<=2, drift or not)"
+EE,2016,5.1,4.342300182661408,"ARIMA auto-AIC (p,q<=2, drift or not)"
+EE,2017,5.3,4.692348045144964,"ARIMA auto-AIC (p,q<=2, drift or not)"
+EE,2018,5.4,5.3,"ARIMA auto-AIC (p,q<=2, drift or not)"
+EE,2019,5.8,5.4,"ARIMA auto-AIC (p,q<=2, drift or not)"
+EE,2020,6.2,5.97332803051612,"ARIMA auto-AIC (p,q<=2, drift or not)"
+EE,2021,6.2,6.387495487224575,"ARIMA auto-AIC (p,q<=2, drift or not)"
+EE,2022,6.6,6.376465596999668,"ARIMA auto-AIC (p,q<=2, drift or not)"
+EE,2023,6.7,6.788883849666023,"ARIMA auto-AIC (p,q<=2, drift or not)"
+EE,2024,7.2,6.8842055598275484,"ARIMA auto-AIC (p,q<=2, drift or not)"
+ES,2013,3.3,3.2,"ARIMA auto-AIC (p,q<=2, drift or not)"
+ES,2014,3.2,3.380029361769213,"ARIMA auto-AIC (p,q<=2, drift or not)"
+ES,2015,3.2,3.2,"ARIMA auto-AIC (p,q<=2, drift or not)"
+ES,2016,3.4,3.2,"ARIMA auto-AIC (p,q<=2, drift or not)"
+ES,2017,3.5,3.385795019372444,"ARIMA auto-AIC (p,q<=2, drift or not)"
+ES,2018,3.6,3.464818792017301,"ARIMA auto-AIC (p,q<=2, drift or not)"
+ES,2019,3.7,3.657137876117842,"ARIMA auto-AIC (p,q<=2, drift or not)"
+ES,2020,3.9,3.7599949653347684,"ARIMA auto-AIC (p,q<=2, drift or not)"
+ES,2021,4.1,3.968745053667498,"ARIMA auto-AIC (p,q<=2, drift or not)"
+ES,2022,4.3,4.176465359030282,"ARIMA auto-AIC (p,q<=2, drift or not)"
+ES,2023,4.4,4.383327957017732,"ARIMA auto-AIC (p,q<=2, drift or not)"
+ES,2024,4.7,4.484205126251725,"ARIMA auto-AIC (p,q<=2, drift or not)"
+FI,2013,6.3,6.21249509550515,"ARIMA auto-AIC (p,q<=2, drift or not)"
+FI,2014,6.3,6.422217388703886,"ARIMA auto-AIC (p,q<=2, drift or not)"
+FI,2015,6.4,6.409995143234235,"ARIMA auto-AIC (p,q<=2, drift or not)"
+FI,2016,6.6,6.509086012528282,"ARIMA auto-AIC (p,q<=2, drift or not)"
+FI,2017,6.7,6.7166617328049245,"ARIMA auto-AIC (p,q<=2, drift or not)"
+FI,2018,6.7,6.815379623237771,"ARIMA auto-AIC (p,q<=2, drift or not)"
+FI,2019,6.8,6.807137827847061,"ARIMA auto-AIC (p,q<=2, drift or not)"
+FI,2020,7.6,6.906661571604431,"ARIMA auto-AIC (p,q<=2, drift or not)"
+FI,2021,7.4,7.749995588180498,"ARIMA auto-AIC (p,q<=2, drift or not)"
+FI,2022,7.6,7.532770274943667,"ARIMA auto-AIC (p,q<=2, drift or not)"
+FI,2023,7.6,7.7045333217544965,"ARIMA auto-AIC (p,q<=2, drift or not)"
+FI,2024,7.8,7.776860264992216,"ARIMA auto-AIC (p,q<=2, drift or not)"
+FR,2013,3.0,2.7,"ARIMA auto-AIC (p,q<=2, drift or not)"
+FR,2014,3.2,3.0,"ARIMA auto-AIC (p,q<=2, drift or not)"
+FR,2015,3.4,3.2,"ARIMA auto-AIC (p,q<=2, drift or not)"
+FR,2016,3.6,3.4,"ARIMA auto-AIC (p,q<=2, drift or not)"
+FR,2017,3.8,3.6,"ARIMA auto-AIC (p,q<=2, drift or not)"
+FR,2018,3.9,3.8,"ARIMA auto-AIC (p,q<=2, drift or not)"
+FR,2019,4.2,3.9,"ARIMA auto-AIC (p,q<=2, drift or not)"
+FR,2020,4.5,4.2,"ARIMA auto-AIC (p,q<=2, drift or not)"
+FR,2021,4.5,4.5,"ARIMA auto-AIC (p,q<=2, drift or not)"
+FR,2022,4.3,4.5,"ARIMA auto-AIC (p,q<=2, drift or not)"
+FR,2023,4.7,4.3,"ARIMA auto-AIC (p,q<=2, drift or not)"
+FR,2024,4.8,4.7,"ARIMA auto-AIC (p,q<=2, drift or not)"
+GR,2013,2.0,1.9,"ARIMA auto-AIC (p,q<=2, drift or not)"
+GR,2014,1.7,2.0,"ARIMA auto-AIC (p,q<=2, drift or not)"
+GR,2015,1.6,1.6999999999999997,"ARIMA auto-AIC (p,q<=2, drift or not)"
+GR,2016,1.8,1.6,"ARIMA auto-AIC (p,q<=2, drift or not)"
+GR,2017,2.0,1.8,"ARIMA auto-AIC (p,q<=2, drift or not)"
+GR,2018,2.2,2.0,"ARIMA auto-AIC (p,q<=2, drift or not)"
+GR,2019,2.0,2.2,"ARIMA auto-AIC (p,q<=2, drift or not)"
+GR,2020,2.0,1.9999999999999998,"ARIMA auto-AIC (p,q<=2, drift or not)"
+GR,2021,2.4,2.0,"ARIMA auto-AIC (p,q<=2, drift or not)"
+GR,2022,2.5,2.4000000000000004,"ARIMA auto-AIC (p,q<=2, drift or not)"
+GR,2023,2.4,2.5,"ARIMA auto-AIC (p,q<=2, drift or not)"
+GR,2024,2.5,2.4,"ARIMA auto-AIC (p,q<=2, drift or not)"
+HR,2013,2.6,2.6124953164404285,"ARIMA auto-AIC (p,q<=2, drift or not)"
+HR,2014,2.8,2.711106441902408,"ARIMA auto-AIC (p,q<=2, drift or not)"
+HR,2015,2.8,2.919995090947912,"ARIMA auto-AIC (p,q<=2, drift or not)"
+HR,2016,3.4,2.909085994539968,"ARIMA auto-AIC (p,q<=2, drift or not)"
+HR,2017,3.3,3.5499950827615603,"ARIMA auto-AIC (p,q<=2, drift or not)"
+HR,2018,3.4,3.5516613324567494,"ARIMA auto-AIC (p,q<=2, drift or not)"
+HR,2019,3.3,3.5345007379641746,"ARIMA auto-AIC (p,q<=2, drift or not)"
+HR,2020,3.7,3.53489168967302,"ARIMA auto-AIC (p,q<=2, drift or not)"
+HR,2021,3.7,3.689309051599987,"ARIMA auto-AIC (p,q<=2, drift or not)"
+HR,2022,3.8,3.809826134893812,"ARIMA auto-AIC (p,q<=2, drift or not)"
+HR,2023,4.3,3.9262853198348413,"ARIMA auto-AIC (p,q<=2, drift or not)"
+HR,2024,5.0,4.1193876899762625,"ARIMA auto-AIC (p,q<=2, drift or not)"
+HU,2013,3.5,3.2,"ARIMA auto-AIC (p,q<=2, drift or not)"
+HU,2014,3.5,3.5,"ARIMA auto-AIC (p,q<=2, drift or not)"
+HU,2015,3.6,3.5,"ARIMA auto-AIC (p,q<=2, drift or not)"
+HU,2016,3.6,3.6000000000000005,"ARIMA auto-AIC (p,q<=2, drift or not)"
+HU,2017,3.6,3.6,"ARIMA auto-AIC (p,q<=2, drift or not)"
+HU,2018,3.7,3.6,"ARIMA auto-AIC (p,q<=2, drift or not)"
+HU,2019,3.4,3.7,"ARIMA auto-AIC (p,q<=2, drift or not)"
+HU,2020,3.8,3.4,"ARIMA auto-AIC (p,q<=2, drift or not)"
+HU,2021,3.9,3.8,"ARIMA auto-AIC (p,q<=2, drift or not)"
+HU,2022,4.2,3.9,"ARIMA auto-AIC (p,q<=2, drift or not)"
+HU,2023,4.2,4.2,"ARIMA auto-AIC (p,q<=2, drift or not)"
+HU,2024,4.5,4.2,"ARIMA auto-AIC (p,q<=2, drift or not)"
+IE,2013,4.7,4.8,"ARIMA auto-AIC (p,q<=2, drift or not)"
+IE,2014,4.8,4.7,"ARIMA auto-AIC (p,q<=2, drift or not)"
+IE,2015,4.6,4.8,"ARIMA auto-AIC (p,q<=2, drift or not)"
+IE,2016,4.9,4.6,"ARIMA auto-AIC (p,q<=2, drift or not)"
+IE,2017,5.0,4.9,"ARIMA auto-AIC (p,q<=2, drift or not)"
+IE,2018,4.8,5.09999559610766,"ARIMA auto-AIC (p,q<=2, drift or not)"
+IE,2019,4.9,4.8,"ARIMA auto-AIC (p,q<=2, drift or not)"
+IE,2020,5.7,4.9,"ARIMA auto-AIC (p,q<=2, drift or not)"
+IE,2021,6.3,5.8249950221972595,"ARIMA auto-AIC (p,q<=2, drift or not)"
+IE,2022,6.3,6.099431388235996,"ARIMA auto-AIC (p,q<=2, drift or not)"
+IE,2023,6.2,6.221668869446354,"ARIMA auto-AIC (p,q<=2, drift or not)"
+IE,2024,6.3,6.188668362561863,"ARIMA auto-AIC (p,q<=2, drift or not)"
+IT,2013,3.2,3.1,"ARIMA auto-AIC (p,q<=2, drift or not)"
+IT,2014,3.3,3.2,"ARIMA auto-AIC (p,q<=2, drift or not)"
+IT,2015,3.3,3.3,"ARIMA auto-AIC (p,q<=2, drift or not)"
+IT,2016,3.3,3.3,"ARIMA auto-AIC (p,q<=2, drift or not)"
+IT,2017,3.4,3.33276998337111,"ARIMA auto-AIC (p,q<=2, drift or not)"
+IT,2018,3.6,3.415422474307645,"ARIMA auto-AIC (p,q<=2, drift or not)"
+IT,2019,3.5,3.649995461950821,"ARIMA auto-AIC (p,q<=2, drift or not)"
+IT,2020,3.6,3.470174200196958,"ARIMA auto-AIC (p,q<=2, drift or not)"
+IT,2021,3.8,3.6437451020381384,"ARIMA auto-AIC (p,q<=2, drift or not)"
+IT,2022,3.9,3.7887632925142283,"ARIMA auto-AIC (p,q<=2, drift or not)"
+IT,2023,4.1,3.9555506352906145,"ARIMA auto-AIC (p,q<=2, drift or not)"
+IT,2024,4.0,4.163152979083518,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LT,2013,1.8,2.001220013017834,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LT,2014,1.7,1.7341136669026909,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LT,2015,2.1,1.7667230907571043,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LT,2016,2.5,2.1448648979591938,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LT,2017,2.7,2.5999895988674973,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LT,2018,2.7,2.7928456964078814,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LT,2019,3.1,2.6133603476819864,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LT,2020,3.3,3.3972079473660277,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LT,2021,3.8,3.2703537578945507,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LT,2022,4.4,3.917641779293274,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LT,2023,4.9,4.670743161026884,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LT,2024,5.3,5.239531320330434,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LU,2013,4.7,5.560145867602873,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LU,2014,5.1,4.986870848587315,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LU,2015,5.0,5.15274602880897,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LU,2016,5.1,5.232412969071717,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LU,2017,5.2,5.315336463408585,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LU,2018,5.9,5.402397135121603,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LU,2019,6.1,5.6513603267488755,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LU,2020,6.3,5.892615550153332,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LU,2021,6.7,6.1272238521026505,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LU,2022,7.7,6.401290421050917,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LU,2023,8.0,7.911106049754444,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LU,2024,8.0,8.21578458577374,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LV,2013,2.4,2.2,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LV,2014,2.5,2.3266273787100085,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LV,2015,2.7,2.3306945391104223,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LV,2016,2.7,2.7,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LV,2017,2.8,2.7,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LV,2018,2.5,2.8,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LV,2019,3.1,2.5,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LV,2020,3.6,2.8649348396989853,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LV,2021,3.8,3.6,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LV,2022,4.4,3.8,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LV,2023,4.4,4.4,"ARIMA auto-AIC (p,q<=2, drift or not)"
+LV,2024,4.9,4.4,"ARIMA auto-AIC (p,q<=2, drift or not)"
+MT,2013,3.3,3.4,"ARIMA auto-AIC (p,q<=2, drift or not)"
+MT,2014,3.6,3.3,"ARIMA auto-AIC (p,q<=2, drift or not)"
+MT,2015,3.8,3.6,"ARIMA auto-AIC (p,q<=2, drift or not)"
+MT,2016,3.9,3.8,"ARIMA auto-AIC (p,q<=2, drift or not)"
+MT,2017,4.3,3.9,"ARIMA auto-AIC (p,q<=2, drift or not)"
+MT,2018,4.8,4.3,"ARIMA auto-AIC (p,q<=2, drift or not)"
+MT,2019,4.6,4.8,"ARIMA auto-AIC (p,q<=2, drift or not)"
+MT,2020,4.4,4.6,"ARIMA auto-AIC (p,q<=2, drift or not)"
+MT,2021,4.8,4.4,"ARIMA auto-AIC (p,q<=2, drift or not)"
+MT,2022,5.0,4.8,"ARIMA auto-AIC (p,q<=2, drift or not)"
+MT,2023,4.7,5.0,"ARIMA auto-AIC (p,q<=2, drift or not)"
+MT,2024,5.2,4.7,"ARIMA auto-AIC (p,q<=2, drift or not)"
+NL,2013,4.7,4.5,"ARIMA auto-AIC (p,q<=2, drift or not)"
+NL,2014,4.8,4.7,"ARIMA auto-AIC (p,q<=2, drift or not)"
+NL,2015,5.0,4.8,"ARIMA auto-AIC (p,q<=2, drift or not)"
+NL,2016,5.1,5.0,"ARIMA auto-AIC (p,q<=2, drift or not)"
+NL,2017,5.1,5.1,"ARIMA auto-AIC (p,q<=2, drift or not)"
+NL,2018,5.3,5.1,"ARIMA auto-AIC (p,q<=2, drift or not)"
+NL,2019,5.6,5.385709026503518,"ARIMA auto-AIC (p,q<=2, drift or not)"
+NL,2020,5.9,5.699994952220157,"ARIMA auto-AIC (p,q<=2, drift or not)"
+NL,2021,6.7,6.012494929841111,"ARIMA auto-AIC (p,q<=2, drift or not)"
+NL,2022,7.2,6.8529362774962035,"ARIMA auto-AIC (p,q<=2, drift or not)"
+NL,2023,6.9,7.372217157022128,"ARIMA auto-AIC (p,q<=2, drift or not)"
+NL,2024,7.0,7.047363510154213,"ARIMA auto-AIC (p,q<=2, drift or not)"
+PL,2013,2.6,2.5,"ARIMA auto-AIC (p,q<=2, drift or not)"
+PL,2014,2.6,2.6,"ARIMA auto-AIC (p,q<=2, drift or not)"
+PL,2015,2.6,2.6,"ARIMA auto-AIC (p,q<=2, drift or not)"
+PL,2016,2.7,2.6,"ARIMA auto-AIC (p,q<=2, drift or not)"
+PL,2017,2.8,2.7,"ARIMA auto-AIC (p,q<=2, drift or not)"
+PL,2018,3.0,2.8,"ARIMA auto-AIC (p,q<=2, drift or not)"
+PL,2019,3.2,3.0,"ARIMA auto-AIC (p,q<=2, drift or not)"
+PL,2020,3.5,3.2,"ARIMA auto-AIC (p,q<=2, drift or not)"
+PL,2021,3.7,3.5,"ARIMA auto-AIC (p,q<=2, drift or not)"
+PL,2022,3.7,3.7,"ARIMA auto-AIC (p,q<=2, drift or not)"
+PL,2023,4.3,3.7,"ARIMA auto-AIC (p,q<=2, drift or not)"
+PL,2024,4.5,4.394731936757225,"ARIMA auto-AIC (p,q<=2, drift or not)"
+PT,2013,2.4,2.1,"ARIMA auto-AIC (p,q<=2, drift or not)"
+PT,2014,3.1,2.4,"ARIMA auto-AIC (p,q<=2, drift or not)"
+PT,2015,2.9,3.1,"ARIMA auto-AIC (p,q<=2, drift or not)"
+PT,2016,3.0,2.9,"ARIMA auto-AIC (p,q<=2, drift or not)"
+PT,2017,2.9,3.0,"ARIMA auto-AIC (p,q<=2, drift or not)"
+PT,2018,3.1,2.9,"ARIMA auto-AIC (p,q<=2, drift or not)"
+PT,2019,3.6,3.1,"ARIMA auto-AIC (p,q<=2, drift or not)"
+PT,2020,4.0,3.6,"ARIMA auto-AIC (p,q<=2, drift or not)"
+PT,2021,4.6,4.0,"ARIMA auto-AIC (p,q<=2, drift or not)"
+PT,2022,4.5,4.7352892122462436,"ARIMA auto-AIC (p,q<=2, drift or not)"
+PT,2023,4.6,4.6222170759569305,"ARIMA auto-AIC (p,q<=2, drift or not)"
+PT,2024,5.2,4.721047918878078,"ARIMA auto-AIC (p,q<=2, drift or not)"
+RO,2014,1.6,1.6,"ARIMA auto-AIC (p,q<=2, drift or not)"
+RO,2015,1.9,1.6,"ARIMA auto-AIC (p,q<=2, drift or not)"
+RO,2016,2.0,1.9,"ARIMA auto-AIC (p,q<=2, drift or not)"
+RO,2017,2.1,2.0,"ARIMA auto-AIC (p,q<=2, drift or not)"
+RO,2018,2.2,2.1,"ARIMA auto-AIC (p,q<=2, drift or not)"
+RO,2019,2.3,2.2,"ARIMA auto-AIC (p,q<=2, drift or not)"
+RO,2020,2.4,2.3,"ARIMA auto-AIC (p,q<=2, drift or not)"
+RO,2021,2.6,2.4,"ARIMA auto-AIC (p,q<=2, drift or not)"
+RO,2022,2.8,2.6896171355696676,"ARIMA auto-AIC (p,q<=2, drift or not)"
+RO,2023,2.6,2.8587423769263296,"ARIMA auto-AIC (p,q<=2, drift or not)"
+RO,2024,2.8,2.453719709336076,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SE,2013,5.7,5.8,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SE,2014,5.8,5.699943749639271,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SE,2015,6.1,5.8,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SE,2016,6.3,6.1,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SE,2017,6.6,6.3,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SE,2018,6.8,6.6,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SE,2019,7.0,6.8,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SE,2020,7.5,7.0,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SE,2021,8.0,7.612495118044302,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SE,2022,8.6,8.13528922048149,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SE,2023,8.7,8.761106369930936,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SE,2024,8.6,8.857889827719328,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SI,2013,3.4,3.3,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SI,2014,3.5,3.4,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SI,2015,3.6,3.5,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SI,2016,3.5,3.6000025120452857,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SI,2017,3.8,3.442857019797673,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SI,2018,4.0,3.8,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SI,2019,3.9,4.0,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SI,2020,4.4,3.9,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SI,2021,4.8,4.4,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SI,2022,4.5,4.894112761428873,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SI,2023,3.8,4.346600035668451,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SI,2024,4.3,3.8142480777258765,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SK,2013,2.6,2.5,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SK,2014,2.8,2.6,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SK,2015,2.8,2.8,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SK,2016,2.9,2.8,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SK,2017,2.8,2.9,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SK,2018,3.2,2.8,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SK,2019,3.7,3.2,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SK,2020,4.2,3.7,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SK,2021,4.3,4.2,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SK,2022,4.3,4.3,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SK,2023,4.2,4.3,"ARIMA auto-AIC (p,q<=2, drift or not)"
+SK,2024,4.6,4.2,"ARIMA auto-AIC (p,q<=2, drift or not)"

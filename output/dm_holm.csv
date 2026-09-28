@@ -1,0 +1,13 @@
+benchmark,model,loss,DM_pooled,p_pooled,t_panel,p_panel,countries_model_better,n_obs,p_pooled_holm,p_panel_holm
+ARIMA,XGBoost,squared,2.121,0.0347,1.4,0.1734,18,323,0.1388,0.6936
+ETS,XGBoost,squared,3.836,0.0002,2.887,0.0077,23,323,0.0014,0.046200000000000005
+Prophet,XGBoost,squared,8.447,0.0,5.053,0.0,24,323,0.0,0.0
+Decision Tree,XGBoost,squared,4.655,0.0,4.377,0.0002,24,323,0.0,0.002
+Random Forest,XGBoost,squared,1.174,0.2413,1.239,0.2266,14,323,0.4826,0.6936
+Decision Tree,Random Forest,squared,4.665,0.0,3.784,0.0008,24,323,0.0,0.007200000000000001
+ETS,ARIMA,squared,3.502,0.0005,3.292,0.0029,19,323,0.003,0.0232
+Prophet,ARIMA,squared,8.232,0.0,4.911,0.0,23,323,0.0,0.0
+Decision Tree,ARIMA,squared,2.765,0.006,1.897,0.069,16,323,0.03,0.34500000000000003
+ARIMA,Random Forest,squared,1.495,0.1359,1.066,0.2964,19,323,0.40769999999999995,0.6936
+XGBoost,Ensemble,squared,0.582,0.5607,0.362,0.7205,12,323,0.5607,0.7205
+ARIMA,Ensemble,squared,4.509,0.0,3.241,0.0033,22,323,0.0,0.0232

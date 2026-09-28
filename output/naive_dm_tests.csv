@@ -1,0 +1,11 @@
+benchmark,model,loss,DM_pooled,p_pooled,t_panel,p_panel,n_countries
+Naive,ARIMA,squared,-2.125,0.0343,-2.087,0.0469,27
+Naive,ARIMA,absolute,-2.701,0.0073,-2.384,0.0247,27
+Naive,ETS,squared,-4.059,0.0001,-3.677,0.0011,27
+Naive,ETS,absolute,-4.593,0.0,-3.93,0.0006,27
+Naive,XGBoost,squared,0.797,0.4263,0.559,0.5808,27
+Naive,XGBoost,absolute,0.911,0.3627,0.64,0.5277,27
+Naive,Prophet,squared,-9.36,0.0,-5.239,0.0,27
+Naive,Prophet,absolute,-11.479,0.0,-5.924,0.0,27
+Naive,Ensemble,squared,1.77,0.0777,1.91,0.0672,27
+Naive,Ensemble,absolute,1.731,0.0845,1.534,0.1371,27

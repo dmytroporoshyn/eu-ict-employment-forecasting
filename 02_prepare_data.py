@@ -69,7 +69,7 @@ def read_eurostat_csv(filename):
     """Read Eurostat CSV and parse the geo column."""
     path = os.path.join(DATA_DIR, filename)
     if not os.path.exists(path):
-        print(f"  Файл не знайдено: {filename}")
+        print(f"  File not found: {filename}")
         return None
     df = pd.read_csv(path)
     # Find the column with geo\TIME_PERIOD pattern
@@ -107,7 +107,7 @@ def process_ict_specialists_pct():
     # Convert to numeric
     result['ict_specialists_pct'] = pd.to_numeric(result['ict_specialists_pct'], errors='coerce')
 
-    print(f"  -> {len(result)} рядків, роки: {result['year'].min()}-{result['year'].max()}")
+    print(f"  -> {len(result)} rows, years: {result['year'].min()}-{result['year'].max()}")
     return result
 
 
@@ -131,7 +131,7 @@ def process_ict_specialists_ths():
     result = result[['geo', 'year', 'ict_specialists_ths']]
     result['ict_specialists_ths'] = pd.to_numeric(result['ict_specialists_ths'], errors='coerce')
 
-    print(f"  -> {len(result)} рядків, роки: {result['year'].min()}-{result['year'].max()}")
+    print(f"  -> {len(result)} rows, years: {result['year'].min()}-{result['year'].max()}")
     return result
 
 
@@ -161,7 +161,7 @@ def process_hightech_employment():
     result = result[['geo', 'year', 'hightech_emp_pct']]
     result['hightech_emp_pct'] = pd.to_numeric(result['hightech_emp_pct'], errors='coerce')
 
-    print(f"  -> {len(result)} рядків, роки: {result['year'].min()}-{result['year'].max()}")
+    print(f"  -> {len(result)} rows, years: {result['year'].min()}-{result['year'].max()}")
     return result
 
 
@@ -193,7 +193,7 @@ def process_gdp_eurostat():
     # Keep only 2004+
     result = result[result['year'] >= 2004]
 
-    print(f"  -> {len(result)} рядків, роки: {result['year'].min()}-{result['year'].max()}")
+    print(f"  -> {len(result)} rows, years: {result['year'].min()}-{result['year'].max()}")
     return result
 
 
@@ -223,7 +223,7 @@ def process_rd_eurostat():
     result['rd_pct_gdp'] = pd.to_numeric(result['rd_pct_gdp'], errors='coerce')
     result = result[result['year'] >= 2004]
 
-    print(f"  -> {len(result)} рядків, роки: {result['year'].min()}-{result['year'].max()}")
+    print(f"  -> {len(result)} rows, years: {result['year'].min()}-{result['year'].max()}")
     return result
 
 
@@ -261,7 +261,7 @@ def process_internet_use():
     result = result[['geo', 'year', 'internet_use_pct']]
     result['internet_use_pct'] = pd.to_numeric(result['internet_use_pct'], errors='coerce')
 
-    print(f"  -> {len(result)} рядків, роки: {result['year'].min()}-{result['year'].max()}")
+    print(f"  -> {len(result)} rows, years: {result['year'].min()}-{result['year'].max()}")
     return result
 
 
@@ -291,7 +291,7 @@ def process_world_bank():
     for filename, col_name in wb_files.items():
         path = os.path.join(DATA_DIR, filename)
         if not os.path.exists(path):
-            print(f"  Файл не знайдено: {filename}")
+            print(f"  File not found: {filename}")
             continue
 
         df = pd.read_csv(path)
@@ -314,7 +314,7 @@ def process_world_bank():
 
         melted = melted[['geo', 'year', col_name]]
         all_dfs.append(melted)
-        print(f"  {col_name}: {melted[col_name].notna().sum()} значень")
+        print(f"  {col_name}: {melted[col_name].notna().sum()} values")
 
     if not all_dfs:
         return pd.DataFrame()
@@ -324,7 +324,7 @@ def process_world_bank():
     for df in all_dfs[1:]:
         result = result.merge(df, on=['geo', 'year'], how='outer')
 
-    print(f"  -> Загалом: {len(result)} рядків")
+    print(f"  -> Total: {len(result)} rows")
     return result
 
 
@@ -335,7 +335,7 @@ def process_world_bank():
 def merge_all():
     """Merge all datasets into a single panel."""
     print("\n" + "=" * 60)
-    print("ПІДГОТОВКА ПАНЕЛЬНОГО ДАТАСЕТУ")
+    print("BUILDING THE PANEL DATASET")
     print("=" * 60 + "\n")
 
     # Process all sources
@@ -411,26 +411,26 @@ if __name__ == "__main__":
 
     # Summary
     print("\n" + "=" * 60)
-    print("ПІДСУМОК ПАНЕЛЬНОГО ДАТАСЕТУ")
+    print("PANEL DATASET SUMMARY")
     print("=" * 60)
-    print(f"Розмір: {panel.shape[0]} рядків x {panel.shape[1]} стовпців")
-    print(f"Країни: {panel['geo'].nunique()} ({', '.join(sorted(panel['geo'].unique()))})")
-    print(f"Роки: {panel['year'].min()} — {panel['year'].max()}")
-    print(f"\nСтовпці:")
+    print(f"Size: {panel.shape[0]} rows x {panel.shape[1]} columns")
+    print(f"Countries: {panel['geo'].nunique()} ({', '.join(sorted(panel['geo'].unique()))})")
+    print(f"Years: {panel['year'].min()}-{panel['year'].max()}")
+    print(f"\nColumns:")
     for col in panel.columns:
         non_null = panel[col].notna().sum()
         pct = non_null / len(panel) * 100
-        print(f"  {col:35s} {non_null:5d} значень ({pct:5.1f}%)")
+        print(f"  {col:35s} {non_null:5d} values ({pct:5.1f}%)")
 
-    print(f"\nЗбережено: {output_path}")
+    print(f"\nSaved: {output_path}")
 
     # Preview
-    print("\n--- Перші 10 рядків ---")
+    print("\n--- First 10 rows ---")
     print(panel.head(10).to_string(index=False))
 
     # Missing data summary per country
-    print("\n--- Пропуски по цільовій змінній (ict_specialists_pct) ---")
+    print("\n--- Coverage of the target variable (ict_specialists_pct) ---")
     target_coverage = panel.groupby('geo')['ict_specialists_pct'].apply(
-        lambda x: f"{x.notna().sum()}/{len(x)} років"
+        lambda x: f"{x.notna().sum()}/{len(x)} years"
     )
     print(target_coverage.to_string())

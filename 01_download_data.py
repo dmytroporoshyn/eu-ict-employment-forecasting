@@ -31,20 +31,20 @@ ISO3_TO_ISO2 = {v: k for k, v in ISO2_TO_ISO3.items()}
 
 def download_eurostat_dataset(code, name):
     """Download one Eurostat dataset as a DataFrame."""
-    print(f"  Завантаження Eurostat: {name} ({code})...")
+    print(f"  Downloading Eurostat: {name} ({code})...")
     try:
         df = eurostat.get_data_df(code)
-        print(f"    -> {df.shape[0]} рядків, {df.shape[1]} стовпців")
+        print(f"    -> {df.shape[0]} rows, {df.shape[1]} columns")
         return df
     except Exception as e:
-        print(f"    -> ПОМИЛКА: {e}")
+        print(f"    -> ERROR: {e}")
         return None
 
 
 def download_eurostat():
     """Download all Eurostat datasets."""
     print("\n" + "=" * 60)
-    print("EUROSTAT: Завантаження датасетів")
+    print("EUROSTAT: downloading datasets")
     print("=" * 60)
 
     datasets = {
@@ -73,7 +73,7 @@ def download_eurostat():
             filename = f"eurostat_{code}.csv"
             df.to_csv(os.path.join(OUTPUT_DIR, filename), index=False)
             results[code] = df
-            print(f"    -> Збережено: {filename}")
+            print(f"    -> Saved: {filename}")
 
     return results
 
@@ -84,7 +84,7 @@ def download_eurostat():
 
 def download_wb_indicator(indicator_code, indicator_name, economies, time_range):
     """Download one World Bank indicator."""
-    print(f"  Завантаження WB: {indicator_name} ({indicator_code})...")
+    print(f"  Downloading WB: {indicator_name} ({indicator_code})...")
     try:
         df = wb.data.DataFrame(
             indicator_code,
@@ -93,17 +93,17 @@ def download_wb_indicator(indicator_code, indicator_name, economies, time_range)
             labels=True,
         )
         df = df.reset_index()
-        print(f"    -> {df.shape[0]} рядків, {df.shape[1]} стовпців")
+        print(f"    -> {df.shape[0]} rows, {df.shape[1]} columns")
         return df
     except Exception as e:
-        print(f"    -> ПОМИЛКА: {e}")
+        print(f"    -> ERROR: {e}")
         return None
 
 
 def download_world_bank():
     """Download all World Bank indicators."""
     print("\n" + "=" * 60)
-    print("WORLD BANK: Завантаження індикаторів")
+    print("WORLD BANK: downloading indicators")
     print("=" * 60)
 
     economies = list(ISO2_TO_ISO3.values())
@@ -140,7 +140,7 @@ def download_world_bank():
             filename = f"wb_{safe_name}.csv"
             df.to_csv(os.path.join(OUTPUT_DIR, filename), index=False)
             results[code] = df
-            print(f"    -> Збережено: {filename}")
+            print(f"    -> Saved: {filename}")
 
     return results
 
@@ -150,23 +150,23 @@ def download_world_bank():
 # ============================================================
 
 if __name__ == "__main__":
-    print("Початок завантаження даних...")
-    print(f"Папка для збереження: {OUTPUT_DIR}")
+    print("Downloading data...")
+    print(f"Output folder: {OUTPUT_DIR}")
 
     eurostat_data = download_eurostat()
     wb_data = download_world_bank()
 
     # Summary
     print("\n" + "=" * 60)
-    print("ПІДСУМОК")
+    print("SUMMARY")
     print("=" * 60)
-    print(f"Eurostat: {len(eurostat_data)} датасетів завантажено")
-    print(f"World Bank: {len(wb_data)} індикаторів завантажено")
+    print(f"Eurostat: {len(eurostat_data)} datasets downloaded")
+    print(f"World Bank: {len(wb_data)} indicators downloaded")
 
     csv_files = [f for f in os.listdir(OUTPUT_DIR) if f.endswith('.csv')]
-    print(f"\nУсього CSV-файлів у папці data/: {len(csv_files)}")
+    print(f"\nCSV files in data/: {len(csv_files)}")
     for f in sorted(csv_files):
         size = os.path.getsize(os.path.join(OUTPUT_DIR, f))
         print(f"  {f} ({size / 1024:.1f} KB)")
 
-    print("\nГотово!")
+    print("\nDone.")

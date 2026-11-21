@@ -69,7 +69,7 @@ def main():
     wide = wide.dropna(subset=models)  # common subsample
     wide = wide.rename(columns={m: f"err_{m}" for m in models})
     n_common = len(wide)
-    print(f"Спільних спостережень для порівняння: {n_common}")
+    print(f"Common observations: {n_common}")
 
     pairs = [
         ("ARIMA", "XGBoost"),
@@ -106,16 +106,16 @@ def main():
     pd.set_option("display.max_columns", 20)
     print("\n=== Diebold-Mariano test results ===")
     print(res.to_string(index=False))
-    print(f"\nЗбережено: {OUT}")
+    print(f"\nSaved: {OUT}")
 
-    print("\n--- Інтерпретація (squared loss, panel DM) ---")
+    print("\n--- Interpretation (squared loss, panel DM) ---")
     for _, r in res[res.loss == "squared"].iterrows():
-        sig = ("значуща, p<0.01" if r.p_panel < 0.01 else
-               "значуща, p<0.05" if r.p_panel < 0.05 else
-               "значуща, p<0.10" if r.p_panel < 0.10 else
-               "НЕзначуща")
+        sig = ("significant, p<0.01" if r.p_panel < 0.01 else
+               "significant, p<0.05" if r.p_panel < 0.05 else
+               "significant, p<0.10" if r.p_panel < 0.10 else
+               "not significant")
         better = r.model if r.mean_loss_diff > 0 else r.benchmark
-        print(f"  {r.model} vs {r.benchmark}: точніша {better}; "
+        print(f"  {r.model} vs {r.benchmark}: more accurate: {better}; "
               f"t={r.t_panel}, p={r.p_panel} ({sig})")
 
 

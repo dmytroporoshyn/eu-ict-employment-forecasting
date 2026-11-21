@@ -6,7 +6,7 @@ Replication code and data for the article
 
 The study forecasts the share of ICT specialists in total employment of the 27 EU countries for 2025–2029 and compares six methods on a common test period (2013–2024): ARIMA and ETS (statistical, estimated per country), and decision tree, random forest, XGBoost (panel models estimated on all 27 countries) and Prophet (per country). Forecast accuracy is compared with Diebold–Mariano tests (pooled and panel versions), and a set of robustness checks separates the contribution of the panel design from that of the learning algorithm.
 
-*Код і дані для відтворення результатів статті про прогнозування частки ІКТ-спеціалістів у зайнятості країн ЄС.*
+*Code and data to reproduce the results of the article on forecasting the share of ICT specialists in employment in EU countries.*
 
 ## Repository structure
 

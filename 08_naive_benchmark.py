@@ -54,7 +54,7 @@ def main():
     wide["Ensemble"] = (wide["ARIMA"] + wide["XGBoost"]) / 2
     wide["Naive"] = wide["naive_pred"]
 
-    print(f"Спільних спостережень: {len(wide)} по {wide['geo'].nunique()} країнах")
+    print(f"Common observations: {len(wide)} in {wide['geo'].nunique()} countries")
 
     # --- 1. metrics ---
     rows = []
@@ -97,7 +97,7 @@ def main():
     dm_df = pd.DataFrame(dm_rows)
     dm_df.to_csv(os.path.join(OUT_DIR, "naive_dm_tests.csv"), index=False)
     print("\n" + dm_df[dm_df.loss == "squared"].to_string(index=False))
-    print("\nЗбережено: output/naive_benchmark.csv, output/naive_dm_tests.csv")
+    print("\nSaved: output/naive_benchmark.csv, output/naive_dm_tests.csv")
 
 
 if __name__ == "__main__":

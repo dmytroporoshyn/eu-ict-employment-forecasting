@@ -6,17 +6,16 @@ Replication code and data for the article
 
 > *Forecasting the share of ICT specialists in employment in EU countries: a comparison of statistical methods and machine learning algorithms* (manuscript under revision at the Journal of Operations Intelligence; submitted under the title *Forecasting employment in information services in EU countries: …*).
 
-The study forecasts the share of ICT specialists in total employment of the 27 EU countries for 2025–2029 and compares six methods on a common test period (2013–2024): ARIMA and ETS (statistical, estimated per country), and decision tree, random forest, XGBoost (panel models estimated on all 27 countries) and Prophet (per country). Forecast accuracy is compared with Diebold–Mariano tests (pooled and panel versions), and a set of robustness checks separates the contribution of the panel design from that of the learning algorithm.
-
-*Code and data to reproduce the results of the article on forecasting the share of ICT specialists in employment in EU countries.*
+The study forecasts the share of ICT specialists in total employment of the 27 EU countries for 2025–2029. Local models (ARIMA, ETS, Prophet) are compared with panel models estimated on all 27 countries (decision tree, random forest, XGBoost and linear regressions) and with an ARIMA + XGBoost combination, using rolling-origin backtesting at horizons of one to five years, two-way (country × year) cluster-robust tests, empirical prediction intervals and an employment-weighted EU aggregate (scripts 16–21). Scripts 01–15 reproduce an earlier one-year-ahead specification.
 
 ## Repository structure
 
 ```
 data/            raw downloads from Eurostat and World Bank + the assembled panel (panel_dataset.csv)
-output/          all numerical results (CSV) and the saved final XGBoost model (xgb_model.json)
-output/print/    the eleven figures of the article at print size (300 dpi)
-01_ ... 15_*.py  analysis scripts (numbers follow the order in which the analysis was developed)
+output/          results of scripts 01-15 (CSV) and the saved XGBoost model (xgb_model.json)
+output/print/    figures of the earlier version at print size (300 dpi)
+output/revision/ results and figures of the revised analysis (scripts 16-21)
+01_ ... 21_*.py  analysis scripts (numbers follow the order in which the analysis was developed)
 ```
 
 ## Requirements
@@ -61,7 +60,7 @@ Scripts 16–21 reproduce all results of the revised manuscript (outputs in `out
 | R5 | `20_revision_figures.py` | figures of the revised manuscript | `output/revision/print/rfig*.png` |
 | R6 | `21_revision_sensitivity.py` | hyper-parameter sensitivity in the revised specification | `output/revision/sensitivity_h1.csv` |
 
-`08_naive_benchmark.py` compares all models with a naive random-walk forecast (`output/naive_benchmark.csv`, `output/naive_dm_tests.csv`). This benchmark was part of an earlier version of the manuscript and is not reported in the final article; it is kept for transparency. `11_research_design_figure.py` and `13_fig_2011_vs_2024.py` produce earlier (screen) versions of Figures 1 and 3 and are kept for completeness. `12_robustness.py` takes about ten minutes because the AIC-selected ARIMA is re-estimated at every cross-validation origin.
+`08_naive_benchmark.py` compares the models of the earlier specification with a naive random-walk forecast (`output/naive_benchmark.csv`, `output/naive_dm_tests.csv`). In the revised analysis, `17_revision_backtest.py` also computes the naive forecast and `18_revision_evaluation.py` reports it in `output/revision/results_revision.md` (accuracy and tests against it); the naive benchmark is not included in the manuscript and is kept here for transparency. `11_research_design_figure.py` and `13_fig_2011_vs_2024.py` produce earlier (screen) versions of Figures 1 and 3 and are kept for completeness. `12_robustness.py` takes about ten minutes because the AIC-selected ARIMA is re-estimated at every cross-validation origin.
 
 `09_tree_models.py` first re-runs the XGBoost cross-validation and asserts that it reproduces `output/cv_results.csv` exactly, which guarantees that all panel models share the same features and folds.
 

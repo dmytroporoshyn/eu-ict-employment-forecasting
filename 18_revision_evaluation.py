@@ -273,9 +273,13 @@ def main():
         for te, be in pairs:
             tests.append(compare(g1, te, be, kind))
     tests = pd.DataFrame(tests)
+    # Holm: over the 16 comparisons reported in the article (without the naive benchmark)
+    # and, for reference, over all 19 comparisons
     for kind in ['squared', 'absolute', 'relative']:
         k = tests.loss == kind
-        tests.loc[k, 'p_2way_holm'] = holm(tests.loc[k, 'p_2way'].values)
+        kn = k & (tests.test != 'Naive') & (tests.bench != 'Naive')
+        tests.loc[kn, 'p_2way_holm'] = holm(tests.loc[kn, 'p_2way'].values)
+        tests.loc[k, 'p_2way_holm_all19'] = holm(tests.loc[k, 'p_2way'].values)
     tests.to_csv(os.path.join(OUT, "tests_h1.csv"), index=False)
     for kind in ['squared', 'absolute', 'relative']:
         md(f'\n### loss = {kind}')

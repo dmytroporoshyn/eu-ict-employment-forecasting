@@ -1,0 +1,277 @@
+"""
+Revision (round 1): final 2025-2029 forecasts with prediction intervals, SHAP of the
+final ex ante XGBoost model, and the employment-weighted EU aggregate.
+
+  * country forecasts of every model from origin 2024 (backtest.csv, main
+    specification) and of the ARIMA + XGBoost combination;
+  * empirical 80% and 95% prediction intervals for every country and horizon:
+    quantiles of all backtest log errors log(actual / forecast) of the same model at
+    the same horizon (origins 2012-2023), applied multiplicatively;
+  * EU aggregate weighted by employment (Reviewer 1):
+        S_t = sum_c E_ct s_ct / sum_c E_ct,   N_t = sum_c E_ct s_ct,
+    with E_c,2024 implied by the Eurostat table itself (ICT specialists in thousands
+    divided by their share) and three employment paths for 2025-2029:
+        E1 constant employment (2024 level),
+        E2 EUROPOP2023 baseline projection of the population aged 15-74 (constant
+           employment rate),
+        E3 continuation of each country's employment growth in 2014-2024 (lfsa_egan);
+    intervals for the aggregate from the backtest errors of the aggregate itself
+    (which keeps the cross-country correlation of errors);
+  * SHAP decomposition (TreeSHAP) of the final ex ante XGBoost model.
+
+Output: output/revision/forecasts_final.csv, intervals_final.csv, eu_aggregate.csv,
+        eu_aggregate_backtest.csv, shap_importance.csv, shap_values.npz, forecast_summary.md
+"""
+import os
+from importlib.machinery import SourceFileLoader
+
+import numpy as np
+import pandas as pd
+import shap
+from scipy import stats
+
+BASE = os.path.dirname(os.path.abspath(__file__))
+OUT = os.path.join(BASE, "output", "revision")
+r17 = SourceFileLoader("r17", os.path.join(BASE, "17_revision_backtest.py")).load_module()
+TARGET = r17.TARGET
+MODELS = ['Naive', 'ARIMA', 'ETS', 'Prophet', 'Decision Tree', 'Random Forest', 'XGBoost',
+          'FE OLS', 'Pooled OLS', 'Ensemble']
+TARGET_N = 20_000  # thousand ICT specialists, Decision (EU) 2022/2481
+LINES = []
+
+
+def md(s=''):
+    LINES.append(s)
+    print(s)
+
+
+def wide_forecasts(bt, origin_filter):
+    loc = bt[bt.spec == 'local']
+    pan = bt[(bt.spec == 'exante') & bt.model.isin(r17.PANEL_MODELS)]
+    x = pd.concat([loc, pan])
+    x = x[origin_filter(x.origin)]
+    w = x.pivot_table(index=['origin', 'geo', 'year', 'h'], columns='model', values='forecast').reset_index()
+    act = x.groupby(['geo', 'year'])['actual'].first()
+    w['actual'] = [act.get((g, y), np.nan) for g, y in zip(w.geo, w.year)]
+    w['Ensemble'] = (w['ARIMA'] + w['XGBoost']) / 2
+    return w
+
+
+def employment_paths(panel):
+    """Growth factors g_ct = E_ct / E_c,2024 for 2025-2029 under E1-E3."""
+    geos = sorted(panel.geo.unique())
+    years = range(2024, 2030)
+    paths = {'E1 constant': pd.DataFrame(1.0, index=geos, columns=years)}
+    pop = pd.read_csv(os.path.join(BASE, "data", "eurostat_proj_23np.csv"))
+    pop = pop.rename(columns={pop.columns[5]: 'geo'})
+    pop = pop[pop.age == 'Y15-74'].copy()
+    pop['geo'] = pop.geo.replace({'EL': 'GR'})
+    pop = pop.set_index('geo')[[str(y) for y in years]].astype(float)
+    pop.columns = [int(c) for c in pop.columns]
+    paths['E2 population 15-74'] = pop.div(pop[2024], axis=0).loc[geos]
+    emp = pd.read_csv(os.path.join(BASE, "data", "eurostat_lfsa_egan.csv"))
+    emp = emp.rename(columns={emp.columns[5]: 'geo'})
+    emp = emp[emp.age == 'Y15-74'].copy()
+    emp['geo'] = emp.geo.replace({'EL': 'GR'})
+    emp = emp.set_index('geo')[['2014', '2024']].astype(float)
+    cagr = (emp['2024'] / emp['2014']) ** (1 / 10)
+    paths['E3 employment trend'] = pd.DataFrame({y: cagr ** (y - 2024) for y in years}).loc[geos]
+    return paths, emp
+
+
+def main():
+    panel = pd.read_csv(os.path.join(BASE, "data", "panel_dataset.csv"))
+    bt = pd.read_csv(os.path.join(OUT, "backtest.csv"))
+    back = wide_forecasts(bt, lambda o: o <= 2023).dropna(subset=MODELS + ['actual'])
+    fin = wide_forecasts(bt, lambda o: o == 2024)
+    s24 = panel[panel.year == 2024].set_index('geo')[TARGET]
+    ict24 = panel[panel.year == 2024].set_index('geo')['ict_specialists_ths']
+
+    # ---------------- country forecasts and empirical intervals
+    rows = []
+    for m in MODELS:
+        le = np.log(back.actual / back[m])
+        for h in range(1, 6):
+            q = np.quantile(le[back.h == h], [0.10, 0.90, 0.025, 0.975])
+            f = fin[fin.h == h]
+            for _, r in f.iterrows():
+                rows.append({'model': m, 'geo': r.geo, 'year': int(r.year), 'h': h,
+                             'forecast': r[m], 'lo80': r[m] * np.exp(q[0]),
+                             'hi80': r[m] * np.exp(q[1]), 'lo95': r[m] * np.exp(q[2]),
+                             'hi95': r[m] * np.exp(q[3])})
+    iv = pd.DataFrame(rows)
+    iv.to_csv(os.path.join(OUT, "intervals_final.csv"), index=False)
+    fin.to_csv(os.path.join(OUT, "forecasts_final.csv"), index=False)
+
+    md('# Final forecasts 2025-2029 (generated by 19_revision_forecast.py)')
+    md('\n## Unweighted mean of national shares (for comparison with the original submission)')
+    um = fin.groupby('year')[MODELS].mean()
+    md(um.round(3).to_string())
+    md(f"2024 actual unweighted mean: {s24.mean():.3f}")
+
+    ens = iv[iv.model == 'Ensemble'].copy()
+    e29 = ens[ens.year == 2029].set_index('geo').join(s24.rename('s2024'))
+    e29['country'] = panel.groupby('geo').country.first()
+    md('\n## Ensemble (ARIMA + XGBoost), 2029, with empirical intervals')
+    md(e29[['country', 's2024', 'forecast', 'lo80', 'hi80', 'lo95', 'hi95']]
+       .sort_values('forecast', ascending=False).round(2).to_string())
+    for m in ['FE OLS', 'XGBoost', 'ARIMA', 'Naive']:
+        f = iv[(iv.model == m) & (iv.year == 2029)].set_index('geo')
+        md(f"\n{m} 2029 by country (forecast [lo80, hi80]): " + ', '.join(
+            f"{g} {f.loc[g, 'forecast']:.2f} [{f.loc[g, 'lo80']:.2f}, {f.loc[g, 'hi80']:.2f}]"
+            for g in f.index))
+    # quantiles used
+    qtab = []
+    for m in MODELS:
+        le = np.log(back.actual / back[m])
+        for h in range(1, 6):
+            qq = np.quantile(le[back.h == h], [0.10, 0.90, 0.025, 0.975])
+            qtab.append({'model': m, 'h': h, 'q10': qq[0], 'q90': qq[1], 'q2.5': qq[2],
+                         'q97.5': qq[3], 'n': int((back.h == h).sum())})
+    qtab = pd.DataFrame(qtab)
+    qtab.to_csv(os.path.join(OUT, "interval_quantiles.csv"), index=False)
+    md('\nLog-error quantiles (Ensemble):')
+    md(qtab[qtab.model == 'Ensemble'].round(4).to_string(index=False))
+
+    # ---------------- employment-weighted aggregate
+    md('\n## Employment-weighted EU aggregate')
+    piv_s = panel.pivot_table(index='geo', columns='year', values=TARGET)
+    piv_n = panel.pivot_table(index='geo', columns='year', values='ict_specialists_ths')
+    emp_impl = piv_n / (piv_s / 100)
+    hist = pd.DataFrame({'N_thousand': piv_n.sum(), 'E_thousand': emp_impl.sum()})
+    hist['S_weighted'] = hist.N_thousand / hist.E_thousand * 100
+    hist['S_unweighted'] = piv_s.mean()
+    hist.to_csv(os.path.join(OUT, "eu_aggregate_history.csv"))
+    md(hist.loc[[2011, 2019, 2020, 2024]].round(3).to_string())
+    paths, emp = employment_paths(panel)
+    e_check = (emp_impl[2024] / emp['2024']).describe()
+    md(f"Check: implied employment 2024 / lfsa_egan Y15-74 2024 = mean {e_check['mean']:.4f}, "
+       f"min {e_check['min']:.4f}, max {e_check['max']:.4f}")
+    md('Employment growth 2024-2029 (EU-27 total) under the paths: ' + ', '.join(
+        f"{k}: {((paths[k][2029] * emp_impl[2024]).sum() / emp_impl[2024].sum() - 1) * 100:.2f}%"
+        for k in paths))
+
+    # backtest errors of the aggregate (actual implied employment as weights)
+    agg_bt = []
+    for (o, h), g in back.groupby(['origin', 'h']):
+        if g.geo.nunique() < 27:
+            continue
+        wts =np.array([emp_impl.loc[gg, yy] for gg, yy in zip(g.geo, g.year)])
+        a = np.sum(wts * g.actual) / wts.sum()
+        r = {'origin': o, 'h': h, 'year': int(g.year.iloc[0]), 'actual': a}
+        for m in MODELS:
+            r[m] = np.sum(wts * g[m]) / wts.sum()
+        agg_bt.append(r)
+    agg_bt = pd.DataFrame(agg_bt)
+    agg_bt.to_csv(os.path.join(OUT, "eu_aggregate_backtest.csv"), index=False)
+    md('\nBacktest of the weighted aggregate: MAE and bias (actual - forecast), pp, by horizon')
+    for h in range(1, 6):
+        g = agg_bt[agg_bt.h == h]
+        md(f"h={h} (n={len(g)}): " + '; '.join(
+            f"{m} MAE {np.mean(np.abs(g.actual - g[m])):.3f} bias {np.mean(g.actual - g[m]):.3f}"
+            for m in ['Naive', 'ARIMA', 'XGBoost', 'FE OLS', 'Ensemble']))
+
+    # Interval of the aggregate: employment-weighted sum of the country bounds. Forecast
+    # errors are strongly correlated across countries (common shocks), so this
+    # corresponds to perfectly correlated errors and gives a conservative (wide) range.
+    agg = []
+    for path, gfac in paths.items():
+        for m in MODELS:
+            for h in range(1, 6):
+                y = 2024 + h
+                f = iv[(iv.model == m) & (iv.year == y)].set_index('geo')
+                E = (emp_impl[2024] * gfac[y]).reindex(f.index)
+                r = {'path': path, 'model': m, 'year': y, 'h': h, 'E_thousand': float(E.sum())}
+                for k in ['forecast', 'lo80', 'hi80', 'lo95', 'hi95']:
+                    N = float((E * f[k] / 100).sum())
+                    suffix = '' if k == 'forecast' else '_' + k
+                    r['N_thousand' + suffix] = N
+                    r['S_weighted' + suffix] = N / float(E.sum()) * 100
+                agg.append(r)
+    agg = pd.DataFrame(agg)
+    agg.to_csv(os.path.join(OUT, "eu_aggregate.csv"), index=False)
+    md('\nWeighted share and number of ICT specialists, 2029 (thousand), by employment path:')
+    t = agg[agg.year == 2029].pivot_table(index='model', columns='path', values='N_thousand')
+    md(t.round(0).to_string())
+    t = agg[agg.year == 2029].pivot_table(index='model', columns='path', values='S_weighted')
+    md(t.round(3).to_string())
+    e = agg[(agg.model == 'Ensemble')]
+    md('\nEnsemble, all years and paths:')
+    md(e[['path', 'year', 'S_weighted', 'S_weighted_lo80', 'S_weighted_hi80', 'S_weighted_lo95',
+          'S_weighted_hi95', 'N_thousand', 'N_thousand_lo80', 'N_thousand_hi80', 'N_thousand_lo95',
+          'N_thousand_hi95']].round(3).to_string(index=False))
+    md('\nAll models, 2029, E1 and E3, N (thousand) with 95% upper bound:')
+    for path in ['E1 constant', 'E3 employment trend']:
+        t = agg[(agg.year == 2029) & (agg.path == path)].set_index('model')
+        md(f"{path}: " + '; '.join(f"{m} {t.loc[m, 'N_thousand']:.0f} [{t.loc[m, 'N_thousand_lo95']:.0f}, "
+                                   f"{t.loc[m, 'N_thousand_hi95']:.0f}]" for m in MODELS))
+    n24 = hist.loc[2024, 'N_thousand']
+    for path in paths:
+        r = agg[(agg.model == 'Ensemble') & (agg.year == 2029) & (agg.path == path)].iloc[0]
+        md(f"{path}: N2029 = {r.N_thousand:.0f} thousand ({r.N_thousand / TARGET_N * 100:.1f}% of target), "
+           f"gap closed since 2024 = {(r.N_thousand - n24) / (TARGET_N - n24) * 100:.1f}%; "
+           f"80% [{r.N_thousand_lo80:.0f}, {r.N_thousand_hi80:.0f}], 95% [{r.N_thousand_lo95:.0f}, "
+           f"{r.N_thousand_hi95:.0f}]")
+    # historical paces of the weighted share
+    sw = hist.S_weighted
+    p1 = (sw[2024] - sw[2011]) / 13
+    p2 = (sw[2024] - sw[2019]) / 5
+    md(f"\nWeighted share 2011 {sw[2011]:.3f}, 2019 {sw[2019]:.3f}, 2024 {sw[2024]:.3f}; "
+       f"pace 2011-2024 {p1:.3f} pp/yr, 2020-2024 {p2:.3f} pp/yr; N 2019 {hist.loc[2019, 'N_thousand']:.0f}, "
+       f"N 2024 {n24:.0f}; avg annual increase of N 2019-2024 "
+       f"{(n24 - hist.loc[2019, 'N_thousand']) / 5:.0f} thousand")
+    E24 = hist.loc[2024, 'E_thousand']
+    for path, gfac in paths.items():
+        E29 = float((emp_impl[2024] * gfac[2029]).sum())
+        g_ann = (E29 / E24) ** (1 / 5)
+        E30 = E29 * g_ann
+        for lab, pace in [('2011-2024 pace', p1), ('2020-2024 pace', p2)]:
+            s30 = sw[2024] + 6 * pace
+            md(f"  {path}, {lab}: share 2030 = {s30:.2f}%, N 2030 = {s30 / 100 * E30:.0f} thousand")
+        md(f"  {path}: share needed in 2030 for 20 million = {TARGET_N / E30 * 100:.2f}% "
+           f"(E2030 = {E30:.0f} thousand); required pace = {(TARGET_N / E30 * 100 - sw[2024]) / 6:.3f} pp/yr")
+    md(f"Largest annual increase of the weighted share 2011-2024: {sw.diff().loc[2012:2024].max():.3f} pp "
+       f"({int(sw.diff().loc[2012:2024].idxmax())})")
+
+    # ---------------- SHAP of the final ex ante XGBoost
+    T = 2024
+    ydf = panel[(panel.year <= T) & panel[TARGET].notna()][['geo', 'country', 'year', TARGET]].copy()
+    feat = r17.exog_frame(panel, 'exante', T)
+    rows_ = r17.build_rows(ydf, feat)
+    train = rows_.dropna(subset=r17.LAGF + [TARGET])
+    train = train[train.year >= 2007].copy()
+    med = train[r17.EXOG].median()
+    train[r17.EXOG] = train[r17.EXOG].fillna(med)
+    X = train[r17.FEATURES].astype(float)
+    model = r17.xgb_factory()
+    model.fit(X, train[TARGET].astype(float))
+    # sanity: same model as the one that produced the 2025 forecasts in backtest.csv
+    sv = shap.TreeExplainer(model)(X)
+    imp = pd.Series(np.abs(sv.values).mean(axis=0), index=r17.FEATURES).sort_values(ascending=False)
+    imp.to_csv(os.path.join(OUT, "shap_importance.csv"), header=['mean_abs_shap'])
+    np.savez(os.path.join(OUT, "shap_values.npz"), values=sv.values, data=sv.data,
+             base=sv.base_values, features=np.array(r17.FEATURES))
+    ar = imp[[f for f in imp.index if f in r17.LAGF]].sum() / imp.sum() * 100
+    md(f"\n## SHAP (final ex ante XGBoost, {len(X)} observations)")
+    md(f"autoregressive share {ar:.1f}%, other {100 - ar:.1f}%")
+    md(imp.round(4).to_string())
+
+    # ---------------- leaders and tree bound in the final forecast
+    for g in ['SE', 'LU', 'FI', 'EE']:
+        f = fin[(fin.geo == g)].set_index('year')
+        md(f"{g} 2024 = {s24[g]:.2f}; 2029: XGB {f.loc[2029, 'XGBoost']:.2f}, RF {f.loc[2029, 'Random Forest']:.2f}, "
+           f"ARIMA {f.loc[2029, 'ARIMA']:.2f}, FE OLS {f.loc[2029, 'FE OLS']:.2f}, Ens {f.loc[2029, 'Ensemble']:.2f}")
+    md(f"Max of training targets: {panel[TARGET].max():.2f}; max XGB forecast 2025-2029: "
+       f"{fin.XGBoost.max():.2f}; max RF: {fin['Random Forest'].max():.2f}")
+    flat = fin[fin.year == 2029].set_index('geo')
+    flat = flat[(flat.Ensemble - s24.reindex(flat.index)).abs() <= 0.03]
+    md(f"Countries with |Ensemble 2029 - 2024| <= 0.03 pp: {list(flat.index)}")
+    dec = fin[fin.year == 2029].set_index('geo')
+    md(f"Countries where XGBoost 2029 < 2024 actual: {list(dec.index[dec.XGBoost < s24.reindex(dec.index)])}")
+
+    with open(os.path.join(OUT, "forecast_summary.md"), "w", encoding="utf-8") as fh:
+        fh.write('\n'.join(LINES) + '\n')
+
+
+if __name__ == "__main__":
+    main()

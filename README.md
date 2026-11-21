@@ -2,7 +2,7 @@
 
 Replication code and data for the article
 
-> Poroshyn, D. *Forecasting employment in information services in the EU countries: a comparison of statistical methods and machine learning algorithms* (manuscript submitted to the Journal of Operations Intelligence).
+> *Forecasting the share of ICT specialists in employment in EU countries: a comparison of statistical methods and machine learning algorithms* (manuscript under revision at the Journal of Operations Intelligence; submitted under the title *Forecasting employment in information services in EU countries: …*).
 
 The study forecasts the share of ICT specialists in total employment of the 27 EU countries for 2025–2029 and compares six methods on a common test period (2013–2024): ARIMA and ETS (statistical, estimated per country), and decision tree, random forest, XGBoost (panel models estimated on all 27 countries) and Prophet (per country). Forecast accuracy is compared with Diebold–Mariano tests (pooled and panel versions), and a set of robustness checks separates the contribution of the panel design from that of the learning algorithm.
 
@@ -46,6 +46,19 @@ Run the scripts from the repository root in this order (on Windows use `py` inst
 | 11 | `12_robustness.py` | panel linear regressions, XGBoost grid, ex ante ensemble, ARIMA with 2011 break dummy, AIC-selected ARIMA, Holm correction, CAGR 2011–2024 | `output/robustness_extra.csv`, `output/xgb_sensitivity.csv`, `output/dm_holm.csv`, `output/cagr_2011_2024.csv` | Table 4, Table 7, Section 3.1 |
 | 12 | `14_figures_print.py` | all figures of the article at print size | `output/print/fig01–fig11` | Figures 1–11 |
 
+### Revised manuscript (round 1 of peer review)
+
+Scripts 16–21 reproduce all results of the revised manuscript (outputs in `output/revision/`). They implement the reviewers' requests: imputation within each training fold, the same information set for all models (exogenous predictors lagged by one year), multi-horizon rolling-origin backtesting (h = 1–5), prediction intervals, two-way (country × year) cluster-robust tests and bootstrap, nested validation of the combination, checks of the 2011 and 2021 breaks and the employment-weighted EU aggregate.
+
+| Step | Script | What it does | Main outputs |
+|------|--------|--------------|--------------|
+| R1 | `16_download_employment.py` | downloads Eurostat `lfsa_egan` and EUROPOP2023 `proj_23np` | `data/eurostat_lfsa_egan.csv`, `data/eurostat_proj_23np.csv` |
+| R2 | `17_revision_backtest.py` | multi-horizon backtest of all models (origins 2012–2023) and final forecasts (origin 2024); checks that the engine reproduces `output/cv_results.csv` exactly; `--aic` adds AIC-selected ARIMA (≈7 min) | `output/revision/backtest.csv`, `backtest_aic.csv` |
+| R3 | `18_revision_evaluation.py` | accuracy by horizon, interval coverage, two-way tests, nested combination, 2021 break, robustness | `output/revision/results_revision.md` and CSV tables |
+| R4 | `19_revision_forecast.py` | 2025–2029 forecasts with empirical intervals, SHAP, employment-weighted EU aggregate | `output/revision/forecast_summary.md`, `intervals_final.csv`, `eu_aggregate.csv` |
+| R5 | `20_revision_figures.py` | figures of the revised manuscript | `output/revision/print/rfig*.png` |
+| R6 | `21_revision_sensitivity.py` | hyper-parameter sensitivity in the revised specification | `output/revision/sensitivity_h1.csv` |
+
 `08_naive_benchmark.py` compares all models with a naive random-walk forecast (`output/naive_benchmark.csv`, `output/naive_dm_tests.csv`). This benchmark was part of an earlier version of the manuscript and is not reported in the final article; it is kept for transparency. `11_research_design_figure.py` and `13_fig_2011_vs_2024.py` produce earlier (screen) versions of Figures 1 and 3 and are kept for completeness. `12_robustness.py` takes about ten minutes because the AIC-selected ARIMA is re-estimated at every cross-validation origin.
 
 `09_tree_models.py` first re-runs the XGBoost cross-validation and asserts that it reproduces `output/cv_results.csv` exactly, which guarantees that all panel models share the same features and folds.
@@ -57,7 +70,7 @@ Results are deterministic (fixed random seeds). Random forest predictions may di
 * Eurostat, datasets `isoc_sks_itspt`, `htec_emp_nat2`, `isoc_ci_ifp_iu`, `nama_10_pc`, `rd_e_gerdtot` (https://ec.europa.eu/eurostat/data/database). Reuse is authorised provided the source is acknowledged (Commission Decision 2011/833/EU).
 * World Bank, World Development Indicators: `SL.SRV.EMPL.ZS`, `IT.NET.BBND.P2`, `NY.GDP.PCAP.CD`, `BX.GSR.CCIS.ZS`, `SE.TER.ENRR` (https://databank.worldbank.org/source/world-development-indicators), CC BY 4.0.
 
-Data were downloaded on 28 June 2026. Note that the Eurostat ICT-specialist series has a methodological break in 2011 (transition of the EU Labour Force Survey to ISCO-08); see Section 2.2 of the article.
+The panel data were downloaded on 12 April 2026 (file dates; values match the Eurostat release before its revision of 17 April 2026); `lfsa_egan` and `proj_23np` on 21 November 2026. Note that the Eurostat ICT-specialist series has a methodological break in 2011 (transition of the EU Labour Force Survey to ISCO-08); see Section 2.2 of the article.
 
 ## Licence
 

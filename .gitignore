@@ -11,3 +11,6 @@ Thumbs.db
 # (the article's figures are published in output/print/)
 output/fig*.png
 output/*.txt
+
+# run logs of the revision scripts
+output/revision/*.log

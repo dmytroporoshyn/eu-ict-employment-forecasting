@@ -1,14 +1,23 @@
 cff-version: 1.2.0
 message: "If you use this code or data, please cite it as below."
-title: "Forecasting ICT employment in the EU: statistical methods vs machine learning (replication code and data)"
+title: "Forecasting the share of ICT specialists in employment in EU countries: replication code and data"
 type: software
 authors:
   - family-names: Poroshyn
     given-names: Dmytro
-    # orcid: "https://orcid.org/0000-0000-0000-0000"   # TODO: add ORCID
-version: "1.0.0"
-date-released: "2026-09-28"
+    orcid: "https://orcid.org/0009-0000-9571-7829"
+    affiliation: "Sumy State University"
+version: "1.1.0"
+date-released: "2026-11-21"
 license: MIT
+repository-code: "https://github.com/dmytroporoshyn/eu-ict-employment-forecasting"
+abstract: >-
+  Code and data for forecasting the share of ICT specialists in total employment
+  in the 27 EU countries for 2025-2029 and comparing statistical methods (ARIMA, ETS)
+  with machine learning (Prophet, decision tree, random forest, XGBoost) and panel
+  linear regressions. Scripts 01-15 reproduce the submitted manuscript; scripts 16-21
+  reproduce the revised manuscript (multi-horizon backtesting, two-way cluster-robust
+  tests, prediction intervals, employment-weighted EU aggregate).
 keywords:
   - employment forecasting
   - ICT specialists
@@ -16,7 +25,7 @@ keywords:
   - ARIMA
   - XGBoost
   - random forest
-  - Prophet
   - panel data
-  - Diebold-Mariano test
+  - multi-horizon evaluation
+  - prediction intervals
   - European Union

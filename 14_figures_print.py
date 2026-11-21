@@ -1,13 +1,8 @@
-"""
-Друкарські версії всіх рисунків статті для подання в JOPI.
+"""Print versions of all figures for the JOPI submission: built at page size (6.5 in)
+with 8-9 pt fonts and saved at 300 dpi; titles are omitted (captions are in the text).
 
-Вимоги журналу: >= 300 dpi (або >= 1000 px), шрифт на рисунку не менше 8 pt.
-Тому кожен рисунок будується одразу у фізичному розмірі сторінки
-(ширина 6,5 дюйма = 16,5 см) з базовим шрифтом 8-9 pt і зберігається з 300 dpi.
-Заголовки прибрано (їх замінюють підписи у тексті), легенди спільні.
-
-Вхід: data/panel_dataset.csv, output/*.csv, output/xgb_model.json
-Вихід: output/print/fig01 ... fig11 (*.png, 300 dpi)
+Input: data/panel_dataset.csv, output/*.csv, output/xgb_model.json
+Output: output/print/fig01 ... fig11 (*.png, 300 dpi)
 """
 import os
 import warnings
@@ -30,7 +25,7 @@ OUT = os.path.join(BASE, "output")
 PRINT = os.path.join(OUT, "print")
 os.makedirs(PRINT, exist_ok=True)
 TARGET = 'ict_specialists_pct'
-W = 6.5            # ширина текстового поля, дюйми
+W = 6.5            # text width, inches
 DPI = 300
 MIN_PT = 8
 
@@ -51,7 +46,7 @@ names = df[['geo', 'country']].drop_duplicates().set_index('geo')['country']
 
 
 def save(fig, name):
-    """Зберігає рисунок і перевіряє, що жоден текст не менший за 8 pt."""
+    """Save the figure and check that no text is smaller than 8 pt."""
     small = [t.get_text() for t in fig.findobj(matplotlib.text.Text)
              if t.get_text().strip() and t.get_fontsize() < MIN_PT - 1e-6]
     assert not small, f"{name}: text below {MIN_PT} pt: {small[:5]}"
@@ -63,7 +58,7 @@ def save(fig, name):
     print(f"  {name}: {w}x{h}px")
 
 
-# ---------------------------------------------------------------- 1. схема
+# ---------------------------------------------------------------- 1. research design
 DESIGN_TEXT = {
     'uk': [
         ('Етап 1. Формування панельного датасету',
@@ -155,7 +150,7 @@ def fig_design(lang='uk'):
     save(fig, "fig01_research_design.png" if lang == 'uk' else f"fig01_research_design_{lang}.png")
 
 
-# ---------------------------------------------------------------- 2. динаміка
+# ---------------------------------------------------------------- 2. trends
 def fig_trends():
     fig, axes = plt.subplots(1, 2, figsize=(W, 3.1))
     ax = axes[0]
@@ -210,7 +205,7 @@ def fig_2011_2024():
     save(fig, "fig03_2011_vs_2024.png")
 
 
-# ---------------------------------------------------------------- 4. кореляції
+# ---------------------------------------------------------------- 4. correlations
 def fig_corr():
     cols = ['ict_specialists_pct', 'hightech_emp_pct', 'gdp_pc_eur', 'rd_pct_gdp',
             'internet_use_pct', 'services_employment_pct', 'broadband_per100',
@@ -239,7 +234,7 @@ def fig_corr():
     save(fig, "fig04_correlation.png")
 
 
-# ---------------------------------------------------------------- 5. метрики
+# ---------------------------------------------------------------- 5. metrics
 def fig_metrics():
     s = pd.read_csv(os.path.join(OUT, "model_comparison_all.csv")).set_index('model').loc[MODELS]
     short = ['ARIMA', 'ETS', 'XGBoost', 'RF', 'DT', 'Prophet']
@@ -255,7 +250,7 @@ def fig_metrics():
     save(fig, "fig05_model_comparison.png")
 
 
-# ---------------------------------------------------------------- 6. факт/прогноз
+# ---------------------------------------------------------------- 6. actual vs predicted
 def fig_scatter():
     cv = pd.concat([pd.read_csv(os.path.join(OUT, "cv_results.csv")),
                     pd.read_csv(os.path.join(OUT, "cv_results_trees.csv"))])
@@ -322,7 +317,7 @@ def fig_shap():
     save(fig, "fig08_shap_beeswarm.png")
 
 
-# ---------------------------------------------------------------- 9. прогнози
+# ---------------------------------------------------------------- 9. forecasts
 def fig_forecasts():
     fc = pd.concat([pd.read_csv(os.path.join(OUT, "forecasts_2025_2029.csv")),
                     pd.read_csv(os.path.join(OUT, "forecasts_trees.csv"))])
@@ -347,7 +342,7 @@ def fig_forecasts():
     save(fig, "fig09_forecasts_by_country.png")
 
 
-# ---------------------------------------------------------------- 10-11. сценарії
+# ---------------------------------------------------------------- 10-11. scenarios
 def fig_scenarios():
     sc = pd.read_csv(os.path.join(OUT, "scenarios_2025_2029.csv"))
     eu = sc.groupby('year')[['pessimistic', 'base', 'optimistic']].mean()

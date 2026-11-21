@@ -64,7 +64,54 @@ def save(fig, name):
 
 
 # ---------------------------------------------------------------- 1. схема
-def fig_design():
+DESIGN_TEXT = {
+    'uk': [
+        ('Етап 1. Формування панельного датасету',
+         'Eurostat, World Bank: 27 країн ЄС × 2004–2024 рр.\n'
+         'цільова змінна — частка ІКТ-спеціалістів у зайнятості (%), 8 екзогенних предикторів'),
+        ('Етап 2а. Локальні моделі',
+         'окрема модель для кожної країни,\nлише власна історія ряду\n\n'
+         'статистичні: ARIMA(1,1,1), ETS\nML: Prophet'),
+        ('Етап 2б. Панельні моделі',
+         'одна модель для всіх 27 країн, 16 ознак:\nлаги, ковзні середні, екзогенні змінні\n\n'
+         'ML: дерево рішень → випадковий ліс\n→ XGBoost'),
+        ('Етап 3. Оцінювання точності',
+         'крос-валідація з розширюваним вікном: 12 точок прогнозу, тестові роки 2013–2024,\n'
+         'прогноз на 1 рік уперед, 323 спільні прогнози; метрики MAE, RMSE, MAPE;\n'
+         "тест Дібольда-Маріано (об'єднаний і панельний); перевірки робастності"),
+        ('Етап 4. Інтерпретація та комбінування',
+         'SHAP-декомпозиція моделі XGBoost: внесок авторегресійних та екзогенних ознак\n'
+         'ансамбль ARIMA + XGBoost з рівними вагами'),
+        ('Етап 5. Прогноз і сценарії на 2025–2029 рр.',
+         'ітеративний прогноз усіма моделями; три сценарії (50%, 100% і 150% приросту\n'
+         'базової траєкторії ARIMA + XGBoost) для кожної країни та агрегату ЄС-27'),
+    ],
+    'en': [
+        ('Stage 1. Building the panel dataset',
+         'Eurostat, World Bank: 27 EU countries × 2004–2024\n'
+         'target variable: ICT specialists, % of total employment; 8 exogenous predictors'),
+        ('Stage 2a. Local models',
+         'a separate model for each country,\nusing only the series\' own history\n\n'
+         'statistical: ARIMA(1,1,1), ETS\nML: Prophet'),
+        ('Stage 2b. Panel models',
+         'one model for all 27 countries, 16 features:\nlags, rolling means, exogenous variables\n\n'
+         'ML: decision tree → random forest\n→ XGBoost'),
+        ('Stage 3. Accuracy evaluation',
+         'expanding-window cross-validation: 12 forecast origins, test years 2013–2024,\n'
+         'one-year-ahead forecasts, 323 common forecasts; metrics: MAE, RMSE, MAPE;\n'
+         'Diebold–Mariano test (pooled and panel); robustness checks'),
+        ('Stage 4. Interpretation and combination',
+         'SHAP decomposition of XGBoost: contributions of autoregressive and exogenous\n'
+         'features; equal-weight ARIMA + XGBoost ensemble'),
+        ('Stage 5. Forecasts and scenarios for 2025–2029',
+         'recursive forecasts from all models; three scenarios (50%, 100% and 150%\n'
+         'of baseline ARIMA + XGBoost growth) for each country and the EU-27 aggregate'),
+    ],
+}
+
+
+def fig_design(lang='uk'):
+    s1, s2a, s2b, s3, s4, s5 = DESIGN_TEXT[lang]
     ink, edge = '#1f2a36', '#4e6a85'
     fig, ax = plt.subplots(figsize=(W, 5.6))
     ax.set_xlim(-0.012, 1.012)
@@ -86,39 +133,26 @@ def fig_design():
 
     X, Wd, G = 0.0, 1.0, 0.035
     y, h = 1.0, 0.125
-    box(X, y - h, Wd, h, 'Етап 1. Формування панельного датасету',
-        'Eurostat, World Bank: 27 країн ЄС × 2004–2024 рр.\n'
-        'цільова змінна — частка ІКТ-спеціалістів у зайнятості (%), 8 екзогенних предикторів')
+    box(X, y - h, Wd, h, *s1)
     arrow(0.5, y - h, 0.5, y - h - G)
     y -= h + G
     h, half = 0.235, 0.49
-    box(X, y - h, half, h, 'Етап 2а. Локальні моделі',
-        'окрема модель для кожної країни,\nлише власна історія ряду\n\n'
-        'статистичні: ARIMA(1,1,1), ETS\nML: Prophet', fill='#e6eef7')
-    box(1 - half, y - h, half, h, 'Етап 2б. Панельні моделі',
-        'одна модель для всіх 27 країн, 16 ознак:\nлаги, ковзні середні, екзогенні змінні\n\n'
-        'ML: дерево рішень → випадковий ліс\n→ XGBoost', fill='#f7ebe9')
+    box(X, y - h, half, h, *s2a, fill='#e6eef7')
+    box(1 - half, y - h, half, h, *s2b, fill='#f7ebe9')
     arrow(half / 2, y - h, 0.42, y - h - G)
     arrow(1 - half / 2, y - h, 0.58, y - h - G)
     y -= h + G
     h = 0.155
-    box(X, y - h, Wd, h, 'Етап 3. Оцінювання точності',
-        'крос-валідація з розширюваним вікном: 12 точок прогнозу, тестові роки 2013–2024,\n'
-        'прогноз на 1 рік уперед, 323 спільні прогнози; метрики MAE, RMSE, MAPE;\n'
-        "тест Дібольда-Маріано (об'єднаний і панельний); перевірки робастності")
+    box(X, y - h, Wd, h, *s3)
     arrow(0.5, y - h, 0.5, y - h - G)
     y -= h + G
     h = 0.13
-    box(X, y - h, Wd, h, 'Етап 4. Інтерпретація та комбінування',
-        'SHAP-декомпозиція моделі XGBoost: внесок авторегресійних та екзогенних ознак\n'
-        'ансамбль ARIMA + XGBoost з рівними вагами')
+    box(X, y - h, Wd, h, *s4)
     arrow(0.5, y - h, 0.5, y - h - G)
     y -= h + G
     h = 0.13
-    box(X, y - h, Wd, h, 'Етап 5. Прогноз і сценарії на 2025–2029 рр.',
-        'ітеративний прогноз усіма моделями; три сценарії (50%, 100% і 150% приросту\n'
-        'базової траєкторії ARIMA + XGBoost) для кожної країни та агрегату ЄС-27')
-    save(fig, "fig01_research_design.png")
+    box(X, y - h, Wd, h, *s5)
+    save(fig, "fig01_research_design.png" if lang == 'uk' else f"fig01_research_design_{lang}.png")
 
 
 # ---------------------------------------------------------------- 2. динаміка
@@ -338,6 +372,7 @@ def fig_scenarios():
                Patch(color='steelblue', alpha=0.2, label='Scenario range')]
     fig, ax = plt.subplots(figsize=(W, 3.0))
     draw(ax, hist, eu)
+    ax.set_xticks([2011, 2014, 2017, 2020, 2024, 2029])
     ax.set_xlabel('Year')
     ax.set_ylabel('ICT specialists, %')
     ax.legend(handles=handles, loc='upper left')
@@ -359,6 +394,7 @@ def fig_scenarios():
 
 if __name__ == "__main__":
     fig_design()
+    fig_design('en')
     fig_trends()
     fig_2011_2024()
     fig_corr()

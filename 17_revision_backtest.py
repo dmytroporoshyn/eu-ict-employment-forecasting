@@ -1,34 +1,9 @@
-"""
-Revision (round 1): multi-horizon rolling-origin backtest.
+"""Multi-horizon rolling-origin backtest (origins 2012-2023, h = 1-5) and final forecasts
+(origin 2024). Panel specifications: exante (main; predictors at t-1, fold-wise
+medians), exante_cty (within-country imputation), conditional (predictors of the
+target year), legacy (reproduces output/cv_results.csv).
 
-Changes requested by the reviewers and implemented here:
-  * fold-wise imputation: missing exogenous values are filled with medians
-    computed on the training rows of the current origin only (no look-ahead);
-  * equal information set: in the main ("ex ante") specification the panel
-    models use exogenous predictors lagged by one year, so the forecast for
-    year t uses only information available at t-1, as ARIMA does; beyond the
-    forecast origin the predictors are held at their last observed value;
-  * multi-horizon evaluation: forecasts are made from every origin T = 2012..2023
-    for h = 1..5 years ahead (targets up to 2024); the same code with T = 2024
-    produces the final 2025-2029 forecasts;
-  * native prediction intervals (80% and 95%) are stored where the model
-    provides them (naive random walk, ARIMA, ETS, Prophet). Empirical intervals
-    for all models are computed in 18_revision_evaluation.py.
-
-Specifications of the panel models
-  exante      main: exogenous predictors at t-1, fold-wise median imputation
-  exante_cty  robustness: as exante, but gaps filled within each country
-              (last/first observed value up to the origin), then medians
-  conditional robustness: exogenous predictors of the target year itself
-              (conditional forecast, as in the original submission), fold-wise
-              medians; only h = 1 is meaningful (future values are "known")
-  legacy      replication only: conditional + full-sample medians, XGBoost,
-              h = 1 -- must reproduce output/cv_results.csv exactly
-
-Output: output/revision/backtest.csv   (one row per spec x model x origin x
-        country x horizon) and output/revision/replication_check.txt
-Run:    py 17_revision_backtest.py            (about 5-6 minutes)
-        py 17_revision_backtest.py --aic      (adds ARIMA with AIC order selection, +10 min)
+Output: output/revision/backtest.csv. Option --aic adds AIC-selected ARIMA.
 """
 import logging
 import os
@@ -124,11 +99,7 @@ PANEL_MODELS = {
 
 # ------------------------------------------------------------ panel engine
 def exog_frame(panel, spec, T):
-    """Exogenous feature values per (geo, year) for rows up to T+H, as seen at origin T.
-
-    exante*: feature of year t = x_{t-1}; for t-1 > T the last observed x_T is kept.
-    conditional / legacy: feature of year t = x_t (actual, incl. future years).
-    """
+    """Exogenous features up to T+H as seen at origin T (exante: x_{t-1}, held at x_T)."""
     years = range(FIRST_YEAR, T + H + 1)
     idx = pd.MultiIndex.from_product([sorted(panel.geo.unique()), years], names=['geo', 'year'])
     x = panel.set_index(['geo', 'year'])[EXOG].reindex(idx)
@@ -154,12 +125,10 @@ def build_rows(ydf, feat):
 
 
 def impute(train, test, how, med):
-    """Fill gaps in exogenous features. `med` = training-fold medians (or, for the
-    legacy replication, the full-sample medians of the original code)."""
+    """Fill gaps with training-fold medians (within-country first for exante_cty)."""
     train, test = train.copy(), test.copy()
     if how == 'country':
-        # within-country fill using only rows visible at the origin (train + test rows,
-        # whose features are dated <= origin in the ex ante specification)
+        # within-country fill from rows visible at the origin
         both = pd.concat([train.assign(_t=0), test.assign(_t=1)]).sort_values(['geo', 'year'])
         both[EXOG] = both.groupby('geo')[EXOG].transform(lambda s: s.ffill().bfill())
         train = both[both._t == 0].drop(columns='_t').sort_values(['geo', 'year'])
@@ -253,7 +222,7 @@ def local_origin(panel, T, with_aic=False):
         except Exception as e:
             print('ARIMA fail', g, T, e)
 
-        # ARIMA(1,1,1) with step dummies for the 2011 and 2021 breaks (when inside the window)
+        # ARIMA(1,1,1) with step dummies for the 2011 and 2021 breaks
         try:
             ex_cols = [b for b in (2011, 2021) if tr.index.min() < b <= tr.index.max()]
             if ex_cols:
@@ -279,7 +248,7 @@ def local_origin(panel, T, with_aic=False):
         except Exception as e:
             print('ETS fail', g, T, e)
 
-        # Prophet (same settings as 04_models.py); intervals from predictive samples
+        # Prophet (as in 04_models.py), intervals from predictive samples
         try:
             dfp = pd.DataFrame({'ds': pd.to_datetime(tr.index.astype(str), format='%Y'),
                                 'y': tr.values})

@@ -1,18 +1,5 @@
-"""
-Наївний бенчмарк (випадкове блукання) як опорна модель порівняння.
-
-Наївний прогноз: y_hat(t) = y(t-1). Це найжорсткіший базовий орієнтир
-для персистентних макроекономічних рядів: його похибка тотожно дорівнює
-фактичній річній зміні показника.
-
-Рахує на тій самій спільній підвибірці, що й 06_dm_test.py:
-  1) метрики MAE/RMSE/MAPE для наївної моделі, чотирьох основних моделей
-     та ансамблю (ARIMA + XGBoost) / 2;
-  2) тест Дібольда-Маріано кожної моделі ПРОТИ наївної, у двох
-     специфікаціях (pooled з HLN-корекцією та панельній).
-
-Знакова конвенція успадкована з 06_dm_test.py:
-  DM > 0  =>  benchmark (наївна) гірша, тобто модель точніша.
+"""Naive (random walk) benchmark: accuracy and DM tests of all models against it on the
+common subsample of 06_dm_test.py. DM > 0 means the model beats the naive forecast.
 """
 import os
 
@@ -27,8 +14,7 @@ CV = os.path.join(BASE, "output", "cv_results.csv")
 OUT_DIR = os.path.join(BASE, "output")
 TARGET = "ict_specialists_pct"
 
-# перевикористовуємо реалізацію тестів з 06_dm_test.py, щоб знаки й
-# HLN-корекція були тотожні тим, що вже наведені у статті
+# reuse the tests of 06_dm_test.py (same sign convention and HLN correction)
 _dm = SourceFileLoader("dm_mod", os.path.join(BASE, "06_dm_test.py")).load_module()
 diebold_mariano = _dm.diebold_mariano
 panel_dm = _dm.panel_dm
@@ -50,7 +36,7 @@ def main():
     cv = pd.read_csv(CV)
     panel = pd.read_csv(DATA)[["geo", "year", TARGET]].rename(columns={TARGET: "y"})
 
-    # значення попереднього року -> наївний прогноз
+    # previous year's value = naive forecast
     prev = panel.copy()
     prev["year"] = prev["year"] + 1
     prev = prev.rename(columns={"y": "naive_pred"})
@@ -62,20 +48,20 @@ def main():
     actual = cv.groupby(["geo", "year"], as_index=False)["actual"].first()
 
     wide = wide_pred.merge(actual, on=["geo", "year"]).merge(prev, on=["geo", "year"])
-    wide = wide.dropna(subset=models + ["naive_pred", "actual"])  # спільна підвибірка
+    wide = wide.dropna(subset=models + ["naive_pred", "actual"])  # common subsample
 
-    # ансамбль двох найточніших моделей
+    # combination of the two most accurate models
     wide["Ensemble"] = (wide["ARIMA"] + wide["XGBoost"]) / 2
     wide["Naive"] = wide["naive_pred"]
 
     print(f"Спільних спостережень: {len(wide)} по {wide['geo'].nunique()} країнах")
 
-    # --- 1. метрики ---
+    # --- 1. metrics ---
     rows = []
     for name in ["Naive"] + models + ["Ensemble"]:
         m = metrics(wide["actual"], wide[name])
         m["model"] = name
-        # у скількох країнах модель точніша за наївну (за MAE)
+        # countries where the model beats the naive forecast (MAE)
         per_c = wide.assign(
             e_m=(wide["actual"] - wide[name]).abs(),
             e_n=(wide["actual"] - wide["Naive"]).abs(),
@@ -88,7 +74,7 @@ def main():
     met_df.to_csv(os.path.join(OUT_DIR, "naive_benchmark.csv"), index=False)
     print("\n" + met_df.to_string(index=False))
 
-    # --- 2. DM-тести проти наївної моделі ---
+    # --- 2. DM tests against the naive forecast ---
     for name in ["Naive"] + models + ["Ensemble"]:
         wide[f"err_{name}"] = wide["actual"] - wide[name]
 

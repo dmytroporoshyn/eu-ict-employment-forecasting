@@ -1,15 +1,5 @@
-"""
-Моделювання та прогнозування зайнятості у сфері інформаційних послуг.
-
-Методи:
-  1. ARIMA (per country)
-  2. ETS / Holt-Winters (per country)
-  3. XGBoost (panel with lag features)
-  4. Prophet (per country)
-
-Validation: expanding window cross-validation
-Metrics: MAE, RMSE, MAPE
-Forecast horizon: 2025-2029
+"""Expanding-window CV and 2025-2029 forecasts: ARIMA, ETS and Prophet (per country)
+and XGBoost (panel with lag features).
 """
 
 import os

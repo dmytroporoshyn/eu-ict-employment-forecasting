@@ -1,9 +1,7 @@
-"""
-Підготовка та об'єднання даних у єдину панель (country × year)
-для прогнозування зайнятості у сфері інформаційних послуг.
+"""Merge the Eurostat and World Bank data into a country x year panel.
 
-Вхід:  data/eurostat_*.csv, data/wb_*.csv
-Вихід: data/panel_dataset.csv
+Input: data/eurostat_*.csv, data/wb_*.csv
+Output: data/panel_dataset.csv
 """
 
 import os

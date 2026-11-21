@@ -1,19 +1,4 @@
-"""
-Revision (round 1): print figures of the revised manuscript (300 dpi, page width 6.5 in,
-fonts >= 8 pt), in the style of 14_figures_print.py. Figures 2-4 of the original
-submission are unchanged and are not rebuilt here.
-
-Output: output/revision/print/
-  rfig01_research_design.png   Fig. 1  research design (revised)
-  rfig05_accuracy_h1.png       Fig. 5  accuracy at h = 1 (ex ante specification)
-  rfig06_horizons.png          Fig. 6  MAE(h), bias(h) and coverage of 80% intervals
-  rfig07_actual_vs_pred.png    Fig. 7  actual vs one-year-ahead forecasts
-  rfig08_shap_importance.png   Fig. 8  SHAP importance, final ex ante XGBoost
-  rfig09_shap_beeswarm.png     Fig. 9  SHAP beeswarm
-  rfig10_forecasts.png         Fig. 10 forecasts 2025-2029 for nine countries
-  rfig11_eu_aggregate.png      Fig. 11 employment-weighted EU aggregate and the target
-  rfig12_country_intervals.png Fig. 12 prediction intervals for six countries
-"""
+"""Figures of the revised manuscript (300 dpi) -> output/revision/print/rfig*.png"""
 import os
 import warnings
 

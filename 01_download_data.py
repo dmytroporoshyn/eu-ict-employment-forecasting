@@ -1,9 +1,4 @@
-"""
-Завантаження даних для статті 3.2:
-"Прогнозування зайнятості у сфері інформаційних послуг в країнах ЄС"
-
-Джерела: Eurostat + World Bank
-"""
+"""Download the Eurostat and World Bank data used in the study."""
 
 import os
 import pandas as pd
@@ -35,7 +30,7 @@ ISO3_TO_ISO2 = {v: k for k, v in ISO2_TO_ISO3.items()}
 # ============================================================
 
 def download_eurostat_dataset(code, name):
-    """Завантажити датасет Eurostat і повернути DataFrame."""
+    """Download one Eurostat dataset as a DataFrame."""
     print(f"  Завантаження Eurostat: {name} ({code})...")
     try:
         df = eurostat.get_data_df(code)
@@ -47,7 +42,7 @@ def download_eurostat_dataset(code, name):
 
 
 def download_eurostat():
-    """Завантажити всі датасети Eurostat."""
+    """Download all Eurostat datasets."""
     print("\n" + "=" * 60)
     print("EUROSTAT: Завантаження датасетів")
     print("=" * 60)
@@ -88,7 +83,7 @@ def download_eurostat():
 # ============================================================
 
 def download_wb_indicator(indicator_code, indicator_name, economies, time_range):
-    """Завантажити індикатор World Bank."""
+    """Download one World Bank indicator."""
     print(f"  Завантаження WB: {indicator_name} ({indicator_code})...")
     try:
         df = wb.data.DataFrame(
@@ -106,7 +101,7 @@ def download_wb_indicator(indicator_code, indicator_name, economies, time_range)
 
 
 def download_world_bank():
-    """Завантажити всі індикатори World Bank."""
+    """Download all World Bank indicators."""
     print("\n" + "=" * 60)
     print("WORLD BANK: Завантаження індикаторів")
     print("=" * 60)

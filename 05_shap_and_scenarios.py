@@ -1,9 +1,4 @@
-"""
-SHAP-аналіз для XGBoost та сценарне прогнозування (2025-2029).
-
-1. SHAP feature importance + beeswarm plot
-2. Сценарії: оптимістичний / базовий / песимістичний
-"""
+"""SHAP analysis of XGBoost and 2025-2029 scenarios (pessimistic / base / optimistic)."""
 
 import os
 import warnings

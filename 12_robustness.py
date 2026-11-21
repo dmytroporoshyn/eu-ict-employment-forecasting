@@ -1,20 +1,9 @@
-"""
-Додаткові перевірки робастності (відгук рецензента + внутрішня рецензія).
+"""Additional robustness checks: pooled and fixed-effects OLS on the same features,
+XGBoost grid, ex ante combination, ARIMA with a 2011 break dummy, AIC-selected ARIMA,
+Holm correction, CAGR 2011-2024.
 
-  1. Панельна ЛІНІЙНА модель на тих самих ознаках, що й деревоподібні моделі:
-     відокремлює внесок панельної оцінки від внеску нелінійного алгоритму.
-       (a) pooled OLS без коду країни;  (b) OLS з фіксованими ефектами країн.
-  2. Сітка гіперпараметрів XGBoost (12 конфігурацій).
-  3. Ансамбль ARIMA + XGBoost у строгому ex ante варіанті (екзогенні з лагом 1).
-  4. ARIMA(1,1,1) з фіктивною змінною методологічного розриву 2011 р.
-     (перехід ISCO-88 -> ISCO-08): step = 1 для year >= 2011.
-  5. ARIMA з автоматичним вибором порядку за AIC на кожному кроці CV
-     (p, q = 0..2, d = 1, з дрейфом і без).
-  6. Поправка Холма на множинні порівняння для 12 DM-тестів (pooled, squared).
-  7. CAGR 2011-2024 (після розриву) по країнах.
-
-Вихід: output/robustness_extra.csv, output/robustness_cv_extra.csv,
-       output/cagr_2011_2024.csv, output/dm_holm.csv
+Output: output/robustness_extra.csv, robustness_cv_extra.csv, cagr_2011_2024.csv,
+dm_holm.csv
 """
 import os
 import warnings
@@ -54,7 +43,7 @@ def dm_vs(ref, cv, name_ref='REF'):
 
 
 class FEOLS:
-    """OLS з фіктивними змінними країн (geo_code -> one-hot)."""
+    """OLS with country dummies (geo_code -> one-hot)."""
 
     def __init__(self):
         self.lr = LinearRegression()
@@ -103,7 +92,7 @@ def local_cv(df, fit_predict, name):
 
 def arima_step(train, next_year):
     step = (train.index >= 2011).astype(float)
-    if step.min() == step.max():          # немає розриву у вікні
+    if step.min() == step.max():          # no break inside the window
         return float(ARIMA(train.values, order=(1, 1, 1)).fit().forecast(1)[0])
     f = ARIMA(train.values, order=(1, 1, 1), exog=step).fit()
     return float(f.forecast(1, exog=np.array([[1.0 if next_year >= 2011 else 0.0]]))[0])
@@ -144,13 +133,13 @@ def main():
         extra_cv.append(cv.assign(model=name))
         print(f"{name:34s} MAE={mae:.3f} RMSE={rmse:.3f} MAPE={mape:.2f} n={len(cv)}")
 
-    # 1. панельні лінійні моделі
+    # 1. panel linear models
     cv, _ = t09.run_panel_model(df_ts, PooledOLS, 'Pooled OLS', forecast=False)
     add('Pooled OLS (same features)', cv)
     cv, _ = t09.run_panel_model(df_ts, FEOLS, 'FE OLS', forecast=False)
     add('FE OLS (same features + country FE)', cv)
 
-    # 2. сітка XGBoost
+    # 2. XGBoost grid
     grid = []
     for depth in [3, 4, 6]:
         for lr, n in [(0.05, 400), (0.1, 200)]:
@@ -165,7 +154,7 @@ def main():
     grid.to_csv(os.path.join(OUT, "xgb_sensitivity.csv"), index=False)
     print("XGB grid MAE range:", round(grid.MAE.min(), 4), "-", round(grid.MAE.max(), 4))
 
-    # 3. ансамбль ex ante
+    # 3. ex ante combination
     df_lag = df_ts.sort_values(['geo', 'year']).copy()
     for c in t09.EXTRA_FEATURES:
         df_lag[c] = df_lag.groupby('geo')[c].shift(1)
@@ -175,7 +164,7 @@ def main():
     ens['predicted'] = (ens.predicted_a + ens.predicted_x) / 2
     add('Ensemble ex ante (ARIMA + XGB lagged exog)', ens[['geo', 'year', 'actual', 'predicted']])
 
-    # 4. ARIMA з дамі розриву 2011
+    # 4. ARIMA with a 2011 break dummy
     add('ARIMA(1,1,1) + 2011 break dummy', local_cv(df_ts, arima_step, 'ARIMA step'))
 
     # 5. ARIMA auto (AIC)
@@ -187,7 +176,7 @@ def main():
     pd.set_option('display.width', 250)
     print(res.round(4).to_string(index=False))
 
-    # 6. Холм
+    # 6. Holm correction
     dm = pd.read_csv(os.path.join(OUT, "dm_test_all.csv"))
     dm = dm[dm.loss == 'squared'].copy()
     for col in ['p_pooled', 'p_panel']:
@@ -201,7 +190,7 @@ def main():
     dm.to_csv(os.path.join(OUT, "dm_holm.csv"), index=False)
     print(dm[['benchmark', 'model', 'p_pooled', 'p_pooled_holm', 'p_panel', 'p_panel_holm']].to_string(index=False))
 
-    # 7. CAGR після розриву
+    # 7. CAGR after the break
     piv = df.pivot_table(index='geo', columns='year', values=TARGET)
     cagr = pd.DataFrame({
         'cagr_2010_2024': ((piv[2024] / piv[2010]) ** (1 / 14) - 1) * 100,

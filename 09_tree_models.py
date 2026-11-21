@@ -1,26 +1,9 @@
-"""
-Деревоподібні моделі як додаткові ML-альтернативи XGBoost (відгук рецензента:
-«чому саме XGBoost, а не дерева чи щось інше»).
+"""Decision tree and random forest with the same panel design as XGBoost in 04_models.py
+(features, imputation, CV, recursive forecast); only the algorithm differs. Also:
+hyper-parameter sensitivity and an ex ante check with predictors lagged by one year.
 
-  5. Decision Tree (CART, одне дерево регресії)       -- panel
-  6. Random Forest (беггінг дерев, Breiman 2001)      -- panel
-
-Обидві моделі використовують ТОЧНО ту саму схему, що й XGBoost у 04_models.py:
-ті самі ознаки (лаги, ковзні середні, перша різниця, екзогенні змінні,
-тренд, код країни), те саме медіанне заповнення пропусків, ту саму
-крос-валідацію з розширюваним вікном (мінімум 6 років навчання, тестові
-роки 2013-2024) і той самий ітеративний прогноз на 2025-2029.
-Відрізняється лише алгоритм навчання. Це дає контрольоване порівняння:
-одне дерево -> беггінг дерев -> бустинг дерев.
-
-Контроль відтворюваності: функцію спершу запущено з XGBoost і звірено з
-output/cv_results.csv (має збігтися до машинної точності).
-
-Вихід:
-  output/cv_results_trees.csv, output/forecasts_trees.csv
-  output/tree_sensitivity.csv  -- чутливість до гіперпараметрів
-  output/robustness_lagged_exog.csv -- строгий ex ante варіант (екзогенні
-                                       змінні з лагом 1 рік) + DM проти ARIMA
+Output: output/cv_results_trees.csv, forecasts_trees.csv, tree_sensitivity.csv,
+robustness_lagged_exog.csv
 """
 import os
 import warnings
@@ -48,10 +31,8 @@ EXTRA_FEATURES = [
     'ict_service_exports_pct'
 ]
 
-# Гіперпараметри. Дерево рішень має ту саму глибину, що й базові дерева
-# XGBoost (4), і мінімум 5 спостережень у листі проти перенавчання.
-# Випадковий ліс: 200 дерев (як у XGBoost), повна глибина, частка ознак
-# у вузлі 1/3 -- рекомендація Breiman для задач регресії.
+# Tree: depth 4 as in XGBoost, >= 5 obs per leaf. Forest: 200 full-depth trees,
+# 1/3 of the features per split (Breiman's default for regression).
 MODELS = {
     'Decision Tree': lambda: DecisionTreeRegressor(
         max_depth=4, min_samples_leaf=5, random_state=RANDOM_STATE),
@@ -81,7 +62,7 @@ def prepare(df):
 
 
 def run_panel_model(df, factory, name, forecast=True):
-    """Копія логіки run_xgboost() з 04_models.py з довільним алгоритмом."""
+    """Same logic as run_xgboost() in 04_models.py, for any regressor."""
     df_feat, df_model, feature_cols, extra = prepare(df)
 
     unique_years = sorted(df_model['year'].unique())
@@ -137,7 +118,7 @@ def main():
     df = pd.read_csv(os.path.join(BASE, "data", "panel_dataset.csv"))
     df_ts = df[df[TARGET].notna()].copy()
 
-    # --- 0. контроль: відтворення XGBoost з 04_models.py ---
+    # --- 0. check: reproduce XGBoost of 04_models.py ---
     cv_x, _ = run_panel_model(df_ts, xgb_factory, 'XGBoost', forecast=False)
     ref = pd.read_csv(os.path.join(OUTPUT_DIR, "cv_results.csv"))
     ref = ref[ref.model == 'XGBoost']
@@ -147,7 +128,7 @@ def main():
           f"max |diff| = {max_diff:.2e}")
     assert len(chk) == len(ref) and max_diff < 1e-4, "XGBoost not reproduced"
 
-    # --- 1. основні специфікації ---
+    # --- 1. main specifications ---
     all_cv, all_fc = [], []
     for name, factory in MODELS.items():
         cv, fc = run_panel_model(df_ts, factory, name)
@@ -157,7 +138,7 @@ def main():
     pd.concat(all_cv).to_csv(os.path.join(OUTPUT_DIR, "cv_results_trees.csv"), index=False)
     pd.concat(all_fc).to_csv(os.path.join(OUTPUT_DIR, "forecasts_trees.csv"), index=False)
 
-    # --- 2. чутливість до гіперпараметрів (лише CV) ---
+    # --- 2. hyper-parameter sensitivity (CV only) ---
     grid = []
     for depth in [3, 4, 5, 6, 8, None]:
         for leaf in [1, 5, 10]:
@@ -180,10 +161,7 @@ def main():
     sens.to_csv(os.path.join(OUTPUT_DIR, "tree_sensitivity.csv"), index=False)
     print(sens.groupby('model')['MAE'].describe())
 
-    # --- 3. робастність: строгий ex ante прогноз ---
-    # В основній специфікації екзогенні предиктори взято за рік t (умовний,
-    # ex post прогноз). Тут їх зсунуто на один рік назад, тож модель на рік t
-    # бачить лише інформацію до t-1 включно.
+    # --- 3. ex ante check: exogenous predictors lagged by one year ---
     df_lag = df_ts.sort_values(['geo', 'year']).copy()
     for c in EXTRA_FEATURES:
         df_lag[c] = df_lag.groupby('geo')[c].shift(1)

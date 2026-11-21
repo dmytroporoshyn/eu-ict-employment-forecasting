@@ -1,26 +1,8 @@
-"""
-Revision (round 1): final 2025-2029 forecasts with prediction intervals, SHAP of the
-final ex ante XGBoost model, and the employment-weighted EU aggregate.
-
-  * country forecasts of every model from origin 2024 (backtest.csv, main
-    specification) and of the ARIMA + XGBoost combination;
-  * empirical 80% and 95% prediction intervals for every country and horizon:
-    quantiles of all backtest log errors log(actual / forecast) of the same model at
-    the same horizon (origins 2012-2023), applied multiplicatively;
-  * EU aggregate weighted by employment (Reviewer 1):
-        S_t = sum_c E_ct s_ct / sum_c E_ct,   N_t = sum_c E_ct s_ct,
-    with E_c,2024 implied by the Eurostat table itself (ICT specialists in thousands
-    divided by their share) and three employment paths for 2025-2029:
-        E1 constant employment (2024 level),
-        E2 EUROPOP2023 baseline projection of the population aged 15-74 (constant
-           employment rate),
-        E3 continuation of each country's employment growth in 2014-2024 (lfsa_egan);
-    intervals for the aggregate from the backtest errors of the aggregate itself
-    (which keeps the cross-country correlation of errors);
-  * SHAP decomposition (TreeSHAP) of the final ex ante XGBoost model.
+"""Final 2025-2029 forecasts with empirical intervals, employment-weighted EU aggregate
+(three employment paths) and SHAP of the final XGBoost model.
 
 Output: output/revision/forecasts_final.csv, intervals_final.csv, eu_aggregate.csv,
-        eu_aggregate_backtest.csv, shap_importance.csv, shap_values.npz, forecast_summary.md
+shap_importance.csv, forecast_summary.md
 """
 import os
 from importlib.machinery import SourceFileLoader
@@ -151,7 +133,7 @@ def main():
         f"{k}: {((paths[k][2029] * emp_impl[2024]).sum() / emp_impl[2024].sum() - 1) * 100:.2f}%"
         for k in paths))
 
-    # backtest errors of the aggregate (actual implied employment as weights)
+    # backtest errors of the aggregate
     agg_bt = []
     for (o, h), g in back.groupby(['origin', 'h']):
         if g.geo.nunique() < 27:
@@ -171,9 +153,7 @@ def main():
             f"{m} MAE {np.mean(np.abs(g.actual - g[m])):.3f} bias {np.mean(g.actual - g[m]):.3f}"
             for m in ['Naive', 'ARIMA', 'XGBoost', 'FE OLS', 'Ensemble']))
 
-    # Interval of the aggregate: employment-weighted sum of the country bounds. Forecast
-    # errors are strongly correlated across countries (common shocks), so this
-    # corresponds to perfectly correlated errors and gives a conservative (wide) range.
+    # aggregate interval: employment-weighted sum of country bounds (conservative)
     agg = []
     for path, gfac in paths.items():
         for m in MODELS:
@@ -245,7 +225,7 @@ def main():
     X = train[r17.FEATURES].astype(float)
     model = r17.xgb_factory()
     model.fit(X, train[TARGET].astype(float))
-    # sanity: same model as the one that produced the 2025 forecasts in backtest.csv
+    # final model (same setup as origin 2024 in backtest.csv)
     sv = shap.TreeExplainer(model)(X)
     imp = pd.Series(np.abs(sv.values).mean(axis=0), index=r17.FEATURES).sort_values(ascending=False)
     imp.to_csv(os.path.join(OUT, "shap_importance.csv"), header=['mean_abs_shap'])

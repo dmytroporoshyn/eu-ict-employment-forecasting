@@ -1,18 +1,5 @@
-"""
-Зведене порівняння шести моделей (ARIMA, ETS, XGBoost, Random Forest,
-Decision Tree, Prophet) та ансамблю ARIMA+XGBoost.
-
-Вхід:  output/cv_results.csv (04_models.py), output/cv_results_trees.csv,
-       output/forecasts_2025_2029.csv, output/forecasts_trees.csv (09_tree_models.py)
-Вихід: output/model_comparison_all.csv   -- MAE/RMSE/MAPE кожної моделі
-       output/dm_test_all.csv            -- тест Дібольда-Маріано (pooled + panel)
-       output/best_model_by_country.csv  -- найточніша модель за MAPE по країнах
-       output/forecasts_eu27_all.csv     -- середній прогноз ЄС-27 по моделях
-       output/fig8_model_comparison.png, fig9_forecasts_by_country.png,
-       output/fig10_actual_vs_predicted.png (перебудовано для шести моделей)
-
-Реалізація DM-тесту та знакова конвенція взяті з 06_dm_test.py:
-DM > 0  =>  перша модель пари (benchmark) гірша, друга -- точніша.
+"""Six models and the ARIMA + XGBoost combination: metrics, DM tests, best model by
+country, EU-27 forecasts and figures. DM sign convention as in 06_dm_test.py.
 """
 import os
 from importlib.machinery import SourceFileLoader
@@ -48,7 +35,7 @@ def main():
                     pd.read_csv(os.path.join(OUT, "cv_results_trees.csv"))],
                    ignore_index=True)
 
-    # --- 1. метрики кожної моделі на власній вибірці (як у табл. 1 статті) ---
+    # --- 1. metrics of each model on its own sample ---
     rows = []
     for m in MODELS:
         c = cv[cv.model == m]
@@ -56,7 +43,7 @@ def main():
         r.update(model=m, cls=CLASS[m], n_obs=len(c))
         rows.append(r)
 
-    # --- спільна підвибірка (усі шість моделей) ---
+    # --- common subsample (all six models) ---
     wide = cv.pivot_table(index=['geo', 'year'], columns='model',
                           values='predicted').reset_index()
     act = cv.groupby(['geo', 'year'], as_index=False)['actual'].first()
@@ -65,7 +52,7 @@ def main():
     r = metrics(wide.actual, wide.Ensemble)
     r.update(model='Ensemble (ARIMA+XGBoost)', cls='combination', n_obs=len(wide))
     rows.append(r)
-    for m in MODELS:  # для довідки -- метрики на спільній підвибірці
+    for m in MODELS:  # for reference: metrics on the common subsample
         rr = metrics(wide.actual, wide[m])
         rows.append({'model': m + ' [common]', 'cls': CLASS[m], 'n_obs': len(wide), **rr})
     summary = pd.DataFrame(rows)[['model', 'cls', 'MAE', 'RMSE', 'MAPE', 'n_obs']]
@@ -74,7 +61,7 @@ def main():
     print(summary.round(3).to_string(index=False))
     print(f"\nCommon subsample: {len(wide)} obs, {wide.geo.nunique()} countries")
 
-    # --- 2. тест Дібольда-Маріано ---
+    # --- 2. Diebold-Mariano tests ---
     names = MODELS + ['Ensemble']
     for m in names:
         wide[f'err_{m}'] = wide['actual'] - wide[m]
@@ -90,7 +77,7 @@ def main():
             dm, p_pool = _dm.diebold_mariano(wide[f'err_{bench}'], wide[f'err_{test}'],
                                              h=1, loss=loss)
             t, p_panel, mean_d, n_c = _dm.panel_dm(wide, bench, test, loss)
-            # у скількох країнах друга модель пари точніша (за MAE)
+            # countries where the second model of the pair is more accurate (MAE)
             per_c = wide.assign(eb=wide[f'err_{bench}'].abs(),
                                 et=wide[f'err_{test}'].abs()).groupby('geo')[['eb', 'et']].mean()
             dm_rows.append({'benchmark': bench, 'model': test, 'loss': loss,
@@ -102,7 +89,7 @@ def main():
     dm_df.to_csv(os.path.join(OUT, "dm_test_all.csv"), index=False)
     print("\n" + dm_df.to_string(index=False))
 
-    # --- 3. найточніша модель по країнах (MAPE, як у статті) ---
+    # --- 3. best model by country (MAPE) ---
     cv['ape'] = (cv.actual - cv.predicted).abs() / cv.actual * 100
     mape_c = cv.groupby(['geo', 'model']).ape.mean().unstack()[MODELS]
     best = mape_c.idxmin(axis=1).rename('best_model').to_frame()
@@ -112,18 +99,18 @@ def main():
     best.join(mape_c.round(2)).to_csv(os.path.join(OUT, "best_model_by_country.csv"))
     print("\nBest model by country (MAPE):", best.best_model.value_counts().to_dict())
     print("Best class by country:", best.best_class.value_counts().to_dict())
-    # лише чотири початкові моделі -- контроль збігу зі статтею (16/7/3/1)
+    # four original models only (check: 16/7/3/1)
     four = mape_c[['ARIMA', 'ETS', 'XGBoost', 'Prophet']].idxmin(axis=1).value_counts()
     print("Four original models:", four.to_dict())
 
-    # --- 4. прогнози ЄС-27 ---
+    # --- 4. EU-27 forecasts ---
     fc = pd.concat([pd.read_csv(os.path.join(OUT, "forecasts_2025_2029.csv")),
                     pd.read_csv(os.path.join(OUT, "forecasts_trees.csv"))], ignore_index=True)
     eu = fc.groupby(['year', 'model']).forecast.mean().unstack()[MODELS]
     eu.to_csv(os.path.join(OUT, "forecasts_eu27_all.csv"))
     print("\nEU27 mean forecast:\n", eu.round(2).to_string())
 
-    # --- 5. рисунки ---
+    # --- 5. figures ---
     base = summary[summary.model.isin(MODELS)].set_index('model').loc[MODELS]
     fig, axes = plt.subplots(1, 3, figsize=(17, 5.2))
     short = ['ARIMA', 'ETS', 'XGBoost', 'Random\nForest', 'Decision\nTree', 'Prophet']

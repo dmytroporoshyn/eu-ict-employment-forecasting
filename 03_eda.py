@@ -1,8 +1,5 @@
-"""
-Розвідувальний аналіз (EDA) панельного датасету
-для прогнозування зайнятості у сфері інформаційних послуг.
-
-Генерує графіки та описову статистику у папку output/
+"""Exploratory analysis of the panel: descriptive statistics, correlations, ADF tests
+and figures (output/).
 """
 
 import os

@@ -1,18 +1,10 @@
 # -*- coding: utf-8 -*-
-"""
-06_dm_test.py
-Тест Дібольда-Маріано (Diebold-Mariano) для перевірки статистичної значущості
-різниці точності прогнозів між моделями.
+"""Diebold-Mariano tests for the original models.
 
-Вхід:  output/cv_results.csv (geo, year, actual, predicted, model)
-Вихід: output/dm_test_results.csv
+(A) pooled DM with the Harvey-Leybourne-Newbold (HLN) correction;
+(B) panel version: mean loss differential per country, t-test across countries.
 
-Реалізовано два підходи:
-  (A) Pooled DM  -- класичний DM-тест на об'єднаному ряді парних втрат
-                    з корекцією Гарві-Лейборна-Ньюболда (HLN) для малих вибірок.
-  (B) Panel DM   -- усереднення диференціалу втрат по кожній країні,
-                    далі парний t-тест по 27 країнах (враховує кластеризацію
-                    спостережень у межах країни). Це основний результат.
+Input: output/cv_results.csv. Output: output/dm_test_results.csv
 """
 import numpy as np
 import pandas as pd
@@ -23,13 +15,8 @@ OUT = "output/dm_test_results.csv"
 
 
 def diebold_mariano(e1, e2, h=1, loss="squared"):
-    """
-    Класичний DM-тест для одного ряду помилок.
-    H0: однакова точність прогнозів. Альтернатива двостороння.
-    Повертає (DM_stat, p_value) з HLN-корекцією.
-    e1 -- помилки моделі 1 (benchmark), e2 -- помилки моделі 2.
-    DM > 0  =>  модель 1 гірша (втрати більші), модель 2 точніша.
-    """
+    """DM test for one error series with HLN correction. Returns (DM, p).
+    DM > 0 means model 2 is more accurate than model 1 (benchmark)."""
     e1 = np.asarray(e1, float)
     e2 = np.asarray(e2, float)
     if loss == "squared":
@@ -41,7 +28,7 @@ def diebold_mariano(e1, e2, h=1, loss="squared"):
 
     n = len(d)
     d_bar = d.mean()
-    # автоковаріації до лагу h-1 (для h=1 -- лише дисперсія)
+    # autocovariances up to lag h-1 (variance only for h = 1)
     gamma0 = np.sum((d - d_bar) ** 2) / n
     gammas = []
     for k in range(1, h):
@@ -51,7 +38,7 @@ def diebold_mariano(e1, e2, h=1, loss="squared"):
     if var_d <= 0:
         return np.nan, np.nan
     dm = d_bar / np.sqrt(var_d)
-    # корекція Harvey-Leybourne-Newbold
+    # Harvey-Leybourne-Newbold correction
     hln = np.sqrt((n + 1 - 2 * h + h * (h - 1) / n) / n)
     dm_hln = dm * hln
     p = 2 * stats.t.cdf(-abs(dm_hln), df=n - 1)
@@ -59,10 +46,7 @@ def diebold_mariano(e1, e2, h=1, loss="squared"):
 
 
 def panel_dm(df_wide, m_bench, m_test, loss="squared"):
-    """
-    Panel DM: для кожної країни рахуємо середній диференціал втрат,
-    далі одновибірковий t-тест по країнах (H0: середній диференціал = 0).
-    """
+    """Panel DM: country-mean loss differentials, one-sample t-test across countries."""
     e_b = df_wide[f"err_{m_bench}"]
     e_t = df_wide[f"err_{m_test}"]
     if loss == "squared":
@@ -78,11 +62,11 @@ def main():
     cv = pd.read_csv(CV)
     cv["err"] = cv["actual"] - cv["predicted"]
 
-    # широкий формат: одна строка на (geo, year), стовпці помилок по моделях
+    # wide format: one row per (geo, year), error columns by model
     wide = cv.pivot_table(index=["geo", "year"], columns="model",
                           values="err").reset_index()
     models = [c for c in ["ARIMA", "ETS", "XGBoost", "Prophet"] if c in wide.columns]
-    wide = wide.dropna(subset=models)  # спільна підвибірка для чесного порівняння
+    wide = wide.dropna(subset=models)  # common subsample
     wide = wide.rename(columns={m: f"err_{m}" for m in models})
     n_common = len(wide)
     print(f"Спільних спостережень для порівняння: {n_common}")
@@ -101,7 +85,7 @@ def main():
             # (A) pooled
             dm, p_pool = diebold_mariano(wide[f"err_{bench}"],
                                          wide[f"err_{test}"], h=1, loss=loss)
-            # (B) panel (по країнах)
+            # (B) panel (by country)
             t_panel, p_panel, mean_d, n_c = panel_dm(wide, bench, test, loss)
             rows.append({
                 "benchmark": bench,

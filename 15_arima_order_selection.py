@@ -1,12 +1,5 @@
-"""AIC-based check of the fixed ARIMA(1,1,1) order (Section 2.3.1 of the article).
-
-For every country the full target series is fitted with ARIMA(p,1,q),
-p, q = 0..2, without a constant (statsmodels default for d = 1, the same
-setting as in 04_models.py). Reports the AIC-optimal order, the AIC gap
-of ARIMA(1,1,1) to the optimum and whether the two are practically
-equivalent (gap < 2 AIC units).
-
-Output: output/arima_order_selection.csv
+"""AIC check of the fixed ARIMA(1,1,1) order: ARIMA(p,1,q), p, q = 0..2, without a
+constant, for every country. Output: output/arima_order_selection.csv
 """
 import os
 import warnings

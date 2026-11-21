@@ -1,28 +1,6 @@
-"""
-Revision (round 1): evaluation of the multi-horizon backtest (17_revision_backtest.py).
-
-  1. accuracy by horizon h = 1..5: MAE(h), RMSE(h), MAPE(h), bias(h) on the common
-     subsample of all models (main specification: ex ante panel models);
-  2. prediction intervals: (a) empirical intervals for every model, built sequentially
-     from past out-of-sample log errors at the same horizon (only errors whose target
-     year is <= the forecast origin are used), (b) native intervals where available;
-     coverage of the 80% and 95% intervals, mean width, interval score;
-  3. tests of equal accuracy that allow for dependence within countries and within
-     years: two-way cluster-robust t test (country and target year; Cameron, Gelbach
-     and Miller 2011) and a two-way ("pigeonhole") bootstrap that resamples countries
-     and years; the pooled Diebold-Mariano test with HLN correction is kept for
-     reference; Holm adjustment over the pairs of the main table;
-  4. nested validation of the forecast combination: at every origin the components
-     (best statistical model among ARIMA/ETS and best ML model among XGBoost, random
-     forest, decision tree, Prophet) and the weights are chosen from past errors only;
-  5. the 2021 EU-LFS break: errors by target year, results without 2021, ARIMA with
-     step dummies for 2011 and 2021;
-  6. robustness (h = 1): conditional forecasts with current-year predictors,
-     within-country imputation, AIC-selected ARIMA;
-  7. country-level results and the extrapolation behaviour of the tree models.
-
-Input:  output/revision/backtest.csv (+ backtest_aic.csv if present)
-Output: output/revision/*.csv and output/revision/results_revision.md
+"""Evaluation of the backtest: accuracy by horizon, prediction intervals, two-way
+cluster-robust tests and bootstrap, nested combination, 2021 break, robustness and
+country results. Output: output/revision/*.csv, results_revision.md
 """
 import os
 from importlib.machinery import SourceFileLoader
@@ -95,8 +73,7 @@ def metrics(a, f):
 
 # -------------------------------------------------------------------- tests
 def twoway(df, d):
-    """Mean loss differential with two-way (country, year) cluster-robust SE and
-    a two-way pigeonhole bootstrap p-value. Returns (mean, t, p_cluster, p_boot)."""
+    """Mean loss differential: two-way cluster-robust t test and pigeonhole bootstrap."""
     d = np.asarray(d, float)
     n, dbar = len(d), d.mean()
     u = d - dbar
@@ -441,7 +418,7 @@ def main():
     rob = pd.DataFrame(rob)
     rob.to_csv(os.path.join(OUT, "robustness_h1.csv"), index=False)
     md(table_md(rob))
-    # imputation effect: legacy (original) vs conditional with fold-wise medians
+    # imputation effect: full-sample vs fold-wise medians
     leg = bt[(bt.spec == 'legacy')][['origin', 'geo', 'year', 'forecast']].rename(columns={'forecast': 'legacy'})
     cnd = sets['conditional']
     cnd = cnd[cnd.h == 1][['origin', 'geo', 'year', 'actual', 'XGBoost']]
@@ -512,7 +489,7 @@ def main():
         md(f"  all horizons, {m}: forecasts above training max = {int((w[m] > w.train_max).sum())} "
            f"of {len(w)}; max excess = {float((w[m] - w.train_max).max()):.3f}")
 
-    # 9. alternative constructions of the empirical intervals (choice of the method)
+    # 9. alternative interval constructions
     md('\n## 9. Alternative empirical intervals: uncentred (used), centred on the median, symmetric')
     alt = []
     for m in ['Ensemble', 'ARIMA', 'XGBoost', 'FE OLS']:

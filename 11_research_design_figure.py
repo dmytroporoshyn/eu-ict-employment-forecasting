@@ -1,4 +1,4 @@
-"""Схема дизайну дослідження (рисунок 1 статті) -> output/fig0_research_design.png"""
+"""Research design figure (Ukrainian version) -> output/fig0_research_design.png"""
 import os
 
 import matplotlib
@@ -35,7 +35,7 @@ ax.set_xlim(0, 1)
 ax.set_ylim(0, 1)
 ax.axis('off')
 
-X, W, G = 0.04, 0.92, 0.04          # ліве поле, ширина, проміжок між блоками
+X, W, G = 0.04, 0.92, 0.04          # left margin, width, gap between boxes
 y = 0.995
 h = 0.125
 box(ax, X, y - h, W, h, 'Етап 1. Формування панельного датасету',

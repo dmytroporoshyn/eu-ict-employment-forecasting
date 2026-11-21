@@ -1,8 +1,4 @@
-"""
-Revision (round 1): hyper-parameter sensitivity of the panel tree models in the main
-(ex ante, fold-wise imputation) specification, one-year-ahead forecasts, origins
-2012-2023 -- the same grids as 09_tree_models.py and 12_robustness.py.
-
+"""Hyper-parameter sensitivity of the tree models (main specification, h = 1).
 Output: output/revision/sensitivity_h1.csv
 """
 import os

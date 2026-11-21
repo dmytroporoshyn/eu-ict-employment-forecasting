@@ -1,17 +1,8 @@
-"""
-Revision (round 1): data for the employment-weighted EU aggregate.
+"""Download Eurostat lfsa_egan (employment) and proj_23np (EUROPOP2023) for the
+employment-weighted EU aggregate.
 
-Reviewer 1 asked to compute the EU indicator as S_t = sum_c(E_ct * s_ct) / sum_c(E_ct)
-and the number of ICT specialists as N_t = sum_c(E_ct * s_ct), using employment
-projections for each country, instead of the unweighted mean of national shares.
-
-Downloads (Eurostat API, package `eurostat`):
-  lfsa_egan  employment by sex, age and citizenship, thousand persons
-             (sex = T, citizen = TOTAL, age = Y15-74 and Y20-64), EU-27 countries
-  proj_23np  EUROPOP2023 population projections on 1 January, baseline (BSL),
-             sex = T, age = Y15-74 and Y20-64, EU-27 countries
 Output: data/eurostat_lfsa_egan.csv, data/eurostat_proj_23np.csv,
-        data/download_log_revision.txt (download date)
+data/download_log_revision.txt
 """
 import datetime as dt
 import os

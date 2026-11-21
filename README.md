@@ -1,5 +1,7 @@
 # Forecasting ICT employment in the EU: statistical methods vs machine learning
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24418613.svg)](https://doi.org/10.5281/zenodo.24418613)
+
 Replication code and data for the article
 
 > *Forecasting the share of ICT specialists in employment in EU countries: a comparison of statistical methods and machine learning algorithms* (manuscript under revision at the Journal of Operations Intelligence; submitted under the title *Forecasting employment in information services in EU countries: …*).
@@ -78,4 +80,4 @@ Code: MIT licence (see `LICENSE`). Derived data and results in `data/panel_datas
 
 ## Citation
 
-If you use this code, please cite the article (see `CITATION.cff`).
+If you use this code, please cite the archived version on Zenodo, https://doi.org/10.5281/zenodo.24418613 (see `CITATION.cff`), and the article.
